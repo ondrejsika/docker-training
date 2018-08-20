@@ -7,4 +7,4 @@ RUN go build -a -ldflags \
 FROM scratch
 COPY --from=build /build/app .
 CMD ["/app"]
-
+EXPOSE 80

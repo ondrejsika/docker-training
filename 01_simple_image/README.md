@@ -7,5 +7,7 @@ docker build -t example01 .
 # Run
 
 ```
-docker run -p 8000:80 example01
+docker run -p 80:80 example01
 ```
+
+Go <http://localhost>
