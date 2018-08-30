@@ -1,0 +1,6 @@
+version: '3.6'
+services:
+    test:
+        build: test
+        depends_on:
+            - counter
