@@ -1,7 +1,7 @@
-FROM python:3.6-alpine
-COPY requirements.txt /app/requirements.txt
+FROM python:3.7-slim
 WORKDIR /app
+COPY requirements.txt .
 RUN pip install -r requirements.txt
-COPY . /app
+COPY . .
 CMD ["python", "app.py"]
 EXPOSE 80

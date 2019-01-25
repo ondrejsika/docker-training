@@ -6,6 +6,7 @@ services:
         depends_on:
             - redis
         labels:
-            - traefik.frontend.rule=Host:localhost
+            traefik.enable: true
+            traefik.frontend.rule: Host:localhost
     redis:
         image: redis:alpine

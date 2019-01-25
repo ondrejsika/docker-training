@@ -4,7 +4,7 @@ services:
         build: .
         image: reg.istry.cz/dte03/counter
         ports:
-            - 80:80
+            - ${PORT:-80}:80
         depends_on:
             - redis
     redis:
