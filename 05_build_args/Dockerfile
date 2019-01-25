@@ -1,0 +1,5 @@
+ARG PYTHON_IMAGE_VERSION=3.7-slim
+FROM python:$PYTHON_IMAGE_VERSION
+WORKDIR /app
+COPY . .
+CMD ["python", "app.py"]
