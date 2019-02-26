@@ -2,7 +2,12 @@ version: '3.6'
 services:
     traefik:
         image: traefik
-        command: --web --docker --docker.watch --entryPoints="Name:http Address::80" --docker.exposedbydefault=false
+        command: |
+            --web \
+            --docker \
+            --docker.watch \
+            --entryPoints="Name:http Address::80" \
+            --docker.exposedbydefault=false
         ports:
             - 80:80
             - 8080:8080
