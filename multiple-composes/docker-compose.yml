@@ -2,7 +2,7 @@ version: '3.6'
 services:
     counter:
         build: .
-        image: reg.istry.cz/docker-training-example/counter
+        image: reg.istry.cz/dte/multiple-composes/counter
         depends_on:
             - redis
         labels:

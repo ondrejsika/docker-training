@@ -2,7 +2,7 @@ version: '3.6'
 services:
     counter:
         build: .
-        image: reg.istry.cz/dte03/counter
+        image: reg.istry.cz/dte/simple-compose/counter
         ports:
             - ${PORT:-80}:80
         depends_on:

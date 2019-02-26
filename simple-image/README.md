@@ -1,13 +1,13 @@
 # Build
 
 ```
-docker build -t example01 .
+docker build -t reg.istry.cz/dte/simple-image .
 ```
 
 # Run
 
 ```
-docker run -p 80:80 example01
+docker run -p 80:80 reg.istry.cz/dte/simple-image
 ```
 
 Go <http://localhost>
