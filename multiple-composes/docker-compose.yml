@@ -9,4 +9,4 @@ services:
             traefik.enable: true
             traefik.frontend.rule: Host:localhost
     redis:
-        image: redis:alpine
+        image: redis
