@@ -1,0 +1,20 @@
+version: '3.7'
+services:
+  counter:
+    build: .
+    image: reg.istry.cz/dte/external-traefik/counter
+    depends_on:
+      - redis
+    labels:
+      traefik.enable: true
+      traefik.frontend.rule: Host:localhost
+      traefik.docker.network: traefik
+    networks:
+      - traefik
+      - default
+  redis:
+    image: redis
+networks:
+    traefik:
+        external:
+            name: traefik
