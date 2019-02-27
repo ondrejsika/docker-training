@@ -11,10 +11,14 @@ services:
       traefik.docker.network: traefik
     networks:
       - traefik
-      - default
+      - backend
   redis:
     image: redis
+    networks:
+      - backend
 networks:
+    backend:
+      internal: true
     traefik:
         external:
             name: traefik
