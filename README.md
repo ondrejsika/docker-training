@@ -20,6 +20,20 @@ Code examples for my Docker Training.
 
 Write me mail to <ondrej@ondrejsika.com>
 
+
+## Related Repositories
+
+### Traefik
+
+- https://github.com/ondrejsika/traefik-le
+- https://github.com/ondrejsika/traefik-ssl
+
+### Related courses
+
+- https://github.com/ondrejsika/kubernetes-training-examples
+- https://github.com/ondrejsika/kubernetes-install-bare-metal
+
+
 ## Lector notes
 
 ### Download Images before course, prevent slow connections
