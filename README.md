@@ -39,7 +39,7 @@ Write me mail to <ondrej@ondrejsika.com>
 ### Download Images before course, prevent slow connections
 
 ```
-./pull-images.txt
+./pull-images.sh
 ```
 
 If you want update list of used images in file `images.txt`, run `./save-image-list.sh` and remove locally built images.
