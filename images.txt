@@ -11,12 +11,15 @@ mysql:latest
 nginx:latest
 ondrejsika/ci:latest
 ondrejsika/curl:latest
+ondrejsika/go-hello-world:1
 ondrejsika/go-hello-world:2
 ondrejsika/host:latest
 postgres:10
 postgres:11
 python:2.7
 python:2.7-slim
+python:3.6
+python:3.6-slim
 python:3.7
 python:3.7-slim
 redis:latest
