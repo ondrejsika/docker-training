@@ -1,0 +1,12 @@
+version: '3.7'
+services:
+    counter:
+        build: counter
+        image: reg.istry.cz/dte/startup-order/counter
+        ports:
+            - ${PORT:-80}:80
+        depends_on:
+            - redis
+    redis:
+        build: redis
+        image: reg.istry.cz/dte/startup-order/redis
