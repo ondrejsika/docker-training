@@ -1,0 +1,11 @@
+version: '3.6'
+services:
+  counter:
+    networks:
+      - default
+      - traefik
+
+networks:
+    traefik:
+        external:
+            name: traefik
