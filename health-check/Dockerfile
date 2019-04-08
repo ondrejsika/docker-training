@@ -1,8 +1,8 @@
-FROM python:2.7-alpine
-COPY requirements.txt /app/requirements.txt
+FROM python:3.7-slim
 WORKDIR /app
+COPY requirements.txt .
 RUN pip install -r requirements.txt
-COPY . /app
+COPY . .
 HEALTHCHECK --interval=5s --timeout=3s \
   CMD python check.py
 CMD ["python", "server.py"]
