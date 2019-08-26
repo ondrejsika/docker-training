@@ -1,9 +1,10 @@
-# Docker Training Examples
+# Docker Training
 
     Ondrej Sika <ondrej@ondrejsika.com>
-    https://github.com/ondrejsika/docker-training-examples
+    https://github.com/ondrejsika/docker-training
 
-Code examples for my Docker Training.
+My Docker course with code examples.
+
 
 ## About Course
 
