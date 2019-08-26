@@ -1,3 +1,5 @@
+[sika.io](https://sika.io) | <ondrej@sika.io> | [go to course ->](#course)
+
 # Docker Training
 
     Ondrej Sika <ondrej@ondrejsika.com>
