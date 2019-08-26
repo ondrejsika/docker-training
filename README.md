@@ -22,25 +22,30 @@ My Docker course with code examples.
 Write me mail to <ondrej@ondrejsika.com>
 
 
-## Related Repositories
+### Related Repositories
 
-### Traefik
+#### Traefik
 
 - https://github.com/ondrejsika/traefik-le
 - https://github.com/ondrejsika/traefik-ssl
 
-### Related courses
+#### Related courses
 
 - https://github.com/ondrejsika/kubernetes-training-examples
 - https://github.com/ondrejsika/kubernetes-install-bare-metal
 
 
-## Lector notes
+### Lector notes
 
-### Download Images before course, prevent slow connections
+#### Download Images before course, prevent slow connections
 
 ```
 ./pull-images.sh
 ```
 
 If you want update list of used images in file `images.txt`, run `./save-image-list.sh` and remove locally built images.
+
+
+## Course
+
+Let's go ...
