@@ -740,3 +740,471 @@ docker run -ti --net my_bridge ondrejsika/curl nginx
 docker run -ti --net my_bridge ondrejsika/curl apache
 ```
 
+## Docker Compose, Machine, Swarm
+
+## Docker Compose
+
+### What is Docker Compose?
+
+__Docker Compose__ is a tool for defining and running multi-container Docker applications.
+
+With __Docker Compose__, you use a __Compose file__ to configure your application's services.
+
+### Install Docker Compose
+
+Docker Compose is part of Docker Desktop (Mac, Windows). Only on Linux, you have to install it:
+
+- <https://docs.docker.com/compose/install/>
+- <https://docs.docker.com/compose/completion/>
+
+### Example Compose File
+
+```yaml
+version: '3.7'
+services:
+  app:
+    build: .
+    ports:
+     - 8000:80
+  redis:
+    image: redis
+```
+
+Here is a compose file reference: <https://docs.docker.com/compose/compose-file/>
+
+### Service
+
+Service is a container running and managed by Docker Compose.
+
+## Common Compose File Attributes
+
+### Build
+
+Simple, just build path
+
+```yaml
+services:
+  app:
+    build: .
+```
+
+Extended form with every build configuration
+
+```yaml
+services:
+  app:
+    build:
+      context: ./app
+      dockerfile: ./app/docker/Dockerfile
+      args:
+        BUILD_NO: 1
+    image: reg.istry.cz/app
+```
+
+### Image
+
+Just pull & run image
+
+```yaml
+services:
+  app:
+    image: redis
+```
+
+### Port Forwarding
+
+```yaml
+services:
+  app:
+    ports:
+      - 8000:80
+```
+
+### Volume
+
+Volumes are very similar but there is a little difference
+
+```yaml
+services:
+  app:
+    volumes:
+      - /data1
+      - data:/data2
+      - ./data:/data3
+
+volumes:
+  data:
+```
+
+### Environment Variables
+
+```yaml
+services:
+  app:
+    environment:
+      RACK_ENV: development
+      SHOW: 'true'
+      SESSION_SECRET:
+```
+
+### Command
+
+```yaml
+services:
+  app:
+    command: ["python", "app.py"]
+
+```
+
+### Deploy
+
+This is ignored by Docker Compose. It's used by Docker Swarm (Docker native cluster).
+
+```yaml
+services:
+  app:
+    deploy:
+      placement:
+        constraints: [node.role == manager]
+```
+
+```yaml
+services:
+  app:
+    deploy:
+      mode: replicated
+      replicas: 4
+```
+
+## Create a Composite
+
+Clone this repository, cd to example an remove the `Dockerfile` & `docker-compose.yml`.
+
+```bash
+git clone https://github.com/ondrejsika/docker-training.git example--simple-compose
+cd example--simple-compose/examples/simple-compose
+rm Dockerfile docker-compose.yml
+
+```
+
+Now, we can create Docker compose and Compose File manually.
+
+Create `Dockerfile`:
+
+```bash
+cat > Dockerfile <<EOF
+FROM python:3.7-slim
+WORKDIR /app
+COPY requirements.txt .
+RUN pip install -r requirements.txt
+COPY . .
+CMD ["python", "app.py"]
+EXPOSE 80
+
+EOF
+
+```
+
+Create `docker-compose.yml`:
+
+```bash
+cat > docker-compose.yml <<EOF
+version: '3.7'
+services:
+    counter:
+        build: .
+        image: reg.istry.cz/examples/simple-compose/counter
+        ports:
+            - ${PORT:-80}:80
+        depends_on:
+            - redis
+    redis:
+        image: redis
+
+EOF
+
+```
+
+## Compose Commands
+
+- `docker-compose config` - validate & see final docker compose yaml
+- `docker-compose ps` - see all composite's containers
+- `docker-compose exec <service> <command>` - run something in container
+- `docker-compose version` - see version of `docker-compose` binary
+- `docker-compose logs [-f] [<service>]` - see logs
+
+### Build Compose
+
+Just build, don't run
+
+```
+docker-compose build
+```
+
+Build without cache
+
+```
+docker-compose build --no-cache
+```
+
+Build with args
+
+```
+docker-compose build --build-arg BUILD_NO=53
+```
+
+### Compose Up Arguments
+
+- `-d` - run in detached mode
+- `--force-recreate` - always create new cont.
+- `--build` - build on every run
+- `--no-build` - don't build, even images not exist
+- `--remove-orphans`
+- `--abort-on-container-exit`
+
+### Manage Compose
+
+- `docker-compose start [<service>]`
+- `docker-compose stop [<service>]`
+- `docker-compose restart [<service>]`
+- `docker-compose kill [<service>]`
+
+### Stop and Remove Compose
+
+```
+docker-compose down
+```
+
+### Scaling Compose
+
+```
+docker-compose up --scale <service>=<n>
+```
+
+## Docker Machine
+
+### What is Docker Machine?
+
+Docker Machine is a tool that lets you install Docker Engine on virtual hosts, and manage the hosts with docker-machine commands.
+
+You can use Machine to create Docker hosts on your local Mac or Windows box, on your company network, in your data center, or on cloud providers like AWS or Digital Ocean.
+
+### Install Docker Machine
+
+Docker Compose is part of Docker Desktop (Mac, Windows). Only on Linux, you have to install it:
+
+<https://docs.docker.com/machine/install-machine/>
+
+### Basic Machine Command
+
+- `docker-machine ls` - list machines
+- `docker-machine version` - show version
+
+### Create a Machine
+
+```
+docker-machine create [-d <driver>] <machine>
+```
+Example:
+
+```
+docker-machine create default
+docker-machine create --driver digitalocean ci
+```
+
+List of drivers: https://docs.docker.com/machine/drivers/
+
+### Get IP Address of Machine
+
+```
+docker-machine ip [<machine>]
+```
+
+Example:
+
+```
+docker-machine ip default
+docker-machine ip
+```
+
+### Connect Shell to the Machine
+
+```
+eval "$(docker-machine env [<machine>])"
+```
+
+Example
+
+```
+eval "$(docker-machine env default)"
+eval "$(docker-machine env)"
+```
+
+### Disconnect Shell from the Machine
+
+```
+eval "$(docker-machine env -u)"
+```
+
+### SSH to the Machine
+
+```
+docker-machine ssh [<machine>]
+```
+
+Example:
+
+```
+docker-machine ssh default
+docker-machine ssh
+```
+
+### Manage Machine
+
+- `docker-machine start [<machine>]`
+- `docker-machine stop [<machine>]`
+- `docker-machine restart [<machine>]`
+- `docker-machine kill [<machine>]`
+
+### Remove Machine
+
+```
+docker-machine rm <machine>
+```
+
+Example:
+
+```
+docker-machine rm default
+```
+
+## Docker Swarm
+
+### What is Docker Swarm?
+
+A native clustering system for Docker. It turns a pool of Docker hosts into a single, virtual host using an API proxy system. It is Docker's first container orchestration project that began in 2014. Combined with Docker Compose, it's a very convenient tool to manage containers.
+
+## Create a Swarm
+
+### Initialize Swarm
+
+```
+docker swarm init --advertise-addr <manager_ip>
+```
+
+```
+docker swarm init --advertise-addr 192.168.99.100
+```
+
+### Add Worker to Swarm
+
+```
+docker swarm join --token <token> <manager_ip>:2377
+```
+
+Example:
+
+```
+docker swarm join \
+    --token SWMTKN-1-49nj1cmql0...acrr2e7c \
+    192.168.99.100:2377
+```
+
+## Manage Swarm
+
+- `docker node ls` - list nodes
+- `docker node rm <node>` - remove node from swarm
+- `docker node ps [<node>]`- list swarm task
+- `docker node update ARGS <node>`
+
+
+## Deploy a Service to the Swarm
+
+```
+docker service create [ARGS] <image> [<command>]
+```
+
+Example:
+
+```
+docker service create --name ping debian ping oxs.cz
+```
+
+## Manage Services
+
+- `docker service ls`
+- `docker service inspect <service>`
+- `docker service ps <service>`
+- `docker service scale <service>=<n>`
+- `docker service rm <service>`
+
+### Scale the Service
+
+```
+docker service scale <service>=<n>
+```
+
+Example:
+
+```
+docker service scale ping=5
+```
+
+## Stacks (Composes) in Swarm
+
+### Build & Push
+
+Swarm (also Kubernetes) can't build the images, you have to build and push to registry first.
+
+```bash
+# Build
+docker-compose build
+# Push
+docker-compose push
+```
+
+### Deploy App to Swarm
+
+```
+docker stack deploy \
+    --compose-file <compose-file> \
+    <stack>
+```
+
+Example:
+
+```
+docker stack deploy \
+    --compose-file docker-compose.yml \
+    counter
+```
+
+### Load Balancing
+
+Test from host:
+
+```
+curl `docker-machine ip manager`
+curl `docker-machine ip manager`
+curl `docker-machine ip worker1`
+curl `docker-machine ip worker1`
+curl `docker-machine ip worker2`
+```
+
+### Manage Stacks
+
+- `docker stack ls`
+- `docker stack services <stack>`
+- `docker stack ps <stack>`
+- `docker stack rm <stack>`
+
+## Thank you & Questions
+
+### Ondrej Sika
+
+- email:	<ondrej@sika.io>
+- web:	<https://ondrejsika.com>
+- twitter: 	[@ondrejsika](https://twitter.com/ondrejsika)
+- linkedin:	[/in/ondrejsika/](https://linkedin.com/in/ondrejsika/)
+
+_Do you like the course? Write me recommendation on Twitter (with handle `@ondrejsika`) and LinkedIn (add me [/in/ondrejsika](https://www.linkedin.com/in/ondrejsika/) and I'll send you request for recommendation). __Thanks__._
