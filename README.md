@@ -99,6 +99,7 @@ Containers run in same kernel as host - it is not possible use different OS or k
 
 - Official installation - <https://docs.docker.com/engine/installation/>
 - My install instructions (in Czech) - <https://ondrej-sika.cz/docker/instalace/>
+- Bash Completion on Mac - <https://blog.alexellis.io/docker-mac-bash-completion/>
 
 ## Test the installation
 
