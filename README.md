@@ -95,6 +95,23 @@ Containers run in same kernel as host - it is not possible use different OS or k
 - Kubernetes ([Kubernetes Training](https://github.com/ondrejsika/kubernetes-training))
 - Swarm
 
+## Docker Editions (CE / EE)
+
+### Docker Engine Community
+
+Docker CE is ideal for individual developers and small teams looking to get started with Docker and experimenting with container-based apps.
+
+### Docker Engine Enterprise
+
+Docker Engine - Enterprise is designed for enterprise development of a container runtime with security and an enterprise grade SLA in mind.
+
+### Docker Enterprise
+
+Docker Enterprise is designed for enterprise development and IT teams who build, ship, and run business critical applications in production at scale.
+
+Source: https://docs.docker.com/install/overview/
+
+
 ## Install Docker
 
 - Official installation - <https://docs.docker.com/engine/installation/>
