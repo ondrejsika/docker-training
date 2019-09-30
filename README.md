@@ -779,6 +779,69 @@ You can enable BuildKit by default in Docker config file `/etc/docker/daemon.jso
 
 More about BuildKit: <https://docs.docker.com/develop/develop-images/build_enhancements/>
 
+## Entrypoint vs Command
+
+### Dockerized tool (echo)
+
+You have your tool (echo) with default configuration (in command).
+
+```bash
+cat > Dockerfile.1 <<EOF
+FROM debian:10
+CMD ["echo", "hello", "world"]
+
+EOF
+
+```
+
+Build
+
+```bash
+docker build -t echo:1 -f Dockerfile.1 .
+```
+
+Run
+
+```bash
+# default command
+docker run --rm echo:1
+
+# updated command (didn't work)
+docker run --rm echo:1 ahoj svete
+
+# properly updated command
+docker run --rm echo:1 echo ahoj svete
+```
+
+You can split command array to command and entrypoint like:
+
+```bash
+cat > Dockerfile.2 <<EOF
+FROM debian:10
+ENTRYPOINT ["echo"]
+CMD ["hello", "world"]
+
+EOF
+
+```
+
+Build
+
+```bash
+docker build -t echo:2 -f Dockerfile.2 .
+```
+
+Run
+
+```bash
+# default command (same)
+docker run --rm echo:2
+
+# updated command (works)
+docker run --rm echo:2 ahoj svete
+```
+
+
 ## Docker Networks
 
 Docker support those network drivers:
