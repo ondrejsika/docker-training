@@ -258,6 +258,17 @@ docker logs my-debian
 docker logs -f mydebian  # following
 ```
 
+### Log Drivers
+
+You can use native Docker logging or some log drivers.
+
+For example, if you want to log into syslog, you can use `--log-driver syslog`.
+
+You can send logs directly to ELK (EFK) or Graylog using __gelf__. For elk logging you have to use `--log-driver gelf –-log-opt gelf-address=udp://1.2.3.4:12201`.
+
+See the logging docs: <https://docs.docker.com/config/containers/logging/configure/>
+
+
 ## Docker Inspect
 
 Get lots of information about container in JSON.
