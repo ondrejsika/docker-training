@@ -257,6 +257,21 @@ Examples
 - `docker run -ti -v my-volume:/data debian`
 - `docker run -ti -v $(pwd)/my-data:/data debian`
 
+### Read only volumes
+
+If you want to mount your volumes __read only__, you have to add `:ro` to volume argument.
+
+Examples
+
+- `docker run -ti -v my-volume:/data:ro debian`
+- `docker run -ti -v $(pwd)/my-data:/data:ro debian`
+
+First example does't make sense read only.
+
+### Socket forwading
+
+If you want to forward socket into conteiner, you can also use volume. If you work with sockets, read only parameters doesn't work.
+
 ## Port Forwarding
 
 Docker can forward specific port from container to host
