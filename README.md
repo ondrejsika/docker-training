@@ -825,6 +825,8 @@ services:
 
 Here is a compose file reference: <https://docs.docker.com/compose/compose-file/>
 
+Here is a nice tutorial for YAML: <https://learnxinyminutes.com/docs/yaml/>
+
 ### Service
 
 Service is a container running and managed by Docker Compose.
