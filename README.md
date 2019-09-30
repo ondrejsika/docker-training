@@ -308,6 +308,7 @@ To make image use command `docker build`
 - `VOLUME <path>` - define volume
 - `ENTRYPOINT <command>` - executable
 - `CMD <command>` - parameters for entrypoint
+- `EXPOSE <port>` - Define on which port the conteiner will be listening
 
 ## .dockerignore
 
@@ -361,6 +362,7 @@ RUN rm -rf /var/lib/apt/lists/*
 COPY . .
 RUN pip3 install -r requirements.txt
 CMD python3 app.py
+EXPOSE 80
 
 EOF
 ```
@@ -397,6 +399,7 @@ RUN apt update && \
 COPY . .
 RUN pip3 install -r requirements.txt
 CMD python3 app.py
+EXPOSE 80
 
 EOF
 ```
@@ -429,6 +432,7 @@ RUN apt update && \
 COPY . .
 RUN pip3 install -r requirements.txt
 CMD python3 app.py
+EXPOSE 80
 
 EOF
 ```
@@ -462,6 +466,7 @@ COPY requirements.txt .
 RUN pip3 install -r requirements.txt
 COPY . .
 CMD python3 app.py
+EXPOSE 80
 
 EOF
 ```
@@ -491,6 +496,7 @@ COPY requirements.txt .
 RUN pip3 install -r requirements.txt
 COPY . .
 CMD ["python3", "app.py"]
+EXPOSE 80
 
 EOF
 ```
@@ -603,6 +609,7 @@ WORKDIR /app
 COPY app.go .
 RUN go build app.go
 CMD ["./app"]
+EXPOSE 80
 
 EOF
 
@@ -641,6 +648,7 @@ RUN go build app.go
 FROM debian:10
 COPY --from=build /build/app .
 CMD ["/app"]
+EXPOSE 80
 
 EOF
 
@@ -683,6 +691,7 @@ RUN go build -a -ldflags \
 FROM scratch
 COPY --from=build /build/app .
 CMD ["/app"]
+EXPOSE 80
 
 EOF
 
