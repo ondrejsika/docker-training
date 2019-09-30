@@ -741,6 +741,32 @@ docker image ls multistage-image
 
 ![](images/image-size-multistage.png)
 
+## Docker BuildKit
+
+Docker has new build tool called BuildKit which can speedup your builds. For example, it build multiple stages in prallel and more. You can also extend Dockerfile functionality for caches, mounts, ...
+
+To enable BuildKit, just set environment variable `DOCKER_BUILDKIT` to `1`.
+
+Example
+
+```
+export DOCKER_BUILDKIT=1
+docker build .
+```
+
+or
+
+```
+DOCKER_BUILDKIT=1 docker build .
+```
+
+You can enable BuildKit by default in Docker config file `/etc/docker/daemon.json`:
+
+```
+{ "features": { "buildkit": true } }
+```
+
+More about BuildKit: <https://docs.docker.com/develop/develop-images/build_enhancements/>
 
 ## Docker Networks
 
