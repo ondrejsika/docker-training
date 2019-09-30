@@ -191,6 +191,17 @@ docker run -ti debian
 - `-ti` - map TTY a STDIN (for bash eg.)
 - `-e <variable>=<value>` - set ENV variable
 
+## Restart Policy
+
+By default, if container process stop (or fail), contailner will be stopped.
+
+You can choose another behavion using argument `--restart <restart policy>`.
+
+- `--restart on-failure` - restart only when container return non zero return code
+- `--restart always` - always, even on Docker daemon restart (server restart also)
+- `--restart unless-stopped` - similar to always, but keep stopped container stopped on Docker daemon restart (server restart also)
+
+
 ## List Containers
 
 - `docker ps` - list running containers
