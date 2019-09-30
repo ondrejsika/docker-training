@@ -38,7 +38,7 @@ Write me mail to <ondrej@ondrejsika.com>
 - https://github.com/ondrejsika/kubernetes-install-bare-metal
 
 
-### Lector notes
+### Lecturer notes
 
 #### Download Images before course, prevent slow connections
 
