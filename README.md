@@ -190,8 +190,6 @@ docker run -ti debian
 - `-d` - run in detached mode
 - `-ti` - map TTY a STDIN (for bash eg.)
 - `-e <variable>=<value>` - set ENV variable
-- `-h <hostname>` - set hostname
-- `-u <user>` - run command by specific user
 
 ## List Containers
 
