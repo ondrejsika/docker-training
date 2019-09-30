@@ -159,6 +159,17 @@ Docker image name also contains location of it source. Those names can be used:
 - `ondrejsika/debian` - User (custom) images on Docker Hub
 - `reg.istry.cz/debian` - Image in my own registry
 
+### Own Docker Registry
+
+If you have Gitlab, Docker reqistry is build in.
+
+You can run registry manually using this command:
+
+```
+docker run -d -p 5000:5000 --restart=always --name registry registry:2
+```
+
+See full deployment configuration here: <https://docs.docker.com/registry/deploying/>
 
 ## Docker Run
 
