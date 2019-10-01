@@ -1397,3 +1397,7 @@ You can fix it by setting Google or Cloudflare DNS to `/etc/docker/daemon.json`:
 ```json
 {"dns":["1.1.1.", "8.8.8.8"]}
 ```
+
+### Can I use Docker Compose and Build Kit Together?
+
+No. But they are work on it...
