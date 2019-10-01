@@ -1,4 +1,4 @@
-[sika.io](https://sika.io) | <ondrej@sika.io> | [go to course ->](#course) | [install docker ->](#install-docker)
+[sika.io](https://which.sika.io) | <ondrej@sika.io> | [go to course ->](#course) | [install docker ->](#install-docker)
 
 ![](images/docker_github.svg)
 
@@ -11,18 +11,12 @@ My Docker course with code examples.
 
 ## About Course
 
-### Docker training in Czech Republic
-
-- [ondrej-sika.cz/skoleni/docker](https://ondrej-sika.cz/skoleni/docker?_s=gh-dte)
-- [skoleni-docker.cz](https://skoleni-docker.cz/?_s=gh-dte)
-
-### Docker training in Europe
-
-- [ondrej-sika.com/training/docker](https://ondrej-sika.com/training/docker?_s=gh-dte)
+- [Docker Training in Czech Republic](https://ondrej-sika.cz/skoleni/docker?_s=gh-dte)
+- [Docker Training in Europe](https://ondrej-sika.com/training/docker?_s=gh-dte)
 
 ### Any Questions?
 
-Write me mail to <ondrej@ondrejsika.com>
+Write me mail to <ondrej@sika.io>
 
 
 ### Related Repositories
@@ -35,7 +29,7 @@ Write me mail to <ondrej@ondrejsika.com>
 #### Related courses
 
 - https://github.com/ondrejsika/kubernetes-training-examples
-- https://github.com/ondrejsika/kubernetes-install-bare-metal
+- https://github.com/ondrejsika/bare-metal-kubernetes
 
 
 ### Lecturer notes
