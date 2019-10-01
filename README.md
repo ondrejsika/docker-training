@@ -1368,3 +1368,32 @@ curl `docker-machine ip worker2`
 - linkedin:	[/in/ondrejsika/](https://linkedin.com/in/ondrejsika/)
 
 _Do you like the course? Write me recommendation on Twitter (with handle `@ondrejsika`) and LinkedIn (add me [/in/ondrejsika](https://www.linkedin.com/in/ondrejsika/) and I'll send you request for recommendation). __Thanks__._
+
+
+## Docker FAQ
+
+### DNS Troubles in Docker Build
+
+If you see something like that, it may be caused by DNS server trouble.
+
+![FAQ DNS Trouble](images/faq-dns-trouble.png)
+
+You can check see your DNS server using:
+
+```
+docker run debian cat /etc/resolv.conf
+```
+
+Or check if it works:
+
+```
+docker run ondrejsika/host google.com
+```
+
+![FAQ DNS Trouble 2](images/faq-dns-trouble-2.png)
+
+You can fix it by setting Google or Cloudflare DNS to `/etc/docker/daemon.json`:
+
+```json
+{"dns":["1.1.1.", "8.8.8.8"]}
+```
