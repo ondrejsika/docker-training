@@ -29,5 +29,6 @@ python:3.7
 python:3.7-slim
 redis:latest
 registry:2
+traefik:1.7
 traefik:latest
 ubuntu:latest
