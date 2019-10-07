@@ -302,13 +302,13 @@ If you want to forward socket into conteiner, you can also use volume. If you wo
 Docker can forward specific port from container to host
 
 ```
-docker run -p <host port>:<cont. port> nginx
+docker run -p <host port>:<cont. port> <image>
 ```
 
 You can specify an address on the host as well
 
 ```
-docker run -p <host address>:<host port>:<cont. port> nginx
+docker run -p <host address>:<host port>:<cont. port> <image>
 ```
 
 Examples
