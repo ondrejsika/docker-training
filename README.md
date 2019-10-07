@@ -450,7 +450,7 @@ Let's update the Dockerfile again. Install only required not recommended package
 cat > Dockerfile.3 <<EOF
 FROM debian:10
 WORKDIR /app
-RUN echo 'APT::Install-Recommends "0";\nAPT::Install-Suggests "0";' > /etc/apt/apt.conf
+RUN echo 'APT::Install-Recommends "0";\nAPT::Install-Suggests "0";' > /etc/apt/apt.conf.d/99recommends
 RUN apt-get update && \
     apt-get install -y python3 python3-pip && \
     rm -rf /var/lib/apt/lists/*
@@ -483,7 +483,7 @@ Let's update the Dockerfile for better caching.
 cat > Dockerfile.4 <<EOF
 FROM debian:10
 WORKDIR /app
-RUN echo 'APT::Install-Recommends "0";\nAPT::Install-Suggests "0";' > /etc/apt/apt.conf
+RUN echo 'APT::Install-Recommends "0";\nAPT::Install-Suggests "0";' > /etc/apt/apt.conf.d/99recommends
 RUN apt-get update && \
     apt-get install -y python3 python3-pip && \
     rm -rf /var/lib/apt/lists/*
