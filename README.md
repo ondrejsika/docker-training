@@ -305,11 +305,20 @@ Docker can forward specific port from container to host
 docker run -p <host port>:<cont. port> nginx
 ```
 
-Example
+You can specify an address on the host as well
+
+```
+docker run -p <host address>:<host port>:<cont. port> nginx
+```
+
+Examples
 
 ```
 docker run -ti -p 8080:80 nginx
+docker run -ti -p 127.0.0.1:8080:80 nginx
 ```
+
+The latter will make connection possible only from localhost.
 
 See <http://127.0.0.1:8080>
 
