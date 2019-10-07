@@ -1,10 +1,10 @@
 version: '3.7'
 services:
-    counter:
-        build: counter
-        image: reg.istry.cz/dte/startup-order/counter
-        depends_on:
-            - redis
-    redis:
-        build: redis
-        image: reg.istry.cz/dte/startup-order/redis
+  counter:
+    build: counter
+    image: reg.istry.cz/dte/startup-order/counter
+    depends_on:
+      - redis
+  redis:
+    build: redis
+    image: reg.istry.cz/dte/startup-order/redis

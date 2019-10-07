@@ -1,6 +1,6 @@
 version: '3.7'
 services:
-    test:
-        build: test
-        depends_on:
-            - counter
+  test:
+    build: test
+    depends_on:
+      - counter

@@ -1,11 +1,11 @@
 version: '3.7'
 services:
-    counter:
-        build: .
-        image: reg.istry.cz/dte/simple-compose/counter
-        ports:
-            - ${PORT:-80}:80
-        depends_on:
-            - redis
-    redis:
-        image: redis
+  counter:
+    build: .
+    image: reg.istry.cz/dte/simple-compose/counter
+    ports:
+      - ${PORT:-80}:80
+    depends_on:
+      - redis
+  redis:
+    image: redis

@@ -1,12 +1,12 @@
 version: '3.7'
 services:
-    counter:
-        build: .
-        image: reg.istry.cz/dte/multiple-composes/counter
-        depends_on:
-            - redis
-        labels:
-            traefik.enable: true
-            traefik.frontend.rule: Host:localhost
-    redis:
-        image: redis
+  counter:
+    build: .
+    image: reg.istry.cz/dte/multiple-composes/counter
+    depends_on:
+      - redis
+    labels:
+      traefik.enable: true
+      traefik.frontend.rule: Host:localhost
+  redis:
+    image: redis
