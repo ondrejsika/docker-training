@@ -1,4 +1,4 @@
-[sika.io](https://which.sika.io) | <ondrej@sika.io> | [go to course ->](#course) | [install docker ->](#install-docker)
+[Ondrej Sika (sika.io)](https://which.sika.io) | <ondrej@sika.io> | [go to course ->](#course) | [install docker ->](#install-docker)
 
 ![](images/docker_github.svg)
 
