@@ -1,7 +1,7 @@
 version: '3.7'
 services:
   traefik:
-    image: traefik
+    image: traefik:1.7
     command: |
       --web \
       --docker \
