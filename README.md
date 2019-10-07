@@ -381,8 +381,8 @@ There are few steps, how to get propper Dockerfile.
 cat > Dockerfile.1 <<EOF
 FROM debian:10
 WORKDIR /app
-RUN apt update
-RUN apt install -y python3 python3-pip
+RUN apt-get update
+RUN apt-get install -y python3 python3-pip
 RUN rm -rf /var/lib/apt/lists/*
 COPY . .
 RUN pip3 install -r requirements.txt
@@ -418,8 +418,8 @@ Let's update the Dockerfile
 cat > Dockerfile.2 <<EOF
 FROM debian:10
 WORKDIR /app
-RUN apt update && \
-    apt install -y python3 python3-pip && \
+RUN apt-get update && \
+    apt-get install -y python3 python3-pip && \
     rm -rf /var/lib/apt/lists/*
 COPY . .
 RUN pip3 install -r requirements.txt
@@ -451,8 +451,8 @@ cat > Dockerfile.3 <<EOF
 FROM debian:10
 WORKDIR /app
 RUN echo 'APT::Install-Recommends "0";\nAPT::Install-Suggests "0";' > /etc/apt/apt.conf
-RUN apt update && \
-    apt install -y python3 python3-pip && \
+RUN apt-get update && \
+    apt-get install -y python3 python3-pip && \
     rm -rf /var/lib/apt/lists/*
 COPY . .
 RUN pip3 install -r requirements.txt
@@ -484,8 +484,8 @@ cat > Dockerfile.4 <<EOF
 FROM debian:10
 WORKDIR /app
 RUN echo 'APT::Install-Recommends "0";\nAPT::Install-Suggests "0";' > /etc/apt/apt.conf
-RUN apt update && \
-    apt install -y python3 python3-pip && \
+RUN apt-get update && \
+    apt-get install -y python3 python3-pip && \
     rm -rf /var/lib/apt/lists/*
 COPY requirements.txt .
 RUN pip3 install -r requirements.txt
@@ -564,8 +564,8 @@ FROM $FROM_IMAGE
 ```dockerfile
 FROM debian
 ARG $PYTHON_VERSION=3.7
-RUN apt update && \
-    apt install python==$PYTHON_VERSION
+RUN apt-get update && \
+    apt-get install python==$PYTHON_VERSION
 ```
 
 Build using
@@ -795,7 +795,7 @@ cat > Dockerfile.1 <<EOF
 FROM ubuntu
 RUN rm -f /etc/apt/apt.conf.d/docker-clean; echo 'Binary::apt::APT::Keep-Downloaded-Packages "true";' > /etc/apt/apt.conf.d/keep-cache
 RUN --mount=type=cache,target=/var/cache/apt --mount=type=cache,target=/var/lib/apt \
-  apt update && apt install -y python gcc
+  apt-get update && apt-get install -y python gcc
 
 EOF
 
@@ -815,7 +815,7 @@ cat > Dockerfile.2 <<EOF
 FROM ubuntu
 RUN rm -f /etc/apt/apt.conf.d/docker-clean; echo 'Binary::apt::APT::Keep-Downloaded-Packages "true";' > /etc/apt/apt.conf.d/keep-cache
 RUN --mount=type=cache,target=/var/cache/apt --mount=type=cache,target=/var/lib/apt \
-  apt update && apt install -y gcc
+  apt-get update && apt-get install -y gcc
 
 EOF
 
