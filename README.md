@@ -765,6 +765,18 @@ or
 DOCKER_BUILDKIT=1 docker build .
 ```
 
+If you are on Windows, you can set variable in PowerShell
+
+```powershell
+Set-Variable -Name "DOCKER_BUILDKIT" -Value "1"
+```
+
+and in CMD
+
+```cmd
+SET DOCKER_BUILDKIT=1
+```
+
 You can enable BuildKit by default in Docker config file `/etc/docker/daemon.json`:
 
 ```
