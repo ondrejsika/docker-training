@@ -771,6 +771,52 @@ You can enable BuildKit by default in Docker config file `/etc/docker/daemon.jso
 { "features": { "buildkit": true } }
 ```
 
+Docker Build Kit comes with new syntax of Dockerfile.
+
+Here is a description of Dockerfile frontend experimental syntaxes - <https://github.com/moby/buildkit/blob/master/frontend/dockerfile/docs/experimental.md>
+
+Example
+
+```
+cat > Dockerfile.1 <<EOF
+# syntax = docker/dockerfile:experimental
+FROM ubuntu
+RUN rm -f /etc/apt/apt.conf.d/docker-clean; echo 'Binary::apt::APT::Keep-Downloaded-Packages "true";' > /etc/apt/apt.conf.d/keep-cache
+RUN --mount=type=cache,target=/var/cache/apt --mount=type=cache,target=/var/lib/apt \
+  apt update && apt install -y python gcc
+
+EOF
+
+```
+
+Build
+
+```
+docker build -t buildkit-example-1 -f Dockerfile.1 .
+```
+
+Another Dockerfile which use APT cached packages
+
+```
+cat > Dockerfile.2 <<EOF
+# syntax = docker/dockerfile:experimental
+FROM ubuntu
+RUN rm -f /etc/apt/apt.conf.d/docker-clean; echo 'Binary::apt::APT::Keep-Downloaded-Packages "true";' > /etc/apt/apt.conf.d/keep-cache
+RUN --mount=type=cache,target=/var/cache/apt --mount=type=cache,target=/var/lib/apt \
+  apt update && apt install -y gcc
+
+EOF
+
+```
+
+Build
+
+```
+docker build -t buildkit-example-2 -f Dockerfile.2 .
+```
+
+See, packages are in APT cache, no download is needed.
+
 More about BuildKit: <https://docs.docker.com/develop/develop-images/build_enhancements/>
 
 ## Entrypoint vs Command
