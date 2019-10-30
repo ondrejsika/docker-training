@@ -7,6 +7,7 @@ debian:latest
 docker/dockerfile:1.0-experimental
 docker:latest
 golang:latest
+google/cadvisor:latest
 hello-world:latest
 httpd:latest
 mysql:latest
