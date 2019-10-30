@@ -120,6 +120,18 @@ docker run hello-world
 
 ![](images/test-the-installation.png)
 
+### Remote Docker (over SSH)
+
+You can use remote Docker using SSH. Just export varibale `DOCKER_HOST` with `ssh://root@docker.sikademo.com` and your local Docker clint will be executed on docker.sikademo.com server.
+
+```
+export DOCKER_HOST=ssh://root@docker.sikademo.com
+docker version
+docker info
+```
+
+You can connect Docker using TCP socker, see chapter [Connect Shell to the Machine](#connect-shell-to-the-machine)
+
 
 ## Basic Usage
 
@@ -1264,6 +1276,7 @@ docker-machine ip
 ```
 
 ### Connect Shell to the Machine
+<!-- permanent link connect-shell-to-the-machine -->
 
 ```
 eval "$(docker-machine env [<machine>])"
