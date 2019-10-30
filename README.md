@@ -1026,6 +1026,16 @@ Service is a container running and managed by Docker Compose.
 
 ## Common Compose File Attributes
 
+### Image
+
+Just pull & run image
+
+```yaml
+services:
+  app:
+    image: redis
+```
+
 ### Build
 
 Simple, just build path
@@ -1047,16 +1057,6 @@ services:
       args:
         BUILD_NO: 1
     image: reg.istry.cz/app
-```
-
-### Image
-
-Just pull & run image
-
-```yaml
-services:
-  app:
-    image: redis
 ```
 
 ### Port Forwarding
