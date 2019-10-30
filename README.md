@@ -1111,6 +1111,24 @@ services:
       SESSION_SECRET:
 ```
 
+### YAML Anchors
+
+```yaml
+x-base: &base
+  image: debian
+  command: ['env']
+
+services:
+  en:
+    <<: *base
+    environment:
+      HELLO: Hello
+  cs:
+    <<: *base
+    environment:
+      HELLO: Hello
+```
+
 ### Deploy
 
 This is ignored by Docker Compose. It's used by Docker Swarm (Docker native cluster).
