@@ -605,7 +605,7 @@ See [Build Args](examples/build-args) example.
 
 ```dockerfile
 FROM java-jdk as build
-RUN grade assembly
+RUN gradle assembly
 
 FROM java-jre
 COPY --from=build /build/demo.jar .
