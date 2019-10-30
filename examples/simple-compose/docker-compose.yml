@@ -9,3 +9,8 @@ services:
       - redis
   redis:
     image: redis
+    volume:
+      - redis-data:/data
+
+volumes:
+  redis-data:
