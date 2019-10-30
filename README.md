@@ -1091,6 +1091,15 @@ volumes:
   data:
 ```
 
+### Command
+
+```yaml
+services:
+  app:
+    command: ["python", "app.py"]
+
+```
+
 ### Environment Variables
 
 ```yaml
@@ -1100,15 +1109,6 @@ services:
       RACK_ENV: development
       SHOW: 'true'
       SESSION_SECRET:
-```
-
-### Command
-
-```yaml
-services:
-  app:
-    command: ["python", "app.py"]
-
 ```
 
 ### Deploy
