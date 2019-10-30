@@ -235,8 +235,11 @@ Arguments
 Example
 
 ```
-docker run --name db -d postgres
-docker exec -ti -u postgres db psql
+docker run --name db11 -d postgres:11
+docker exec -ti -u postgres db11 psql
+
+docker run --name db12 -d postgres:12
+docker exec -ti -u postgres db12 psql
 ```
 
 ## Docker Logs
