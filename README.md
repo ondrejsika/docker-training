@@ -106,6 +106,13 @@ Docker Enterprise is designed for enterprise development and IT teams who build,
 Source: https://docs.docker.com/install/overview/
 
 
+## 12 Factor Apps
+
+[12factor.net](https://12factor.net)
+
+Set of 12 rules how to write modern applications.
+
+
 ## Install Docker
 
 - Official installation - <https://docs.docker.com/engine/installation/>
