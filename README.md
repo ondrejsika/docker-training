@@ -820,6 +820,12 @@ You can enable BuildKit by default in Docker config file `/etc/docker/daemon.jso
 { "features": { "buildkit": true } }
 ```
 
+BuildKit has interactive output by default, if you can use plan, for example for CI, use:
+
+```
+docker build --progress=plain .
+```
+
 Docker Build Kit comes with new syntax of Dockerfile.
 
 Here is a description of Dockerfile frontend experimental syntaxes - <https://github.com/moby/buildkit/blob/master/frontend/dockerfile/docs/experimental.md>
