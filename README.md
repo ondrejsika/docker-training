@@ -1157,6 +1157,8 @@ services:
 
 ## Create a Composite
 
+See [simple compose example](examples/simple-compose)
+
 Clone this repository, cd to example an remove the `Dockerfile` & `docker-compose.yml`.
 
 ```bash
