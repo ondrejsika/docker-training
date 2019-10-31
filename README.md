@@ -1234,6 +1234,17 @@ Build with args
 docker-compose build --build-arg BUILD_NO=53
 ```
 
+### Docker BuildKit & Docker Compose
+
+Docker Compose doesn't support BuildKit yet. They are working on it.
+
+It's because Docker Compose is written in Python and Python Docker client it doesn't support yet.
+
+See:
+
+- https://github.com/docker/docker-py/issues/2230
+- https://github.com/docker/compose/issues/6440
+
 ### Compose Up Arguments
 
 - `-d` - run in detached mode
