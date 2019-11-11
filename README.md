@@ -149,7 +149,7 @@ An __image__ is an inert, immutable, file that's essentially a snapshot of a con
 ## System Wide Info
 
 - `docker version` - print version
-- `docker info` - system vide information
+- `docker info` - system wide information
 - `docker system df` - docker disk usage
 - `docker system prune` - cleanup unused data
 
