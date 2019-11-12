@@ -785,7 +785,7 @@ docker image ls multistage-image
 
 ## Docker BuildKit
 
-Docker has new build tool called BuildKit which can speedup your builds. For example, it build multiple stages in prallel and more. You can also extend Dockerfile functionality for caches, mounts, ...
+Docker has new build tool called BuildKit which can speedup your builds. For example, it build multiple stages in parallel and more. You can also extend Dockerfile functionality for caches, mounts, ...
 
 To enable BuildKit, just set environment variable `DOCKER_BUILDKIT` to `1`.
 
