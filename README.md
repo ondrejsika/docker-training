@@ -137,7 +137,7 @@ docker version
 docker info
 ```
 
-You can connect Docker using TCP socker, see chapter [Connect Shell to the Machine](#connect-shell-to-the-machine)
+You can connect Docker using TCP socket, see chapter [Connect Shell to the Machine](#connect-shell-to-the-machine)
 
 
 ## Basic Usage
