@@ -10,7 +10,7 @@ services:
       traefik.frontend.rule: Host:localhost
   redis:
     image: redis
-    volume:
+    volumes:
       - redis-data:/data
 
 volumes:
