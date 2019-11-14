@@ -325,6 +325,10 @@ First example does't make sense read only.
 
 If you want to forward socket into conteiner, you can also use volume. If you work with sockets, read only parameters doesn't work.
 
+```
+docker run -v /var/run/docker.sock:/var/run/docker.sock -ti docker
+```
+
 ## Port Forwarding
 
 Docker can forward specific port from container to host
