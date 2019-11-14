@@ -604,7 +604,7 @@ FROM $FROM_IMAGE
 
 ```dockerfile
 FROM debian
-ARG $PYTHON_VERSION=3.7
+ARG PYTHON_VERSION=3.7
 RUN apt-get update && \
     apt-get install python==$PYTHON_VERSION
 ```
