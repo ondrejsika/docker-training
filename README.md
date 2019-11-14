@@ -217,7 +217,7 @@ docker run -ti debian
 
 ## Restart Policy
 
-By default, if container process stop (or fail), contailner will be stopped.
+By default, if container process stop (or fail), container will be stopped.
 
 You can choose another behavion using argument `--restart <restart policy>`.
 
@@ -323,7 +323,7 @@ First example does't make sense read only.
 
 ### Socket forwading
 
-If you want to forward socket into conteiner, you can also use volume. If you work with sockets, read only parameters doesn't work.
+If you want to forward socket into container, you can also use volume. If you work with sockets, read only parameter doesn't work.
 
 ```
 docker run -v /var/run/docker.sock:/var/run/docker.sock -ti docker
