@@ -1424,7 +1424,7 @@ docker service create [ARGS] <image> [<command>]
 Example:
 
 ```
-docker service create --name ping debian ping oxs.cz
+docker service create --name hello -p 80:80 ondrejsika/go-hello-world:2
 ```
 
 ## Manage Services
