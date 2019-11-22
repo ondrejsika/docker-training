@@ -174,7 +174,7 @@ Docker image name also contains location of it source. Those names can be used:
 
 ### Own Docker Registry
 
-If you have Gitlab, Docker reqistry is build in.
+__Docker Registry__ is build in __Gitlab__ and __Github__ for no additional cost. You can find it in packages section.
 
 You can run registry manually using this command:
 
