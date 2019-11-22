@@ -388,6 +388,8 @@ __Dockerfile__ defines each layer of image by some command.
 
 To make image use command `docker build`
 
+## Dockerfile Commands
+
 - `FROM <image>` - define base image
 - `RUN <command>` - run command and save as layer
 - `COPY <local path> <image path>` - copy file or directory to image layer
