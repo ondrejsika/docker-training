@@ -278,11 +278,16 @@ docker exec -ti -u postgres pg12 psql
 docker logs [-f] <container>
 ```
 
+Args
+
+- `-f` - following output (similar to `tail -f ...`)
+
 Examples
 
 ```
-docker logs my-debian
-docker logs -f mydebian  # following
+docker run --name loop -d ondrejsika/infinite-counter
+docker logs loop
+docker logs -f loop
 ```
 
 ### Log Drivers
