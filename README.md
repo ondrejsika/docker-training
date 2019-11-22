@@ -346,6 +346,13 @@ If you want to forward socket into container, you can also use volume. If you wo
 docker run -v /var/run/docker.sock:/var/run/docker.sock -ti docker
 ```
 
+### !! Possible Security Risk !!
+
+__You can mount your's host rootfs to container with root privileges. Everybody ho has access to docker or docker socket has root privileges on your host.__
+
+`docker run -v /:/rootfs -ti debian`
+
+
 ## Port Forwarding
 
 Docker can forward specific port from container to host
