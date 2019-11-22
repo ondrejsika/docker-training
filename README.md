@@ -398,8 +398,7 @@ To make image use command `docker build`
 - `USER <user>` - switch user
 - `WORKDIR <path>` - change working directory
 - `VOLUME <path>` - define volume
-- `ENTRYPOINT <command>` - executable
-- `CMD <command>` - parameters for entrypoint
+- `CMD <command>` - command we want to run on container start up. Difference between `CMD` and `ENTRYPOINT` will be exaplain [later](#entrypoint-vs-command)
 - `EXPOSE <port>` - Define on which port the conteiner will be listening
 
 ## .dockerignore
