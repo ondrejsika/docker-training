@@ -193,8 +193,14 @@ docker run <image> [<command>]
 Examples
 
 ```
+# Basic Docker Run
 docker run hello-world
-docker run debian date
+
+# With custom command
+docker run debian cat /etc/os-release
+docker run ubuntu cat /etc/os-release
+
+# With TTY & Standart Input
 docker run -ti debian
 ```
 
