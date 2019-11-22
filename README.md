@@ -210,7 +210,6 @@ docker run -ti debian
 - `docker start <container>`
 - `docker stop <container>`
 - `docker restart <container>`
-- `docker logs <container>` - show STDOUT & STDERR
 - `docker rm <container>` - remove container
 
 ## Common Docker Run Params
