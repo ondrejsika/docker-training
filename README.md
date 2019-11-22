@@ -314,6 +314,13 @@ docker inspect <container>
 - Volumes are persistent data storage for containers.
 - Volumes can be shared between containers and data are written directly to host.
 
+CLI
+
+- `docker volume` - all volume management commands
+- `docker volume ls` - list all volumes
+- `docker volume rm <volume>` - remove volume
+- `docker volume prune` - remove all not used (not bount to container) volumes
+
 Examples
 
 - `docker run -ti -v /data debian`
