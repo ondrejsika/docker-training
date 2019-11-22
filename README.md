@@ -406,7 +406,7 @@ To make image use command `docker build`
 - Ignore files for docker build process.
 - Similar to `.gitignore`
 
-Example of `.dockerignore`
+Example of `.dockerignore` for Next.js (Node) project
 
 ```.dockerignore
 Dockerfile
