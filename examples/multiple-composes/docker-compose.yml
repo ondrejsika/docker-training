@@ -7,7 +7,7 @@ services:
       - redis
     labels:
       traefik.enable: true
-      traefik.frontend.rule: Host:localhost
+      traefik.frontend.rule: Host:${HOST:-localhost}
   redis:
     image: redis
     volumes:
