@@ -1066,6 +1066,38 @@ Here is a nice tutorial for YAML: <https://learnxinyminutes.com/docs/yaml/>
 
 Service is a container running and managed by Docker Compose.
 
+## Run Docker Compose
+
+```
+docker-compose up [ARGS] [<service>, ...]
+```
+
+Example
+
+```
+docker-compose up
+```
+
+## Build Compose
+
+Just build, don't run
+
+```
+docker-compose build
+```
+
+Build without cache
+
+```
+docker-compose build --no-cache
+```
+
+Build with args
+
+```
+docker-compose build --build-arg BUILD_NO=53
+```
+
 ## Common Compose File Attributes
 
 ### Image
@@ -1243,37 +1275,6 @@ EOF
 - `docker-compose version` - see version of `docker-compose` binary
 - `docker-compose logs [-f] [<service>]` - see logs
 
-### Build Compose
-
-Just build, don't run
-
-```
-docker-compose build
-```
-
-Build without cache
-
-```
-docker-compose build --no-cache
-```
-
-Build with args
-
-```
-docker-compose build --build-arg BUILD_NO=53
-```
-
-### Docker BuildKit & Docker Compose
-
-Docker Compose doesn't support BuildKit yet. They are working on it.
-
-It's because Docker Compose is written in Python and Python Docker client it doesn't support yet.
-
-See:
-
-- https://github.com/docker/docker-py/issues/2230
-- https://github.com/docker/compose/issues/6440
-
 ### Compose Up Arguments
 
 - `-d` - run in detached mode
@@ -1301,6 +1302,18 @@ docker-compose down
 ```
 docker-compose up --scale <service>=<n>
 ```
+
+### Docker BuildKit & Docker Compose
+
+Docker Compose doesn't support BuildKit yet. They are working on it.
+
+It's because Docker Compose is written in Python and Python Docker client it doesn't support yet.
+
+See:
+
+- https://github.com/docker/docker-py/issues/2230
+- https://github.com/docker/compose/issues/6440
+
 
 ## Docker Machine
 
