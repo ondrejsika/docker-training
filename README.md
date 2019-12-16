@@ -350,8 +350,43 @@ docker run -v /var/run/docker.sock:/var/run/docker.sock -ti docker
 
 __You can mount your's host rootfs to container with root privileges. Everybody ho has access to docker or docker socket has root privileges on your host.__
 
+__userns-remap can fix that__
+
 `docker run -v /:/rootfs -ti debian`
 
+## userns-remap
+
+Docker can remap root user from container to hight-number user on host.
+
+More: <https://docs.docker.com/engine/security/userns-remap/>
+
+### Enabble userns-remap
+
+dockerd argument
+
+```
+dockerd --userns-remap="default"
+```
+
+Config `/etc/docker/daemon.json`
+
+```json
+{
+  "userns-remap": "default"
+}
+```
+
+### Examples
+
+```
+docker run -v /:/rootfs -ti debian cat /rootfs/etc/shadow
+```
+
+```
+docker run -v /:/rootfs -ti --userns=host debian cat /rootfs/etc/shadow
+```
+
+![docker-userns-remap-example](images/docker-userns-remap-example.png)
 
 ## Port Forwarding
 
