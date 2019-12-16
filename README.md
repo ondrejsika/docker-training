@@ -219,6 +219,7 @@ docker run -ti debian
 - `-d` - run in detached mode
 - `-ti` - map TTY a STDIN (for bash eg.)
 - `-e <variable>=<value>` - set ENV variable
+- `--env-file=<env_file>` - load all variables defined in ENV file
 
 ## Restart Policy
 
@@ -1211,6 +1212,16 @@ services:
       RACK_ENV: development
       SHOW: 'true'
       SESSION_SECRET:
+```
+
+ENV Files
+
+```yaml
+services:
+  app:
+    env_files:
+      - default.env
+      - prod.env
 ```
 
 ### YAML Anchors
