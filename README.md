@@ -156,7 +156,7 @@ An __image__ is an inert, immutable, file that's essentially a snapshot of a con
 
 ## Docker Images
 
-- `docker pull <imaage>` - download an image
+- `docker pull <image>` - download an image
 - `docker image ls` - list all images
 - `docker image ls -q` - quiet output, just IDs
 - `docker image ls <image>` - list image versions
