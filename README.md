@@ -1469,7 +1469,7 @@ docker service scale <service>=<n>
 Example:
 
 ```
-docker service scale ping=5
+docker service scale hello=5
 ```
 
 ## Stacks (Composes) in Swarm
