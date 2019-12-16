@@ -1549,6 +1549,12 @@ docker stack deploy \
     counter
 ```
 
+If you have multiple composes, you can prepare deployment using docker-compose and deploy it using pipe.
+
+```
+docker-compose config | docker stack deploy --compose-file - counter
+```
+
 ### Load Balancing
 
 Test from host:
