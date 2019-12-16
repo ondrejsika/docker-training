@@ -187,7 +187,7 @@ See full deployment configuration here: <https://docs.docker.com/registry/deploy
 ## Docker Run
 
 ```
-docker run <image> [<command>]
+docker run [ARGS] <image> [<command>]
 ```
 
 Examples
