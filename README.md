@@ -1590,7 +1590,7 @@ curl `docker-machine ip worker2`
 ### Ondrej Sika
 
 - email:	<ondrej@sika.io>
-- web:	<https://ondrejsika.com>
+- web:	<https://sika.io>
 - twitter: 	[@ondrejsika](https://twitter.com/ondrejsika)
 - linkedin:	[/in/ondrejsika/](https://linkedin.com/in/ondrejsika/)
 
