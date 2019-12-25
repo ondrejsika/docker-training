@@ -1103,6 +1103,21 @@ docker run -ti --net my_bridge ondrejsika/curl nginx
 docker run -ti --net my_bridge ondrejsika/curl apache
 ```
 
+
+## Portainer
+
+Portainer is a web UI for Docker & Docker Swarm.
+
+Homepage: [portainer.io](https://www.portainer.io/)
+
+
+### Run Portainer
+
+```
+docker run -d --name portainer -p 8000:8000 -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer
+```
+
+
 ## Docker Compose, Machine, Swarm
 
 ## Docker Compose
