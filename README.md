@@ -378,6 +378,18 @@ Examples
 
 First example does't make sense read only.
 
+### Find Containers Which Use Specific Volume
+
+```
+docker ps -a --filter volume=<volume>
+```
+
+Example
+
+```
+docker ps -a --filter volume=my-volume
+```
+
 ### Socket forwading
 
 If you want to forward socket into container, you can also use volume. If you work with sockets, read only parameter doesn't work.
