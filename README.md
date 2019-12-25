@@ -1052,6 +1052,10 @@ docker run --rm echo:2
 docker run --rm echo:2 ahoj svete
 ```
 
+### Entrypoint Example - Postgress with Default Data
+
+Example [Postgress with Default Data](examples/postgres-default-data)
+
 
 ## Docker Networks
 
