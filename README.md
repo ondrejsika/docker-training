@@ -184,6 +184,45 @@ docker run -d -p 5000:5000 --restart=always --name registry registry:2
 
 See full deployment configuration here: <https://docs.docker.com/registry/deploying/>
 
+### Registry Client - Reg
+
+I use [reg](https://github.com/genuinetools/reg) for CLI and Web client. Work only with open source registry, Docker Hub use different API.
+
+#### Install Reg
+
+Mac
+
+```
+brew install reg
+```
+
+#### CLI
+
+```
+reg ls <registry>
+```
+
+Example
+
+```
+reg ls reg.istry.cz
+```
+
+#### Web
+
+```
+reg server -r <registry>
+```
+
+Example
+
+```
+reg server -r reg.istry.cz
+```
+
+See <http://127.0.0.1:8080>
+
+
 ## Docker Run
 
 ```
