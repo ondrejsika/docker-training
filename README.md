@@ -395,6 +395,12 @@ docker ps -a --filter volume=my-volume
 If you want to forward socket into container, you can also use volume. If you work with sockets, read only parameter doesn't work.
 
 ```
+docker run -v /var/run/docker.sock:/var/run/docker.sock docker docker ps
+```
+
+or
+
+```
 docker run -v /var/run/docker.sock:/var/run/docker.sock -ti docker
 ```
 
