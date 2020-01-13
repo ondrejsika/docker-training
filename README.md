@@ -530,7 +530,7 @@ Let's create Dockerfile together.
 
 There are few steps, how to get propper Dockerfile.
 
-```bash
+```Dockerfile
 cat > Dockerfile.1 <<EOF
 FROM debian:10
 WORKDIR /app
@@ -567,7 +567,7 @@ docker rm -f simple-image
 
 Let's update the Dockerfile
 
-```bash
+```Dockerfile
 cat > Dockerfile.2 <<EOF
 FROM debian:10
 WORKDIR /app
@@ -599,7 +599,7 @@ docker rm -f simple-image
 
 Let's update the Dockerfile again. Install only required not recommended packages.
 
-```bash
+```Dockerfile
 cat > Dockerfile.3 <<EOF
 FROM debian:10
 WORKDIR /app
@@ -632,7 +632,7 @@ docker rm -f simple-image
 
 Let's update the Dockerfile for better caching.
 
-```bash
+```Dockerfile
 cat > Dockerfile.4 <<EOF
 FROM debian:10
 WORKDIR /app
@@ -666,7 +666,7 @@ docker rm -f simple-image
 
 Final touch. Source image and CMD.
 
-```bash
+```Dockerfile
 cat > Dockerfile.5 <<EOF
 FROM python:3.7-slim
 WORKDIR /app
@@ -780,7 +780,7 @@ Or download file [app.go](https://raw.githubusercontent.com/ondrejsika/docker-tr
 
 ### Standard Image
 
-```bash
+```Dockerfile
 cat > Dockerfile.1 <<EOF
 FROM golang
 WORKDIR /app
@@ -816,7 +816,7 @@ docker image ls multistage-image
 
 ### Multistage Image (based on Debian)
 
-```bash
+```Dockerfile
 cat > Dockerfile.2 <<EOF
 FROM golang as build
 WORKDIR /build
@@ -857,7 +857,7 @@ docker image ls multistage-image
 
 If you build you Go app to static binary (no dynamic dependencies), you can create image from scratch - without OS.
 
-```bash
+```Dockerfile
 cat > Dockerfile.3 <<EOF
 FROM golang as build
 WORKDIR /build
@@ -932,7 +932,7 @@ SET DOCKER_BUILDKIT=1
 
 You can enable BuildKit by default in Docker config file `/etc/docker/daemon.json`:
 
-```
+```json
 { "features": { "buildkit": true } }
 ```
 
@@ -948,7 +948,7 @@ Here is a description of Dockerfile frontend experimental syntaxes - <https://gi
 
 Example
 
-```
+```Dockerfile
 cat > Dockerfile.1 <<EOF
 # syntax = docker/dockerfile:experimental
 FROM ubuntu
@@ -968,7 +968,7 @@ docker build -t buildkit-example-1 -f Dockerfile.1 .
 
 Another Dockerfile which use APT cached packages
 
-```
+```Dockerfile
 cat > Dockerfile.2 <<EOF
 # syntax = docker/dockerfile:experimental
 FROM ubuntu
@@ -996,7 +996,7 @@ More about BuildKit: <https://docs.docker.com/develop/develop-images/build_enhan
 
 You have your tool (echo) with default configuration (in command).
 
-```bash
+```Dockerfile
 cat > Dockerfile.1 <<EOF
 FROM debian:10
 CMD ["echo", "hello", "world"]
@@ -1026,7 +1026,7 @@ docker run --rm echo:1 echo ahoj svete
 
 You can split command array to command and entrypoint like:
 
-```bash
+```Dockerfile
 cat > Dockerfile.2 <<EOF
 FROM debian:10
 ENTRYPOINT ["echo"]
@@ -1349,7 +1349,7 @@ Now, we can create Docker compose and Compose File manually.
 
 Create `Dockerfile`:
 
-```bash
+```Dockerfile
 cat > Dockerfile <<EOF
 FROM python:3.7-slim
 WORKDIR /app
