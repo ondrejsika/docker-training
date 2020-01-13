@@ -1440,6 +1440,12 @@ docker-compose down
 docker-compose up --scale <service>=<n>
 ```
 
+### Docker Compose Override
+
+If you want override your `docker-compose.yml`, you can use `-f` param for multiple compose files. You can also create `docker-compose.override.yml` which will be used automatically.
+
+See [compose-override](examples/compose-override) example.
+
 ### Docker BuildKit & Docker Compose
 
 Docker Compose doesn't support BuildKit yet. They are working on it.
