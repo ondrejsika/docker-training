@@ -1310,7 +1310,7 @@ ENV Files
 ```yaml
 services:
   app:
-    env_files:
+    env_file:
       - default.env
       - prod.env
 ```
