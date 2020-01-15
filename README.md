@@ -190,11 +190,7 @@ I use [reg](https://github.com/genuinetools/reg) for CLI and Web client. Work on
 
 #### Install Reg
 
-Mac
-
-```
-brew install reg
-```
+From their release page on Github: <https://github.com/genuinetools/reg/releases>
 
 #### CLI
 
