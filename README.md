@@ -706,6 +706,50 @@ docker image ls simple-image
 
 ![](images/image-sizes.png)
 
+## Hadolint
+
+Hadolint is Dockerfile linter.
+
+### Install & Use Hadolint
+
+Install on Mac
+
+```
+brew install hadolint
+```
+
+Use hadolint
+
+```bash
+hadolint <dockerfile>
+```
+
+You can ignore checks & specify trusted registries
+
+```bash
+hadolint --ignore DL3003 --ignore DL3006 <dockerfile> # exclude specific rules
+hadolint --trusted-registry registry.sikademo.com <dockerfile>
+```
+
+### Use from Docker
+
+You can also use Hadolint from Docker
+
+```
+docker run --rm -i hadolint/hadolint < Dockerfile
+```
+
+You can setup alias `hadolint`:
+
+```
+alias hadolint="docker run --rm -i hadolint/hadolint <"
+```
+
+And use it:
+
+```
+hadolint Dockerfile
+```
 
 ## Build Arguments
 
