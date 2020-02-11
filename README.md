@@ -1468,6 +1468,19 @@ EOF
 - `docker-compose restart [<service>]`
 - `docker-compose kill [<service>]`
 
+### `docker-compose up` vs `docker-compose run`
+
+`docker-compose up`
+
+- run all services (or multiple selected services)
+- you can't specify command, volums, environment from cli arguments
+
+`docker-compose run`
+
+- run only one service
+- run dependencies on background
+- you can specify command, volums, environment from cli arguments
+
 ### Stop and Remove Compose
 
 ```
