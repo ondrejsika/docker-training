@@ -9,3 +9,5 @@ end_of_line = lf
 max_line_length = null
 [images.txt]
 insert_final_newline = false
+[*.py]
+indent_size = 4
