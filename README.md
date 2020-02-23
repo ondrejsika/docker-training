@@ -544,156 +544,44 @@ See [Simple Image](examples/simple-image) example
 ### Get Source
 
 ```
-wget https://raw.githubusercontent.com/ondrejsika/docker-training/master/examples/simple-image/app.py
-wget https://raw.githubusercontent.com/ondrejsika/docker-training/master/examples/simple-image/requirements.txt
+git clone https://github.com/ondrejsika/docker-training
+cd examples/simple-image
+rm Dockerfile Dockerfile.debian
 ```
 
-Or download files [app.py](https://raw.githubusercontent.com/ondrejsika/docker-training/master/examples/simple-image/app.py), [requirements.txt](https://raw.githubusercontent.com/ondrejsika/docker-training/master/examples/simple-image/requirements.txt) manually.
-
-### Create Dockerfile
-
-Let's create Dockerfile together.
-
-There are few steps, how to get propper Dockerfile.
+### Create Dockerfile (Debian Based)
 
 ```Dockerfile
-cat > Dockerfile.1 <<EOF
-FROM debian:10
-WORKDIR /app
-RUN apt-get update
-RUN apt-get install -y python3 python3-pip
-RUN rm -rf /var/lib/apt/lists/*
-COPY . .
-RUN pip3 install -r requirements.txt
-CMD python3 app.py
-EXPOSE 80
-
-EOF
-```
-
-Build
-
-```
-docker build -t simple-image:1 -f Dockerfile.1 .
-```
-
-Run
-
-```
-docker run --name simple-image -d -p 8000:80 simple-image:1
-```
-
-See <http://127.0.0.1:8000>
-
-Stop & remove container
-
-```
-docker rm -f simple-image
-```
-
-Let's update the Dockerfile
-
-```Dockerfile
-cat > Dockerfile.2 <<EOF
 FROM debian:10
 WORKDIR /app
 RUN apt-get update && \
-    apt-get install -y python3 python3-pip && \
-    rm -rf /var/lib/apt/lists/*
-COPY . .
-RUN pip3 install -r requirements.txt
-CMD python3 app.py
-EXPOSE 80
-
-EOF
-```
-
-Build & Run
-
-```
-docker build -t simple-image:2 -f Dockerfile.2 .
-docker run --name simple-image -d -p 8000:80 simple-image:2
-```
-
-See <http://127.0.0.1:8000>
-
-Stop & remove container
-
-```
-docker rm -f simple-image
-```
-
-Let's update the Dockerfile again. Install only required not recommended packages.
-
-```Dockerfile
-cat > Dockerfile.3 <<EOF
-FROM debian:10
-WORKDIR /app
-RUN echo 'APT::Install-Recommends "0";\nAPT::Install-Suggests "0";' > /etc/apt/apt.conf.d/99recommends
-RUN apt-get update && \
-    apt-get install -y python3 python3-pip && \
-    rm -rf /var/lib/apt/lists/*
-COPY . .
-RUN pip3 install -r requirements.txt
-CMD python3 app.py
-EXPOSE 80
-
-EOF
-```
-
-Build & Run
-
-```
-docker build -t simple-image:3 -f Dockerfile.3 .
-docker run --name simple-image -d -p 8000:80 simple-image:3
-```
-
-See <http://127.0.0.1:8000>
-
-Stop & remove container
-
-```
-docker rm -f simple-image
-```
-
-Let's update the Dockerfile for better caching.
-
-```Dockerfile
-cat > Dockerfile.4 <<EOF
-FROM debian:10
-WORKDIR /app
-RUN echo 'APT::Install-Recommends "0";\nAPT::Install-Suggests "0";' > /etc/apt/apt.conf.d/99recommends
-RUN apt-get update && \
-    apt-get install -y python3 python3-pip && \
+    apt-get install -y --no-install-recommends python3 python3-pip && \
     rm -rf /var/lib/apt/lists/*
 COPY requirements.txt .
 RUN pip3 install -r requirements.txt
 COPY . .
-CMD python3 app.py
+CMD ["python3", "app.py"]
 EXPOSE 80
-
-EOF
 ```
 
-Build & Run
+#### Build & Run
 
 ```
-docker build -t simple-image:4 -f Dockerfile.4 .
-docker run --name simple-image -d -p 8000:80 simple-image:4
+docker build -t simple-image .
+docker run --name simple-image -d -p 8000:80 simple-image
 ```
 
 See <http://127.0.0.1:8000>
 
-Stop & remove container
+#### Stop & remove container
 
 ```
 docker rm -f simple-image
 ```
 
-Final touch. Source image and CMD.
+### Create Dockerfile (Debian Based)
 
 ```Dockerfile
-cat > Dockerfile.5 <<EOF
 FROM python:3.7-slim
 WORKDIR /app
 COPY requirements.txt .
@@ -701,20 +589,18 @@ RUN pip3 install -r requirements.txt
 COPY . .
 CMD ["python3", "app.py"]
 EXPOSE 80
-
-EOF
 ```
 
-Build & Run
+#### Build & Run
 
 ```
-docker build -t simple-image:5 -f Dockerfile.5 .
-docker run --name simple-image -d -p 8000:80 simple-image:5
+docker build -t simple-image .
+docker run --name simple-image -d -p 8000:80 simple-image
 ```
 
 See <http://127.0.0.1:8000>
 
-Stop & remove container
+#### Stop & remove container
 
 ```
 docker rm -f simple-image
@@ -842,31 +728,25 @@ See [Multistage Image](examples/multistage-image) example
 ### Get Source
 
 ```
-wget https://raw.githubusercontent.com/ondrejsika/docker-training/master/examples/multistage-image/app.go
+cd ../multistage-image
+rm Dockerfile
 ```
-
-Or download file [app.go](https://raw.githubusercontent.com/ondrejsika/docker-training/master/examples/multistage-image/app.go) manually.
-
 
 ### Standard Image
 
 ```Dockerfile
-cat > Dockerfile.1 <<EOF
 FROM golang
 WORKDIR /app
 COPY app.go .
 RUN go build app.go
 CMD ["./app"]
 EXPOSE 80
-
-EOF
-
 ```
 
 Build & Run
 
 ```
-docker build -t multistage-image:1 -f Dockerfile.1 .
+docker build -t multistage-image:1 .
 docker run --name multistage-image -d -p 8000:80 multistage-image:1
 ```
 
@@ -887,7 +767,6 @@ docker image ls multistage-image
 ### Multistage Image (based on Debian)
 
 ```Dockerfile
-cat > Dockerfile.2 <<EOF
 FROM golang as build
 WORKDIR /build
 COPY app.go .
@@ -897,15 +776,12 @@ FROM debian:10
 COPY --from=build /build/app .
 CMD ["/app"]
 EXPOSE 80
-
-EOF
-
 ```
 
 Build & Run
 
 ```
-docker build -t multistage-image:2 -f Dockerfile.2 .
+docker build -t multistage-image:2 .
 docker run --name multistage-image -d -p 8000:80 multistage-image:2
 ```
 
@@ -928,7 +804,6 @@ docker image ls multistage-image
 If you build you Go app to static binary (no dynamic dependencies), you can create image from scratch - without OS.
 
 ```Dockerfile
-cat > Dockerfile.3 <<EOF
 FROM golang as build
 WORKDIR /build
 COPY app.go .
@@ -940,16 +815,13 @@ FROM scratch
 COPY --from=build /build/app .
 CMD ["/app"]
 EXPOSE 80
-
-EOF
-
 ```
 
 
 Build & Run
 
 ```
-docker build -t multistage-image:3 -f Dockerfile.3 .
+docker build -t multistage-image:3 .
 docker run --name multistage-image -d -p 8000:80 multistage-image:3
 ```
 
@@ -1421,13 +1293,10 @@ services:
 
 See [simple compose example](examples/simple-compose)
 
-Clone this repository, cd to example an remove the `Dockerfile` & `docker-compose.yml`.
-
 ```bash
 git clone https://github.com/ondrejsika/docker-training.git example--simple-compose
-cd example--simple-compose/examples/simple-compose
+cd ../examples/simple-compose
 rm Dockerfile docker-compose.yml
-
 ```
 
 Now, we can create Docker compose and Compose File manually.
@@ -1435,7 +1304,6 @@ Now, we can create Docker compose and Compose File manually.
 Create `Dockerfile`:
 
 ```Dockerfile
-cat > Dockerfile <<EOF
 FROM python:3.7-slim
 WORKDIR /app
 COPY requirements.txt .
@@ -1443,15 +1311,11 @@ RUN pip install -r requirements.txt
 COPY . .
 CMD ["python", "app.py"]
 EXPOSE 80
-
-EOF
-
 ```
 
 Create `docker-compose.yml`:
 
-```bash
-cat > docker-compose.yml <<EOF
+```
 version: '3.7'
 services:
     counter:
@@ -1463,9 +1327,6 @@ services:
             - redis
     redis:
         image: redis
-
-EOF
-
 ```
 
 ## Compose Commands
