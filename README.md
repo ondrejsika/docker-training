@@ -1091,6 +1091,10 @@ docker run -ti nixery.dev/htop htop
 docker run -ti nixery.dev/shell/git/curl/mc bash
 ```
 
+## Thank you! & Questions?
+
+That's it. Do you have any questions? __Let's go for a beer!__
+
 ## Docker Compose, Machine, Swarm
 
 ## Docker Compose
