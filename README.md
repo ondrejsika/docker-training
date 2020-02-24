@@ -545,7 +545,7 @@ See [Simple Image](examples/simple-image) example
 
 ```
 git clone https://github.com/ondrejsika/docker-training
-cd examples/simple-image
+cd docker-training/examples/simple-image
 rm Dockerfile Dockerfile.debian
 ```
 
