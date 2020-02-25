@@ -650,18 +650,14 @@ You can also use Hadolint from Docker
 
 ```
 docker run --rm -i hadolint/hadolint < Dockerfile
+docker run --rm -i hadolint/hadolint hadolint --ignore DL3006 - < Dockerfile
 ```
 
-You can setup alias `hadolint`:
+or (for PowerShell)
 
 ```
-alias hadolint="docker run --rm -i hadolint/hadolint <"
-```
-
-And use it:
-
-```
-hadolint Dockerfile
+cat Dockerfile | docker run --rm -i hadolint/hadolint
+cat Dockerfile | docker run --rm -i hadolint/hadolint hadolint --ignore DL3006 -
 ```
 
 ## Build Arguments
