@@ -1274,7 +1274,7 @@ services:
   cs:
     <<: *base
     environment:
-      HELLO: Hello
+      HELLO: Ahoj
 ```
 
 ### Deploy
