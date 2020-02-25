@@ -290,6 +290,8 @@ You can choose another behavion using argument `--restart <restart policy>`.
 - `--restart always` - always, even on Docker daemon restart (server restart also)
 - `--restart unless-stopped` - similar to always, but keep stopped container stopped on Docker daemon restart (server restart also)
 
+If you want to set maximum restart count for `on-failure` restart policy, you can use: `--restart on-failure:<count>`
+
 
 ## List Containers
 
