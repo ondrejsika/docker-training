@@ -1303,7 +1303,7 @@ See [simple compose example](examples/simple-compose)
 
 ```bash
 git clone https://github.com/ondrejsika/docker-training.git example--simple-compose
-cd ../examples/simple-compose
+cd example--simple-compose/examples/simple-compose
 rm Dockerfile docker-compose.yml
 ```
 
