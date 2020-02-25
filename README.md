@@ -328,7 +328,7 @@ Example
 docker run --name pg11 -d postgres:11
 docker exec -ti -u postgres pg11 psql
 
-docker run --name pg12 -d postgres:12
+docker run --name pg12 -e POSTGRES_PASSWORD=pg -d postgres:12
 docker exec -ti -u postgres pg12 psql
 ```
 
