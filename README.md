@@ -1075,6 +1075,9 @@ Homepage: [portainer.io](https://www.portainer.io/)
 docker run -d --name portainer -p 8000:8000 -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer
 ```
 
+See: <http://127.0.0.1:9000>
+
+
 ## Nixery.dev
 
 Nixery.dev provides ad-hoc container images that contain packages from the Nix package manager. Images with arbitrary packages can be requested via the image name.
