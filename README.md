@@ -363,6 +363,20 @@ You can send logs directly to __ELK__ (EFK) or Graylog using __gelf__. For elk l
 See the logging docs: <https://docs.docker.com/config/containers/logging/configure/>
 
 
+### Json File (Default Log Driver)
+
+Log Driver options:
+
+- `max-size` - Max size of log file (default `-1` - unlimited), use for example `100k` for kB, `10m` for MB or `1g` for GB.
+- `max-file` - Nuber of log rotated files (default `1`)
+- `compress` - Compression for rotated logs (default `disabled`)
+
+Examle:
+
+```
+docker run --name log-rotation -d --log-opt max-size=1k --log-opt max-file=5 ondrejsika/log-rotation
+```
+
 ## Docker Inspect
 
 Get lots of information about container in JSON.
