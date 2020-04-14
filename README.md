@@ -208,6 +208,15 @@ docker run -d -p 5000:5000 --restart=always --name registry registry:2
 
 See full deployment configuration here: <https://docs.docker.com/registry/deploying/>
 
+### Docker Registry in Self-Hosted Gitlab
+
+You have to add `registry_external_url` to Your Gitlab config and reconfigure.
+
+```
+echo "registry_external_url 'registry.example.com'" >> /etc/gitlab/gitlab.rb
+gitlab-ctl reconfigure
+```
+
 ### Registry Client - Reg
 
 I use [reg](https://github.com/genuinetools/reg) for CLI and Web client. Work only with open source registry, Docker Hub use different API.
