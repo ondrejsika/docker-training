@@ -383,6 +383,20 @@ Get lots of information about container in JSON.
 docker inspect <container>
 ```
 
+### Inspect Format
+
+Using Go Template Language.
+
+Examples:
+
+```
+docker inspect log-rotation --format "{{.NetworkSettings.IPAddress}}"
+```
+
+```
+docker inspect log-rotation --format "{{.LogPath}}"
+```
+
 ## Docker Volumes
 
 - Volumes are persistent data storage for containers.
