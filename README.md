@@ -1357,7 +1357,6 @@ services:
 - `--build` - build on every run
 - `--no-build` - don't build, even images not exist
 - `--remove-orphans`
-- `--abort-on-container-exit`
 
 ### Manage Compose
 
