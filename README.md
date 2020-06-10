@@ -480,6 +480,23 @@ docker run -v /:/rootfs -ti --userns=host debian cat /rootfs/etc/shadow
 
 ![docker-userns-remap-example](images/docker-userns-remap-example.png)
 
+## Docker In Docker
+
+Run Docker in Docker
+
+```
+docker run --name docker -d --privileged docker:dind
+```
+
+Try run any Docker command in this container:
+
+```
+docker exec docker docker info
+docker exec docker docker image ls
+docker exec docker docker run hello-world
+docker exec -ti docker sh
+```
+
 ## Port Forwarding
 
 Docker can forward specific port from container to host
