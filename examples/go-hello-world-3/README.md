@@ -19,4 +19,3 @@ docker run -p 80:80 ondrejsika/go-hello-world:3
 ```
 
 Go <http://localhost>
-

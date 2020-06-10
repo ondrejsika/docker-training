@@ -18,7 +18,6 @@ My Docker course with code examples.
 
 Write me mail to <ondrej@sika.io>
 
-
 ### Related Repositories
 
 #### Traefik
@@ -31,7 +30,6 @@ Write me mail to <ondrej@sika.io>
 - https://github.com/ondrejsika/kubernetes-training-examples
 - https://github.com/ondrejsika/bare-metal-kubernetes
 
-
 ### Lecturer notes
 
 #### Download Images before course, prevent slow connections
@@ -42,12 +40,11 @@ Write me mail to <ondrej@sika.io>
 
 If you want update list of used images in file `images.txt`, run `./save-image-list.sh` and remove locally built images.
 
-
 ## Course
 
 ## About Me - Ondrej Sika
 
-__Freelance DevOps Engineer, Consultant & Lecturer__
+**Freelance DevOps Engineer, Consultant & Lecturer**
 
 - Complete DevOps Pipeline
 - Open Source / Linux Stack
@@ -68,13 +65,11 @@ For sharing links & "secrets".
 
 <https://tlk.io/sika-docker>
 
-
 ## What is Docker?
 
 Docker is an open-source project that automates the deployment of applications inside software containers ...
 
 Docker containers wrap up a piece of software in a complete filesystem that contains everything it needs to run: code, runtime, system tools, system libraries – anything you can install on a server.
-
 
 ## Containers vs virtualization
 
@@ -129,13 +124,11 @@ Docker Enterprise is designed for enterprise development and IT teams who build,
 
 Source: https://docs.docker.com/install/overview/
 
-
 ## 12 Factor Apps
 
 [12factor.net](https://12factor.net)
 
 Set of 12 rules how to write modern applications.
-
 
 ## Install Docker
 
@@ -163,12 +156,11 @@ docker info
 
 You can connect Docker using TCP socket, see chapter [Connect Shell to the Machine](#connect-shell-to-the-machine)
 
-
 ## Basic Usage
 
 ## Image and Container
 
-An __image__ is an inert, immutable, file that's essentially a snapshot of a container. Images are created with the build command, and they'll produce a __container__ when started with run. Images are stored in a Docker registry.
+An **image** is an inert, immutable, file that's essentially a snapshot of a container. Images are created with the build command, and they'll produce a **container** when started with run. Images are stored in a Docker registry.
 
 ## System Wide Info
 
@@ -176,7 +168,6 @@ An __image__ is an inert, immutable, file that's essentially a snapshot of a con
 - `docker info` - system wide information
 - `docker system df` - docker disk usage
 - `docker system prune` - cleanup unused data
-
 
 ## Docker Images
 
@@ -198,7 +189,7 @@ Docker image name also contains location of it source. Those names can be used:
 
 ### Own Docker Registry
 
-__Docker Registry__ is build in __Gitlab__ and __Github__ for no additional cost. You can find it in packages section.
+**Docker Registry** is build in **Gitlab** and **Github** for no additional cost. You can find it in packages section.
 
 You can run registry manually using this command:
 
@@ -251,7 +242,6 @@ reg server -r reg.istry.cz
 
 See <http://127.0.0.1:8080>
 
-
 ## Docker Run
 
 ```
@@ -301,7 +291,6 @@ You can choose another behavion using argument `--restart <restart policy>`.
 
 If you want to set maximum restart count for `on-failure` restart policy, you can use: `--restart on-failure:<count>`
 
-
 ## List Containers
 
 - `docker ps` - list running containers
@@ -315,6 +304,7 @@ docker rm -f $(docker ps -a -q)
 ```
 
 or my `dra` (docker remove all) alias
+
 ```
 alias dra='docker ps -a  -q | xargs docker rm -f'
 dra
@@ -367,10 +357,9 @@ You can use native Docker logging or some log drivers.
 
 For example, if you want to log into syslog, you can use `--log-driver syslog`.
 
-You can send logs directly to __ELK__ (EFK) or Graylog using __gelf__. For elk logging you have to use `--log-driver gelf –-log-opt gelf-address=udp://1.2.3.4:12201`.
+You can send logs directly to **ELK** (EFK) or Graylog using **gelf**. For elk logging you have to use `--log-driver gelf –-log-opt gelf-address=udp://1.2.3.4:12201`.
 
 See the logging docs: <https://docs.docker.com/config/containers/logging/configure/>
-
 
 ### Json File (Default Log Driver)
 
@@ -414,7 +403,7 @@ Examples
 
 ### Read only volumes
 
-If you want to mount your volumes __read only__, you have to add `:ro` to volume argument.
+If you want to mount your volumes **read only**, you have to add `:ro` to volume argument.
 
 Examples
 
@@ -451,9 +440,9 @@ docker run -v /var/run/docker.sock:/var/run/docker.sock -ti docker
 
 ### !! Possible Security Risk !!
 
-__You can mount your's host rootfs to container with root privileges. Everybody ho has access to docker or docker socket has root privileges on your host.__
+**You can mount your's host rootfs to container with root privileges. Everybody ho has access to docker or docker socket has root privileges on your host.**
 
-__userns-remap can fix that__
+**userns-remap can fix that**
 
 `docker run -v /:/rootfs -ti debian`
 
@@ -520,9 +509,9 @@ See <http://127.0.0.1:8080>
 
 ## Dockerfile
 
-__Dockerfile__ is preferred way to create images.
+**Dockerfile** is preferred way to create images.
 
-__Dockerfile__ defines each layer of image by some command.
+**Dockerfile** defines each layer of image by some command.
 
 To make image use command `docker build`
 
@@ -558,7 +547,6 @@ node_modules
 - `docker build <path> -t <image>` - build image
 - `docker build <path> -f <dockerfile> -t <image>`
 - `docker tag <source image> <target image>` - rename docker image
-
 
 ## Practice
 
@@ -646,7 +634,6 @@ docker image ls simple-image
 Hadolint is Dockerfile linter.
 
 Github: <https://github.com/hadolint/hadolint>
-
 
 ### Install & Use Hadolint
 
@@ -840,7 +827,6 @@ COPY --from=build /build/app .
 CMD ["/app"]
 EXPOSE 80
 ```
-
 
 Build & Run
 
@@ -1085,13 +1071,11 @@ docker run -ti --net my_bridge ondrejsika/curl nginx
 docker run -ti --net my_bridge ondrejsika/curl apache
 ```
 
-
 ## Portainer
 
 Portainer is a web UI for Docker & Docker Swarm.
 
 Homepage: [portainer.io](https://www.portainer.io/)
-
 
 ### Run Portainer
 
@@ -1100,7 +1084,6 @@ docker run -d --name portainer -p 8000:8000 -p 9000:9000 -v /var/run/docker.sock
 ```
 
 See: <http://127.0.0.1:9000>
-
 
 ## Nixery.dev
 
@@ -1120,7 +1103,7 @@ docker run -ti nixery.dev/shell/git/curl/mc bash
 
 ## Thank you! & Questions?
 
-That's it. Do you have any questions? __Let's go for a beer!__
+That's it. Do you have any questions? **Let's go for a beer!**
 
 ## Docker Compose, Machine, Swarm
 
@@ -1128,9 +1111,9 @@ That's it. Do you have any questions? __Let's go for a beer!__
 
 ### What is Docker Compose?
 
-__Docker Compose__ is a tool for defining and running multi-container Docker applications.
+**Docker Compose** is a tool for defining and running multi-container Docker applications.
 
-With __Docker Compose__, you use a __Compose file__ to configure your application's services.
+With **Docker Compose**, you use a **Compose file** to configure your application's services.
 
 ### Install Docker Compose
 
@@ -1142,12 +1125,12 @@ Docker Compose is part of Docker Desktop (Mac, Windows). Only on Linux, you have
 ### Example Compose File
 
 ```yaml
-version: '3.7'
+version: "3.7"
 services:
   app:
     build: .
     ports:
-     - 8000:80
+      - 8000:80
   redis:
     image: redis
 ```
@@ -1258,7 +1241,6 @@ volumes:
 services:
   app:
     command: ["python", "app.py"]
-
 ```
 
 ### Environment Variables
@@ -1268,7 +1250,7 @@ services:
   app:
     environment:
       RACK_ENV: development
-      SHOW: 'true'
+      SHOW: "true"
       SESSION_SECRET:
 ```
 
@@ -1287,7 +1269,7 @@ services:
 ```yaml
 x-base: &base
   image: debian
-  command: ['env']
+  command: ["env"]
 
 services:
   en:
@@ -1426,7 +1408,6 @@ See:
 - https://github.com/docker/docker-py/issues/2230
 - https://github.com/docker/compose/issues/6440
 
-
 ## Docker Machine
 
 ### What is Docker Machine?
@@ -1451,6 +1432,7 @@ Docker Compose is part of Docker Desktop (Mac, Windows). Only on Linux, you have
 ```
 docker-machine create [-d <driver>] <machine>
 ```
+
 Example:
 
 ```
@@ -1474,6 +1456,7 @@ docker-machine ip
 ```
 
 ### Connect Shell to the Machine
+
 <!-- permanent link connect-shell-to-the-machine -->
 
 ```
@@ -1564,7 +1547,6 @@ docker swarm join \
 - `docker node ps [<node>]`- list swarm task
 - `docker node update ARGS <node>`
 
-
 ## Deploy a Service to the Swarm
 
 ```
@@ -1653,17 +1635,17 @@ curl `docker-machine ip worker2`
 
 ## Thank you! & Questions?
 
-That's it. Do you have any questions? __Let's go for a beer!__
+That's it. Do you have any questions? **Let's go for a beer!**
 
 ### Ondrej Sika
 
 - email: <ondrej@sika.io>
 - web: <https://sika.io>
 - twitter: [@ondrejsika](https://twitter.com/ondrejsika)
-- linkedin:	[/in/ondrejsika/](https://linkedin.com/in/ondrejsika/)
+- linkedin: [/in/ondrejsika/](https://linkedin.com/in/ondrejsika/)
 - Newsletter, Slack, Facebook & Linkedin Groups: <https://join.sika.io>
 
-_Do you like the course? Write me recommendation on Twitter (with handle `@ondrejsika`) and LinkedIn (add me [/in/ondrejsika](https://www.linkedin.com/in/ondrejsika/) and I'll send you request for recommendation). __Thanks__._
+_Do you like the course? Write me recommendation on Twitter (with handle `@ondrejsika`) and LinkedIn (add me [/in/ondrejsika](https://www.linkedin.com/in/ondrejsika/) and I'll send you request for recommendation). **Thanks**._
 
 Wanna to go for a beer or do some work together? Just [book me](https://book-me.sika.io) :)
 
@@ -1692,7 +1674,7 @@ docker run ondrejsika/host google.com
 You can fix it by setting Google or Cloudflare DNS to `/etc/docker/daemon.json`:
 
 ```json
-{"dns":["1.1.1.", "8.8.8.8"]}
+{ "dns": ["1.1.1.", "8.8.8.8"] }
 ```
 
 ### Can I use Docker Compose and Build Kit Together?

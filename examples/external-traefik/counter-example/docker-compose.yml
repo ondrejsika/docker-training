@@ -1,4 +1,4 @@
-version: '3.7'
+version: "3.7"
 services:
   counter:
     build: .
@@ -17,8 +17,8 @@ services:
     networks:
       - backend
 networks:
-    backend:
-      internal: true
-    traefik:
-        external:
-            name: traefik
+  backend:
+    internal: true
+  traefik:
+    external:
+      name: traefik

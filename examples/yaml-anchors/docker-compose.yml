@@ -1,4 +1,4 @@
-version: '3.7'
+version: "3.7"
 x-service-template: &service-template
   image: debian
   command: sh -c "env | grep DEMO"
@@ -11,10 +11,10 @@ services:
   service2:
     <<: *service-template
     environment:
-        <<: *environment-template
-        DEMO_C: 3
+      <<: *environment-template
+      DEMO_C: 3
   service3:
     <<: *service-template
     environment:
-        <<: *environment-template
-        DEMO_C: 4
+      <<: *environment-template
+      DEMO_C: 4
