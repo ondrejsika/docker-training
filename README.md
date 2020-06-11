@@ -1167,7 +1167,7 @@ docker run \
  --name=cadvisor \
  --privileged \
  --device=/dev/kmsg \
- gcr.io/google-containers/cadvisor:\$VERSION
+ gcr.io/google-containers/cadvisor:$VERSION
 ```
 
 Check out:
