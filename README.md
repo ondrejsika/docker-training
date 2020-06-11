@@ -1111,9 +1111,8 @@ If you need assign IP addresses from your local network directly to containers, 
 ```
 docker network create -d macvlan \
   --subnet=192.168.101.0/24 \
-  --ip-range=192.168.101.200/25 \
-  --gateway=192.168.101.254 \
-  --aux-address="my-router=192.168.101.129" \
+  --ip-range=192.168.101.128/25 \
+  --gateway=192.168.101.1\
   -o parent=eth0 macvlan
 ```
 
