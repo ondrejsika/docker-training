@@ -1325,6 +1325,26 @@ services:
       - prod.env
 ```
 
+### Variable Substitution
+
+Docker Compose uses standart bash variable substitution
+
+#### Variable with Default Value
+
+```
+services:
+  app:
+    image: ${IMAGE:-ondrejsika/go-hello-world:3}
+```
+
+#### Mandatory Variable
+
+```
+services:
+  app:
+    image: ${IMAGE?Environment variable IMAGE is required}
+```
+
 ### YAML Anchors
 
 ```yaml
