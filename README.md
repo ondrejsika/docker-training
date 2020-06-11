@@ -1102,6 +1102,21 @@ docker run -ti --net my_bridge ondrejsika/curl nginx
 docker run -ti --net my_bridge ondrejsika/curl apache
 ```
 
+### Macvlan Network
+
+If you need assign IP addresses from your local network directly to containers, you have to use Macvlan.
+
+<https://docs.docker.com/network/macvlan/>
+
+```
+docker network create -d macvlan \
+  --subnet=192.168.101.0/24 \
+  --ip-range=192.168.101.200/25 \
+  --gateway=192.168.101.254 \
+  --aux-address="my-router=192.168.101.129" \
+  -o parent=eth0 macvlan
+```
+
 ## Portainer
 
 Portainer is a web UI for Docker & Docker Swarm.
