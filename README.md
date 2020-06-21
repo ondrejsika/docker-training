@@ -415,6 +415,20 @@ Examples
 - `docker run -ti -v my-volume:/data debian`
 - `docker run -ti -v $(pwd)/my-data:/data debian`
 
+### NFS Volumes
+
+Create NFS volume
+
+```
+docker volume create --driver local --opt type=nfs --opt o=addr=nfs.sikademo.com,rw --opt device=:/nfs nfs
+```
+
+Use NFS volume
+
+```
+docker run -ti -v nfs:/data debian
+```
+
 ### Read only volumes
 
 If you want to mount your volumes **read only**, you have to add `:ro` to volume argument.
