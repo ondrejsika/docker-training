@@ -402,6 +402,8 @@ docker inspect log-rotation --format "{{.LogPath}}"
 
 ## Docker Volumes
 
+[Docs](https://docs.docker.com/storage/volumes/)
+
 - Volumes are persistent data storage for containers.
 - Volumes can be shared between containers and data are written directly to host.
 
@@ -418,18 +420,39 @@ Examples
 - `docker run -ti -v my-volume:/data debian`
 - `docker run -ti -v $(pwd)/my-data:/data debian`
 
+### Volume Drivers
+
+[Docs](https://docs.docker.com/storage/volumes/#use-a-volume-driver)
+
+### SSH FS Volumes
+
+Create SSH FS volume
+
+```
+docker volume create --driver vieux/sshfs \
+  -o sshcmd=root@sshfs.sikademo.com:/sshfs \
+  -o password=asdfasdf \
+  sshvolume
+```
+
+Use SSH FS volume
+
+```
+docker run -ti -v sshvolume:/data debian
+```
+
 ### NFS Volumes
 
 Create NFS volume
 
 ```
-docker volume create --driver local --opt type=nfs --opt o=addr=nfs.sikademo.com,rw --opt device=:/nfs nfs
+docker volume create --driver local --opt type=nfs --opt o=addr=nfs.sikademo.com,rw --opt device=:/nfs nfsvolume
 ```
 
 Use NFS volume
 
 ```
-docker run -ti -v nfs:/data debian
+docker run -ti -v nfsvolume:/data debian
 ```
 
 ### Read only volumes
