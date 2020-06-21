@@ -943,6 +943,10 @@ Docker Build Kit comes with new syntax of Dockerfile.
 
 Here is a description of Dockerfile frontend experimental syntaxes - <https://github.com/moby/buildkit/blob/master/frontend/dockerfile/docs/experimental.md>
 
+Example of Build Kit's paralelism
+
+<https://github.com/ondrejsika/ondrejsika-ci-docker>
+
 Example
 
 ```Dockerfile
