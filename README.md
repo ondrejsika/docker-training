@@ -336,19 +336,22 @@ docker exec -ti -u postgres pg12 psql
 ## Docker Logs
 
 ```
-docker logs [-f] <container>
+docker logs [-f] [-t] <container>
 ```
 
 Args
 
 - `-f` - following output (similar to `tail -f ...`)
+- `-t` - show time prefix
 
 Examples
 
 ```
 docker run --name loop -d ondrejsika/infinite-counter
 docker logs loop
+docker logs -t loop
 docker logs -f loop
+docker logs -ft loop
 ```
 
 ### Log Drivers
