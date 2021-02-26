@@ -928,6 +928,19 @@ docker image ls multistage-image
 
 ![](images/image-size-multistage.png)
 
+## ASP.NET Core Example
+
+Source: https://github.com/dotnet/dotnet-docker/tree/master/samples/aspnetapp
+
+```
+git clone https://github.com/dotnet/dotnet-docker.git
+cd samples/aspnetapp
+docker build -t dotnet-example .
+docker run -ti -p 8000:80 dotnet-example
+```
+
+See: http://127.0.0.1:8000
+
 ## Docker BuildKit
 
 Docker has new build tool called BuildKit which can speedup your builds. For example, it build multiple stages in parallel and more. You can also extend Dockerfile functionality for caches, mounts, ...
