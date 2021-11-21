@@ -1270,7 +1270,7 @@ services:
     image: redis
 ```
 
-Here is a compose file reference: <https://docs.docker.com/compose/compose-file/>
+Here is a compose file reference: <https://docs.docker.com/compose/compose-file/compose-file-v3/>
 
 Here is a nice tutorial for YAML: <https://learnxinyminutes.com/docs/yaml/>
 
