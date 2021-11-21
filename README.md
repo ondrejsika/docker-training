@@ -1482,6 +1482,18 @@ CMD ["python", "app.py"]
 EXPOSE 80
 ```
 
+Try without Docker Compose
+
+```
+docker build -t counter .
+docker network create counter
+docker run --name redis -d --net counter redis
+docker run --name counter -d --net counter -p 8000:80 counter
+docker stop counter redis
+docker rm counter redis
+docker network rm counter
+```
+
 Create `docker-compose.yml`:
 
 ```
