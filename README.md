@@ -153,8 +153,6 @@ docker version
 docker info
 ```
 
-You can connect Docker using TCP socket, see chapter [Connect Shell to the Machine](#connect-shell-to-the-machine)
-
 ## Basic Usage
 
 ## Image and Container
@@ -1557,106 +1555,6 @@ See:
 
 - https://github.com/docker/docker-py/issues/2230
 - https://github.com/docker/compose/issues/6440
-
-## Docker Machine
-
-### What is Docker Machine?
-
-Docker Machine is a tool that lets you install Docker Engine on virtual hosts, and manage the hosts with docker-machine commands.
-
-You can use Machine to create Docker hosts on your local Mac or Windows box, on your company network, in your data center, or on cloud providers like AWS or Digital Ocean.
-
-### Install Docker Machine
-
-Docker Compose is part of Docker Desktop (Mac, Windows). Only on Linux, you have to install it:
-
-<https://docs.docker.com/machine/install-machine/>
-
-### Basic Machine Command
-
-- `docker-machine ls` - list machines
-- `docker-machine version` - show version
-
-### Create a Machine
-
-```
-docker-machine create [-d <driver>] <machine>
-```
-
-Example:
-
-```
-docker-machine create default
-docker-machine create --driver digitalocean ci
-```
-
-List of drivers: https://docs.docker.com/machine/drivers/
-
-### Get IP Address of Machine
-
-```
-docker-machine ip [<machine>]
-```
-
-Example:
-
-```
-docker-machine ip default
-docker-machine ip
-```
-
-### Connect Shell to the Machine
-
-<!-- permanent link connect-shell-to-the-machine -->
-
-```
-eval "$(docker-machine env [<machine>])"
-```
-
-Example
-
-```
-eval "$(docker-machine env default)"
-eval "$(docker-machine env)"
-```
-
-### Disconnect Shell from the Machine
-
-```
-eval "$(docker-machine env -u)"
-```
-
-### SSH to the Machine
-
-```
-docker-machine ssh [<machine>]
-```
-
-Example:
-
-```
-docker-machine ssh default
-docker-machine ssh
-```
-
-### Manage Machine
-
-- `docker-machine start [<machine>]`
-- `docker-machine stop [<machine>]`
-- `docker-machine restart [<machine>]`
-- `docker-machine kill [<machine>]`
-
-### Remove Machine
-
-```
-docker-machine rm <machine>
-```
-
-Example:
-
-```
-docker-machine rm default
-```
 
 ## Thank you! & Questions?
 
