@@ -103,10 +103,9 @@ Containers run in same kernel as host - it is not possible use different OS or k
 - Better (easier, faster) deployment process
 - Separates running applications
 
-## Docker works with
+## Docker containers in cluster
 
-- Kubernetes ([Kubernetes Training](https://github.com/ondrejsika/kubernetes-training))
-- Swarm
+- Kubernetes
 
 ## Docker Editions (CE / EE)
 
@@ -1181,7 +1180,7 @@ docker network create -d macvlan \
 
 ## Portainer
 
-Portainer is a web UI for Docker & Docker Swarm.
+Portainer is a web UI for Docker.
 
 Homepage: [portainer.io](https://www.portainer.io/)
 
@@ -1242,8 +1241,6 @@ Check out:
 ## Thank you! & Questions?
 
 That's it. Do you have any questions? **Let's go for a beer!**
-
-## Docker Compose, Machine, Swarm
 
 ## Docker Compose
 
@@ -1443,21 +1440,10 @@ services:
 
 ### Deploy
 
-This is ignored by Docker Compose. It's used by Docker Swarm (Docker native cluster).
-
 ```yaml
 services:
   app:
     deploy:
-      placement:
-        constraints: [node.role == manager]
-```
-
-```yaml
-services:
-  app:
-    deploy:
-      mode: replicated
       replicas: 4
 ```
 
@@ -1665,131 +1651,6 @@ Example:
 ```
 docker-machine rm default
 ```
-
-## Docker Swarm
-
-### What is Docker Swarm?
-
-A native clustering system for Docker. It turns a pool of Docker hosts into a single, virtual host using an API proxy system. It is Docker's first container orchestration project that began in 2014. Combined with Docker Compose, it's a very convenient tool to manage containers.
-
-## Create a Swarm
-
-### Initialize Swarm
-
-```
-docker swarm init --advertise-addr <manager_ip>
-```
-
-```
-docker swarm init --advertise-addr 192.168.99.100
-```
-
-### Add Worker to Swarm
-
-```
-docker swarm join --token <token> <manager_ip>:2377
-```
-
-Example:
-
-```
-docker swarm join \
-    --token SWMTKN-1-49nj1cmql0...acrr2e7c \
-    192.168.99.100:2377
-```
-
-## Manage Swarm
-
-- `docker node ls` - list nodes
-- `docker node rm <node>` - remove node from swarm
-- `docker node ps [<node>]`- list swarm task
-- `docker node update ARGS <node>`
-
-## Deploy a Service to the Swarm
-
-```
-docker service create [ARGS] <image> [<command>]
-```
-
-Example:
-
-```
-docker service create --name hello -p 80:80 ondrejsika/go-hello-world:2
-```
-
-## Manage Services
-
-- `docker service ls`
-- `docker service inspect <service>`
-- `docker service ps <service>`
-- `docker service scale <service>=<n>`
-- `docker service rm <service>`
-
-### Scale the Service
-
-```
-docker service scale <service>=<n>
-```
-
-Example:
-
-```
-docker service scale hello=5
-```
-
-## Stacks (Composes) in Swarm
-
-### Build & Push
-
-Swarm (also Kubernetes) can't build the images, you have to build and push to registry first.
-
-```bash
-# Build
-docker-compose build
-# Push
-docker-compose push
-```
-
-### Deploy App to Swarm
-
-```
-docker stack deploy \
-    --compose-file <compose-file> \
-    <stack>
-```
-
-Example:
-
-```
-docker stack deploy \
-    --compose-file docker-compose.yml \
-    counter
-```
-
-If you have multiple composes, you can prepare deployment using docker-compose and deploy it using pipe.
-
-```
-docker-compose config | docker stack deploy --compose-file - counter
-```
-
-### Load Balancing
-
-Test from host:
-
-```
-curl `docker-machine ip manager`
-curl `docker-machine ip manager`
-curl `docker-machine ip worker1`
-curl `docker-machine ip worker1`
-curl `docker-machine ip worker2`
-```
-
-### Manage Stacks
-
-- `docker stack ls`
-- `docker stack services <stack>`
-- `docker stack ps <stack>`
-- `docker stack rm <stack>`
 
 ## Thank you! & Questions?
 
