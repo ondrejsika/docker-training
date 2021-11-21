@@ -425,6 +425,12 @@ Examples
 
 ### SSH FS Volumes
 
+Install plugin
+
+```
+docker plugin install vieux/sshfs
+```
+
 Create SSH FS volume
 
 ```
