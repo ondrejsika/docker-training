@@ -417,6 +417,13 @@ Examples
 - `docker run -ti -v my-volume:/data debian`
 - `docker run -ti -v $(pwd)/my-data:/data debian`
 
+
+### Get Volume Paths from Image
+
+```
+docker image inspect redis --format "{{.Config.Volumes|json}}"
+```
+
 ### Volume Drivers
 
 [Docs](https://docs.docker.com/storage/volumes/#use-a-volume-driver)
