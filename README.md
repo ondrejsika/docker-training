@@ -996,7 +996,7 @@ docker build --progress=plain .
 
 Docker Build Kit comes with new syntax of Dockerfile.
 
-Here is a description of Dockerfile frontend experimental syntaxes - <https://github.com/moby/buildkit/blob/master/frontend/dockerfile/docs/experimental.md>
+Here is a description of Dockerfile frontend syntax - <https://github.com/moby/buildkit/blob/master/frontend/dockerfile/docs/syntax.md>
 
 Example of Build Kit's paralelism: `sikalabs/ci` image
 
@@ -1006,7 +1006,7 @@ Example
 
 ```Dockerfile
 cat > Dockerfile.1 <<EOF
-# syntax = docker/dockerfile:experimental
+# syntax = docker/dockerfile:1.3
 FROM ubuntu
 RUN rm -f /etc/apt/apt.conf.d/docker-clean; echo 'Binary::apt::APT::Keep-Downloaded-Packages "true";' > /etc/apt/apt.conf.d/keep-cache
 RUN --mount=type=cache,target=/var/cache/apt --mount=type=cache,target=/var/lib/apt \
@@ -1026,7 +1026,7 @@ Another Dockerfile which use APT cached packages
 
 ```Dockerfile
 cat > Dockerfile.2 <<EOF
-# syntax = docker/dockerfile:experimental
+# syntax = docker/dockerfile:1.3
 FROM ubuntu
 RUN rm -f /etc/apt/apt.conf.d/docker-clean; echo 'Binary::apt::APT::Keep-Downloaded-Packages "true";' > /etc/apt/apt.conf.d/keep-cache
 RUN --mount=type=cache,target=/var/cache/apt --mount=type=cache,target=/var/lib/apt \
