@@ -205,6 +205,27 @@ echo "registry_external_url 'registry.example.com'" >> /etc/gitlab/gitlab.rb
 gitlab-ctl reconfigure
 ```
 
+### My Example Registry: reg.istry.cz
+
+See: <https://reg.istry.cz/v2/_catalog>
+
+Deployed into Kubernetes by [sikalabs/simple-registry](https://github.com/sikalabs/charts/tree/master/charts/simple-registry) chart
+
+### sikalabs/simple-registry chart
+
+Setup SikaLabs Charts
+
+```
+helm repo add sikalabs https://helm.sikalabs.io
+helm repo update
+```
+
+Install **sikalabs/simple-registry** chart
+
+```
+helm install registry sikalabs/simple-registry --set host reg.istry.cz
+```
+
 ### Registry Client - Reg
 
 I use [reg](https://github.com/genuinetools/reg) for CLI and Web client. Work only with open source registry, Docker Hub use different API.
