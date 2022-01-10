@@ -998,9 +998,9 @@ Docker Build Kit comes with new syntax of Dockerfile.
 
 Here is a description of Dockerfile frontend experimental syntaxes - <https://github.com/moby/buildkit/blob/master/frontend/dockerfile/docs/experimental.md>
 
-Example of Build Kit's paralelism
+Example of Build Kit's paralelism: `sikalabs/ci` image
 
-<https://github.com/ondrejsika/ondrejsika-ci-docker>
+<https://github.com/sikalabs/sikalabs-container-images/tree/master/ci>
 
 Example
 
