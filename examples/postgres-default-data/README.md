@@ -5,13 +5,13 @@
 ## Build with default arg
 
 ```
-docker build -t reg.istry.cz/dte/postgres-default-data .
+docker build -t postgres-default-data .
 ```
 
 ## Run
 
 ```
-docker run --name pg -d -e POSTGRES_PASSWORD=pg reg.istry.cz/dte/postgres-default-data
+docker run --name pg -d -e POSTGRES_PASSWORD=pg postgres-default-data
 ```
 
 ## Validate
