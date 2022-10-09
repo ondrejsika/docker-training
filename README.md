@@ -4,11 +4,6 @@
 
 # Docker Training
 
-    Ondrej Sika <ondrej@ondrejsika.com>
-    https://github.com/ondrejsika/docker-training
-
-My Docker course with code examples.
-
 ## About Course
 
 - [Docker Training in Czech Republic & Slovakia](https://ondrej-sika.cz/skoleni/docker?x_source=github-ondrejsika-docker-training&_s=gh-dte)
