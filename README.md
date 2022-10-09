@@ -11,24 +11,17 @@ My Docker course with code examples.
 
 ## About Course
 
-- [Docker Training in Czech Republic](https://ondrej-sika.cz/skoleni/docker?_s=gh-dte)
-- [Docker Training in Europe](https://ondrej-sika.com/training/docker?_s=gh-dte)
+- [Docker Training in Czech Republic & Slovakia](https://ondrej-sika.cz/skoleni/docker?x_source=github-ondrejsika-docker-training&_s=gh-dte)
+- [Docker Training in Europe](https://ondrej-sika.com/training/docker?x_source=github-ondrejsika-docker-training&_s=gh-dte)
+
+#### Related Courses
+
+- [Kubernetes Training in Czech Republic & Slovakia](https://ondrej-sika.cz/skoleni/kubernetes?x_source=github-ondrejsika-docker-training&_s=gh-dte)
+- [Kubernetes Training in Europe](https://ondrej-sika.com/training/kubernetes?x_source=github-ondrejsika-docker-training&_s=gh-dte)
 
 ### Any Questions?
 
 Write me mail to <ondrej@sika.io>
-
-### Related Repositories
-
-#### Traefik
-
-- https://github.com/ondrejsika/traefik-le
-- https://github.com/ondrejsika/traefik-ssl
-
-#### Related courses
-
-- https://github.com/ondrejsika/kubernetes-training-examples
-- https://github.com/ondrejsika/bare-metal-kubernetes
 
 ### Lecturer notes
 
