@@ -426,7 +426,6 @@ Examples
 - `docker run -ti -v my-volume:/data debian`
 - `docker run -ti -v $(pwd)/my-data:/data debian`
 
-
 ### Get Volume Paths from Image
 
 ```
