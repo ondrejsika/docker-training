@@ -11,3 +11,5 @@ max_line_length = off
 insert_final_newline = false
 [*.py]
 indent_size = 4
+[Makefile]
+indent_style = tab
