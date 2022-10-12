@@ -2,6 +2,7 @@ fmt:
 	yarn run prettier-write
 
 fmt-check:
+	editorconfig-checker
 	yarn run prettier-check
 
 setup-git-hooks:
