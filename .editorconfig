@@ -13,3 +13,5 @@ insert_final_newline = false
 indent_size = 4
 [Makefile]
 indent_style = tab
+[*.go]
+indent_style = tab
