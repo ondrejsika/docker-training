@@ -841,7 +841,7 @@ rm Dockerfile
 ### Standard Image
 
 ```Dockerfile
-FROM golang
+FROM golang:1.19
 WORKDIR /app
 COPY app.go .
 RUN go build app.go
@@ -873,7 +873,7 @@ docker image ls multistage-image
 ### Multistage Image (based on Debian)
 
 ```Dockerfile
-FROM golang as build
+FROM golang:1.19 as build
 WORKDIR /build
 COPY app.go .
 RUN go build app.go
@@ -910,7 +910,7 @@ docker image ls multistage-image
 If you build you Go app to static binary (no dynamic dependencies), you can create image from scratch - without OS.
 
 ```Dockerfile
-FROM golang as build
+FROM golang:1.19 as build
 WORKDIR /build
 COPY app.go .
 ENV CGO_ENABLED=0
