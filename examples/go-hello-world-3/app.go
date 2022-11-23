@@ -1,16 +1,14 @@
 package main
 
-import "os"
-import "fmt"
-import "net/http"
+import (
+	"fmt"
+	"net/http"
+	"os"
+)
 
 func index(w http.ResponseWriter, r *http.Request) {
 	hostname, _ := os.Hostname()
-	fmt.Fprintf(w, "Hello World from Go! ")
-	fmt.Fprintf(w, hostname)
-	fmt.Fprintf(w, " ")
-	fmt.Fprintf(w, r.RequestURI)
-	fmt.Fprintf(w, "\n")
+	fmt.Fprintf(w, "Hello World from Go! %s %s \n", hostname, r.RequestURI)
 }
 
 func main() {
