@@ -1294,7 +1294,7 @@ Docker Compose is part of Docker Desktop (Mac, Windows). Only on Linux, you have
 ### Example Compose File
 
 ```yaml
-version: "3.7"
+version: "3.8"
 services:
   app:
     build: .
@@ -1520,7 +1520,7 @@ docker network rm counter
 Create `docker-compose.yml`:
 
 ```
-version: '3.7'
+version: "3.8"
 services:
     counter:
         build: .
