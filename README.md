@@ -317,7 +317,10 @@ docker rm -f $(docker ps -a -q)
 or my `dra` (docker remove all) alias
 
 ```
-alias dra='docker ps -a  -q | xargs -r docker rm -f'
+alias dra='docker ps -a -q | xargs -r docker rm -f'
+```
+
+```
 dra
 ```
 
