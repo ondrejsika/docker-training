@@ -47,11 +47,13 @@ If you found bug, create issue or pull request.
 
 Also feel free to propose improvements by creating issues.
 
-## Live Chat
+### Chat
 
 For sharing links & "secrets".
 
-<https://sika.link/chat>
+- Slack - https://sikapublic.slack.com/
+- Microsoft Teams
+- https://sika.link/chat (tlk.io)
 
 ## DevOps Kniha (Czech only)
 
