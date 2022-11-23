@@ -7,7 +7,7 @@ services:
       - redis
     labels:
       traefik.enable: true
-      traefik.frontend.rule: Host:localhost
+      traefik.frontend.rule: Host:127.0.0.1
       traefik.docker.network: traefik
     networks:
       - traefik
