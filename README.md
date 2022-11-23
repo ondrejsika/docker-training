@@ -1252,7 +1252,7 @@ Install:
 
 ```
 # use the latest release version from https://github.com/google/cadvisor/releases
-VERSION=v0.36.0
+VERSION=v0.46.0
 docker run \
   --volume=/:/rootfs:ro \
   --volume=/var/run:/var/run:ro \
@@ -1264,7 +1264,7 @@ docker run \
   --name=cadvisor \
   --privileged \
   --device=/dev/kmsg \
-  gcr.io/google-containers/cadvisor:$VERSION
+  gcr.io/cadvisor/cadvisor:$VERSION
 ```
 
 Check out:
