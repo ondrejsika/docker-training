@@ -53,6 +53,12 @@ For sharing links & "secrets".
 
 <https://sika.link/chat>
 
+## DevOps Kniha (Czech only)
+
+[![](./images/devops_kniha.jpg)](https://kniha.sika.io)
+
+<https://kniha.sika.io>
+
 ## What is Docker?
 
 Docker is an open-source project that automates the deployment of applications inside software containers ...
