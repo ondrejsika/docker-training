@@ -214,6 +214,11 @@ Install **sikalabs/simple-registry** chart
 helm install registry sikalabs/simple-registry --set host reg.istry.cz
 ```
 
+### ttl.sh - Anonymous & ephemeral Docker image registry
+
+- https://ttl.sh/
+- https://github.com/replicatedhq/ttl.sh
+
 ### Registry Client - Reg
 
 I use [reg](https://github.com/genuinetools/reg) for CLI and Web client. Work only with open source registry, Docker Hub use different API.
