@@ -332,6 +332,12 @@ alias dra='docker ps -a -q | xargs -r docker rm -f'
 dra
 ```
 
+Or using `slu`:
+
+```
+slu s dra
+```
+
 ## Docker Exec
 
 ```
