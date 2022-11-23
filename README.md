@@ -1481,6 +1481,13 @@ services:
       replicas: 4
 ```
 
+### Compose Project Name
+
+```yaml
+version: "3.8"
+name: "compose-name-example"
+```
+
 ## Create a Composite
 
 See [simple compose example](examples/simple-compose)
