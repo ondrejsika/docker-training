@@ -505,7 +505,7 @@ First example does't make sense read only.
 ### Show All Volumes & Mounts for All Containers
 
 ```
-docker ps -a --format '{{ .ID }}' | xargs -I {} docker inspect -f '{{ .Name }}{{ printf "\n" }}{{ range .Mounts }}{{ printf "\n\t" }}{{ .Type }} {{ if eq .Type "bind" }}{{ .Source }}{{ end }}{{ .Name }} => {{ .Destination }}{{ end }}{{ printf "\n" }}' {}
+docker ps -a --format '{{ .ID }}' | xargs -I {} docker inspect -f '{{ .Name }} ({{ .ID }}){{ printf "\n" }}{{ range .Mounts }}{{ printf "\n\t" }}{{ .Type }} {{ if eq .Type "bind" }}{{ .Source }}{{ end }}{{ .Name }} => {{ .Destination }}{{ end }}{{ printf "\n" }}' {}
 ```
 
 ### Find Containers Which Use Specific Volume
