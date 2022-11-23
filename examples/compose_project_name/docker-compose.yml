@@ -1,0 +1,5 @@
+version: "3.8"
+name: "compose-name-example"
+services:
+  example:
+    image: "hello-world"
