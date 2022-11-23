@@ -643,6 +643,22 @@ node_modules
 - `docker build <path> -f <dockerfile> -t <image>`
 - `docker tag <source image> <target image>` - rename docker image
 
+## Cross Platform Build
+
+Use `--platform` for cross platform builds
+
+Build AMD64
+
+```
+docker build --platform linux/amd64 .
+```
+
+Build ARM64 (for Apple Silicon)
+
+```
+docker build --platform linux/arm64 .
+```
+
 ## Practice
 
 ## Simple Image
