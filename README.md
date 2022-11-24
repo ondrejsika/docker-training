@@ -267,17 +267,27 @@ See <http://127.0.0.1:8080>
 docker run [ARGS] <image> [<command>]
 ```
 
-Examples
+### Examples
+
+Basic Docker Run
 
 ```
-# Basic Docker Run
 docker run hello-world
+```
 
-# With custom command
+With custom command
+
+```
 docker run debian cat /etc/os-release
-docker run ubuntu cat /etc/os-release
+```
 
-# With TTY & Standart Input
+```
+docker run ubuntu cat /etc/os-release
+```
+
+With TTY & Standart Input
+
+```
 docker run -ti debian
 ```
 
