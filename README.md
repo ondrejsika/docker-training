@@ -396,9 +396,21 @@ Examples
 
 ```
 docker run --name loop -d ondrejsika/infinite-counter
+```
+
+```
 docker logs loop
-docker logs -t loop
+```
+
+```
 docker logs -f loop
+```
+
+```
+docker logs -t loop
+```
+
+```
 docker logs -ft loop
 ```
 
