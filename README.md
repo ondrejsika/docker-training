@@ -1206,19 +1206,19 @@ Docker support those network drivers:
 ### Bridge (default)
 
 ```
-docker run debian ip a
+docker run debian:10 ip a
 ```
 
 ### Host
 
 ```
-docker run --net host debian ip a
+docker run --net host debian:10 ip a
 ```
 
 ### None
 
 ```
-docker run --net none debian ip a
+docker run --net none debian:10 ip a
 ```
 
 ### Network Commands
