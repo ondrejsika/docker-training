@@ -1330,6 +1330,29 @@ Check out:
 - Web UI - <http://127.0.0.1:8080/>
 - /metrics (prometheus) - <http://127.0.0.1:8080/metrics>
 
+Run behind Traefik v1
+
+```
+VERSION=v0.46.0
+docker run \
+  --volume=/:/rootfs:ro \
+  --volume=/var/run:/var/run:ro \
+  --volume=/sys:/sys:ro \
+  --volume=/var/lib/docker/:/var/lib/docker:ro \
+  --volume=/dev/disk/:/dev/disk:ro \
+  --detach=true \
+  --name=cadvisor \
+  --privileged \
+  --device=/dev/kmsg \
+  --label=traefik.enable=true \
+  --label=traefik.frontend.rule=Host:cadvisor.lab0.sikademo.com \
+  --label=traefik.port=8080 \
+  --net=traefik \
+  gcr.io/cadvisor/cadvisor:$VERSION
+```
+
+See: <https://cadvisor.lab0.sikademo.com>
+
 ## Thank you! & Questions?
 
 That's it. Do you have any questions? **Let's go for a beer!**
