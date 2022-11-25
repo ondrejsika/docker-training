@@ -1284,6 +1284,23 @@ docker run -d --name portainer -p 8000:8000 -p 9000:9000 -v /var/run/docker.sock
 
 See: <http://127.0.0.1:9000>
 
+### Run Portainer behind Traefik v1
+
+```
+docker run \
+  -d \
+  --name portainer \
+  -v /var/run/docker.sock:/var/run/docker.sock \
+  -v portainer_data:/data \
+  --label=traefik.enable=true \
+  --label=traefik.frontend.rule=Host:portainer.lab0.sikademo.com \
+  --label=traefik.port=9000 \
+  --net traefik \
+  portainer/portainer
+```
+
+See: <https://portainer.lab0.sikademo.com>
+
 ## Nixery.dev
 
 Nixery.dev provides ad-hoc container images that contain packages from the Nix package manager. Images with arbitrary packages can be requested via the image name.
