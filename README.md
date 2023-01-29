@@ -399,23 +399,27 @@ Args
 Examples
 
 ```
-docker run --name loop -d ondrejsika/infinite-counter
+docker run --name loggen -d sikalabs/slu:v0.60.0 slu loggen --json
 ```
 
 ```
-docker logs loop
+docker logs loggen
 ```
 
 ```
-docker logs -f loop
+docker logs -f loggen
 ```
 
 ```
-docker logs -t loop
+docker logs -f loggen | jq .i
 ```
 
 ```
-docker logs -ft loop
+docker logs -t loggen
+```
+
+```
+docker logs -ft loggen
 ```
 
 ### Log Drivers
