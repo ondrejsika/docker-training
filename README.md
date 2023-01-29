@@ -261,6 +261,38 @@ reg server -r reg.istry.cz
 
 See <http://127.0.0.1:8080>
 
+## Crane
+
+Homepage: <https://github.com/google/go-containerregistry/blob/main/cmd/crane/doc/crane.md>
+
+### Install Crane
+
+Mac
+
+```
+brew install crane
+```
+
+Linux (using [slu](https://github.com/sikalabs/slu))
+
+```
+slu install-bin crane
+```
+
+### Copy Image
+
+Copy image from one registry to another without pulling it to local machine.
+
+```
+crane copy <source> <destination>
+```
+
+example
+
+```
+crane copy sikalabs/dev reg.istry.cz/dev
+```
+
 ## Docker Run
 
 ```
