@@ -2,7 +2,12 @@ version: '3.8'
 services:
   traefik:
     image: traefik:v2.9
-    command: --api.insecure=true --providers.docker
+    command:
+      - --metrics.prometheus=true
+      - "--api.insecure=true"
+      - "--providers.docker=true"
+      - "--providers.docker.exposedbydefault=false"
+      - "--entrypoints.http.address=:80"
     ports:
       - "80:80"
       - "8080:8080"
