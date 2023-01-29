@@ -149,6 +149,10 @@ docker version
 docker info
 ```
 
+## Docker plugin for VS Code
+
+<https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker>
+
 ## Basic Usage
 
 ## Image and Container
