@@ -1767,6 +1767,12 @@ _Do you like the course? Write me recommendation on Twitter (with handle `@ondre
 
 Wanna to go for a beer or do some work together? Just [book me](https://book-me.sika.io) :)
 
+## Training Sessions
+
+#### 2022-09-22 TTC
+
+- https://github.com/sika-training-examples/2022-09-22--ttc--docker-compose
+
 ## Docker FAQ
 
 ### DNS Troubles in Docker Build
