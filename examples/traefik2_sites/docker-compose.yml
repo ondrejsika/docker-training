@@ -1,0 +1,31 @@
+version: '3.8'
+services:
+  example:
+    image: sikalabs/slu:v0.60.0
+    command: slu example-server
+    labels:
+      - traefik.http.routers.example-server.rule=Host(`example.127.0.0.1.nip.io`)
+      - traefik.http.services.example-server.loadbalancer.server.port=8000
+    networks:
+      - traefik
+  nginx:
+    image: nginx
+    labels:
+      - traefik.http.routers.nginx.rule=Host(`nginx.127.0.0.1.nip.io`)
+    networks:
+      - traefik
+  apache:
+    image: httpd
+    labels:
+      - traefik.http.routers.apache.rule=Host(`apache.127.0.0.1.nip.io`)
+    networks:
+      - traefik
+  caddy:
+    image: caddy:2
+    labels:
+      - traefik.http.routers.caddy.rule=Host(`caddy.127.0.0.1.nip.io`)
+    networks:
+      - traefik
+networks:
+  traefik:
+    name: traefik
