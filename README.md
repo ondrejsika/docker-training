@@ -383,6 +383,10 @@ docker exec -ti -u postgres pg12 psql
 
 ## Docker Logs
 
+All containers have to log into STDOUT or STDERR.
+
+Example of logging to STDOUT from legacy application - [examples/log_to_file](./examples/log_to_file)
+
 ```
 docker logs [-f] [-t] <container>
 ```
