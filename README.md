@@ -1378,6 +1378,9 @@ See: <https://cadvisor.lab0.sikademo.com>
 
 - https://github.com/GoogleContainerTools/distroless
 - [examples/distroless_python](./examples/distroless_python)
+- [examples/distroless_flask](./examples/distroless_flask) (multistage)
+- [distroless/examples/python3](https://github.com/GoogleContainerTools/distroless/tree/main/examples/python3)
+- [distroless/examples/python3-requirements](https://github.com/GoogleContainerTools/distroless/tree/main/examples/python3-requirements)
 
 ## Thank you! & Questions?
 
