@@ -1,8 +1,7 @@
 version: '3.8'
 services:
   example:
-    image: sikalabs/slu:v0.60.0
-    command: slu example-server
+    image: sikalabs/hello-world-server:v0.6.0
     labels:
       - traefik.enable=true
       - traefik.http.routers.example-server.rule=Host(`example.127.0.0.1.nip.io`)
