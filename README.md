@@ -1076,6 +1076,19 @@ docker run -ti -p 8000:80 dotnet-example
 
 See: http://127.0.0.1:8000
 
+## Kaniko
+
+- Build Docker images in Conteiner / Kubernetes without Docker daemon
+- <https://github.com/GoogleContainerTools/kaniko>
+
+See [examples/kaniko](./examples/kaniko)
+
+```
+cd example/kaniko
+make build
+make run
+```
+
 ## Docker BuildKit
 
 Docker has new build tool called BuildKit which can speedup your builds. For example, it build multiple stages in parallel and more. You can also extend Dockerfile functionality for caches, mounts, ...
