@@ -1447,12 +1447,38 @@ That's it. Do you have any questions? **Let's go for a beer!**
 
 With **Docker Compose**, you use a **Compose file** to configure your application's services.
 
+### `docker-compose` vs `docker compose`
+
+`docker-compose` is the old command. `docker compose` is the new command. Both commands are the same.
+
 ### Install Docker Compose
 
 Docker Compose is part of Docker Desktop (Mac, Windows). Only on Linux, you have to install it:
 
 - <https://docs.docker.com/compose/install/>
 - <https://docs.docker.com/compose/completion/>
+
+Install `docker compose` CLI plugin
+
+```
+mkdir -p ~/.docker/cli-plugins/
+curl -SL https://github.com/docker/compose/releases/download/v2.7.0/docker-compose-linux-x86_64 -o ~/.docker/cli-plugins/docker-compose
+chmod +x ~/.docker/cli-plugins/docker-compose
+```
+
+Or
+
+```
+slu install-bin docker-compose
+mkdir -p ~/.docker/cli-plugins/
+ln -s /usr/local/bin/docker-compose ~/.docker/cli-plugins/docker-compose
+```
+
+Validate
+
+```
+docker compose version
+```
 
 ### Example Compose File
 
