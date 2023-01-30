@@ -267,7 +267,8 @@ See <http://127.0.0.1:8080>
 
 ## Crane
 
-Homepage: <https://github.com/google/go-containerregistry/blob/main/cmd/crane/doc/crane.md>
+- <https://github.com/google/go-containerregistry/tree/main/cmd/crane>
+- <https://github.com/google/go-containerregistry/blob/main/cmd/crane/doc/crane.md>
 
 ### Install Crane
 
