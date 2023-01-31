@@ -1,0 +1,45 @@
+version: '3.8'
+services:
+  example:
+    image: sikalabs/hello-world-server:v0.6.0
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.example.rule=Host(`example.sikademo1.uk`)
+      - traefik.http.services.example.loadbalancer.server.port=8000
+      - traefik.http.routers.example.entrypoints=http,https
+      - traefik.http.routers.example.tls.certresolver=le
+    networks:
+      - traefik
+    deploy:
+      replicas: 4
+  nginx:
+    image: nginx
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.nginx.rule=Host(`nginx.sikademo1.uk`)
+      - traefik.http.routers.nginx.entrypoints=http,https
+      - traefik.http.routers.nginx.tls.certresolver=le
+    networks:
+      - traefik
+  apache:
+    image: httpd
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.apache.rule=Host(`apache.sikademo1.uk`)
+      - traefik.http.routers.apache.entrypoints=http,https
+      - traefik.http.routers.apache.tls.certresolver=le
+    networks:
+      - traefik
+  caddy:
+    image: caddy:2
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.caddy.rule=Host(`caddy.sikademo1.uk`)
+      - traefik.http.routers.caddy.entrypoints=http,https
+      - traefik.http.routers.caddy.tls.certresolver=le
+    networks:
+      - traefik
+
+networks:
+  traefik:
+    name: traefik
