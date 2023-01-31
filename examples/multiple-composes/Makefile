@@ -13,8 +13,8 @@ use-ports:
 use-test:
 	cp .env.test .env
 
-use-traefik:
-	cp .env.traefik .env
+use-traefik-internal:
+	cp .env.traefik-internal .env
 
 use-traefik-external:
 	cp .env.traefik-external .env
