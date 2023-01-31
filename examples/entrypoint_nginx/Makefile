@@ -9,3 +9,6 @@ build:
 
 run:
 	docker run -p 80:80 -e MESSAGE=${MESSAGE} entrypoint_nginx
+
+run-fail:
+	docker run -p 80:80 entrypoint_nginx
