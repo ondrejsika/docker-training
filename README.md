@@ -1693,6 +1693,7 @@ docker-compose up --scale <service>=<n>
 - https://traefik.io/traefik/
 - https://github.com/traefik/traefik
 - https://github.com/ondrejsika/ondrejsika-docker-traefik
+- https://doc.traefik.io/traefik/reference/dynamic-configuration/docker/
 
 ### Docker Compose Override
 
