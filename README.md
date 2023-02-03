@@ -81,17 +81,6 @@ Containers are abstraction in linux kernel, just proces, memory, network, … na
 
 Containers run in same kernel as host - it is not possible use different OS or kernel version, but containers are much more faster than VMs.
 
-## Docker Advantages
-
-- Performance
-- Management
-- Application (image) distribution
-
-## Docker Disadvantages
-
-- Security
-- One kernel / "Linux only"
-
 ## Usage of Docker
 
 - Almost everywhere
