@@ -33,7 +33,7 @@ replace (
 	k8s.io/sample-apiserver => k8s.io/sample-apiserver v0.24.0
 )
 
-require github.com/ondrejsika/large v0.5.0
+require github.com/ondrejsika/large v0.6.0
 
 require (
 	github.com/Azure/azure-sdk-for-go/sdk/azcore v1.1.4 // indirect
@@ -203,6 +203,7 @@ require (
 	github.com/russross/blackfriday/v2 v2.1.0 // indirect
 	github.com/ryanuber/go-glob v1.0.0 // indirect
 	github.com/sergi/go-diff v1.1.0 // indirect
+	github.com/sikalabs/gobble v0.2.0 // indirect
 	github.com/sikalabs/install-slu v0.1.0 // indirect
 	github.com/sikalabs/signpost v0.1.0 // indirect
 	github.com/sikalabs/slu v0.62.1-0.20230203213149-0daa71e03d9e // indirect
@@ -223,7 +224,7 @@ require (
 	go.starlark.net v0.0.0-20200306205701-8dd3e2ee1dd5 // indirect
 	go.uber.org/atomic v1.9.0 // indirect
 	golang.org/x/crypto v0.4.0 // indirect
-	golang.org/x/exp v0.0.0-20210901193431-a062eea981d2 // indirect
+	golang.org/x/exp v0.0.0-20221230185412-738e83a70c30 // indirect
 	golang.org/x/net v0.4.0 // indirect
 	golang.org/x/oauth2 v0.3.0 // indirect
 	golang.org/x/sync v0.1.0 // indirect
