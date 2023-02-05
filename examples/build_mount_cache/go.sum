@@ -803,8 +803,8 @@ github.com/ondrejsika/fork-go-mssqldb-32bit-for-slu v1.0.1 h1:lCvf9k+OGumpvIbMG5
 github.com/ondrejsika/fork-go-mssqldb-32bit-for-slu v1.0.1/go.mod h1:eYEc5khu5Jdv99uvgoItbm5LCPsXZ3n/9K0X2NTV94c=
 github.com/ondrejsika/gosendmail v0.4.0 h1:ZJxU33yQJg/k2ENOtsVOLg1s853rxF9+093uFknLauM=
 github.com/ondrejsika/gosendmail v0.4.0/go.mod h1:dDI+roxX0VEWSwPJYPGWIa3+8SdAWR5AX4JocFKNQAo=
-github.com/ondrejsika/large v0.4.1 h1:/J3Ixz8emIwJOIsELupQNF1qXPyMbEFhQwU2QIhRb80=
-github.com/ondrejsika/large v0.4.1/go.mod h1:fIEwDe8KSj5cgGgVlE61Aw7mCONvZxL7Nu8qNBPT2lI=
+github.com/ondrejsika/large v0.5.0 h1:z6+Y/v3T0BB/JDOuCOljcMURJrm33nFsHzMrSsBcJcc=
+github.com/ondrejsika/large v0.5.0/go.mod h1:iSKNFPhPrXN10AQVKFIskOCg1hTbJEzYlsnNmoV+wrg=
 github.com/ondrejsika/notion-backup v0.1.0 h1:3PX5XU+ijY1kHhjvn9RwfPRN+8PzPLBjKBLhdho6ye4=
 github.com/ondrejsika/notion-backup v0.1.0/go.mod h1:EbIrCulQ+dh2uNP4JFrUKSVQonRvP/42wfpsV89Jz94=
 github.com/ondrejsika/training-cli v0.5.0 h1:hNJ1Lm9g70rf1lpYYeEPtJ1OILo9HPoS6EIeoqzFOL0=
@@ -961,6 +961,8 @@ github.com/shirou/w32 v0.0.0-20160930032740-bb4de0191aa4/go.mod h1:qsXQc7+bwAM3Q
 github.com/shurcooL/go v0.0.0-20180423040247-9e1955d9fb6e/go.mod h1:TDJrrUr11Vxrven61rcy3hJMUqaf/CLWYhHNPmT14Lk=
 github.com/shurcooL/go-goon v0.0.0-20170922171312-37c2f522c041/go.mod h1:N5mDOmsrJOB+vfqUK+7DmDyjhSLIIBnXo9lvZJj3MWQ=
 github.com/shurcooL/sanitized_anchor_name v1.0.0/go.mod h1:1NzhyTcUVG4SuEtjjoZeVRXNmyL/1OwPU0+IJeTBvfc=
+github.com/sikalabs/install-slu v0.1.0 h1:QSKPLVEUUSsOutDXAgnUDci1w8Fy5tr80jOCA+Blcxg=
+github.com/sikalabs/install-slu v0.1.0/go.mod h1:EzGbW6O9GBNMGDXs3juAqTw33Higj0lKLz3UljtaLOI=
 github.com/sikalabs/signpost v0.1.0 h1:IayjH/irBc7fu1d3ny2hWQnrRTHWR7bio1tcwX3oNlY=
 github.com/sikalabs/signpost v0.1.0/go.mod h1:USvh1oS+iIuJOdTH8i4IZdlWM0EoKuGuQlvVx9T7/Vc=
 github.com/sikalabs/slu v0.62.1-0.20230203213149-0daa71e03d9e h1:aNj3GfTlaIxCazbl8XBzAvlUrl+lwfOYFYUDtcaxTHo=

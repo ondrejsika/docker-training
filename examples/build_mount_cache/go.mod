@@ -33,7 +33,7 @@ replace (
 	k8s.io/sample-apiserver => k8s.io/sample-apiserver v0.24.0
 )
 
-require github.com/ondrejsika/large v0.4.1
+require github.com/ondrejsika/large v0.5.0
 
 require (
 	github.com/Azure/azure-sdk-for-go/sdk/azcore v1.1.4 // indirect
@@ -203,6 +203,7 @@ require (
 	github.com/russross/blackfriday/v2 v2.1.0 // indirect
 	github.com/ryanuber/go-glob v1.0.0 // indirect
 	github.com/sergi/go-diff v1.1.0 // indirect
+	github.com/sikalabs/install-slu v0.1.0 // indirect
 	github.com/sikalabs/signpost v0.1.0 // indirect
 	github.com/sikalabs/slu v0.62.1-0.20230203213149-0daa71e03d9e // indirect
 	github.com/sikalabs/tergum v0.34.1-0.20230203191835-60e0f31aceaf // indirect
