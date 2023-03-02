@@ -1404,13 +1404,13 @@ Service is a container running and managed by Docker Compose.
 ## Run Docker Compose
 
 ```
-docker-compose up [ARGS] [<service>, ...]
+docker compose up [ARGS] [<service>, ...]
 ```
 
 Example
 
 ```
-docker-compose up
+docker compose up
 ```
 
 ## Build Compose
@@ -1418,19 +1418,19 @@ docker-compose up
 Just build, don't run
 
 ```
-docker-compose build
+docker compose build
 ```
 
 Build without cache
 
 ```
-docker-compose build --no-cache
+docker compose build --no-cache
 ```
 
 Build with args
 
 ```
-docker-compose build --build-arg BUILD_NO=53
+docker compose build --build-arg BUILD_NO=53
 ```
 
 ## Common Compose File Attributes
@@ -1631,11 +1631,11 @@ services:
 
 ## Compose Commands
 
-- `docker-compose config` - validate & see final docker compose yaml
-- `docker-compose ps` - see all composite's containers
-- `docker-compose exec <service> <command>` - run something in container
-- `docker-compose version` - see version of `docker-compose` binary
-- `docker-compose logs [-f] [<service>]` - see logs
+- `docker compose config` - validate & see final docker compose yaml
+- `docker compose ps` - see all composite's containers
+- `docker compose exec <service> <command>` - run something in container
+- `docker compose version` - see version of `docker-compose` binary
+- `docker compose logs [-f] [<service>]` - see logs
 
 ### Compose Up Arguments
 
@@ -1647,19 +1647,19 @@ services:
 
 ### Manage Compose
 
-- `docker-compose start [<service>]`
-- `docker-compose stop [<service>]`
-- `docker-compose restart [<service>]`
-- `docker-compose kill [<service>]`
+- `docker compose start [<service>]`
+- `docker compose stop [<service>]`
+- `docker compose restart [<service>]`
+- `docker compose kill [<service>]`
 
-### `docker-compose up` vs `docker-compose run`
+### `docker compose up` vs `docker compose run`
 
-`docker-compose up`
+`docker compose up`
 
 - run all services (or multiple selected services)
 - you can't specify command, volums, environment from cli arguments
 
-`docker-compose run`
+`docker compose run`
 
 - run only one service
 - run dependencies on background
@@ -1668,13 +1668,13 @@ services:
 ### Stop and Remove Compose
 
 ```
-docker-compose down
+docker compose down
 ```
 
 ### Scaling Compose
 
 ```
-docker-compose up --scale <service>=<n>
+docker compose up --scale <service>=<n>
 ```
 
 ## Traefik
