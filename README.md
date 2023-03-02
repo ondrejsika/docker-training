@@ -164,6 +164,12 @@ An **image** is an inert, immutable, file that's essentially a snapshot of a con
 - `docker image rm <image>` - remove image
 - `docker image inspect <image>` - show image properties
 
+Update all local images
+
+```
+docker image ls --format="{{.Repository}}:{{.Tag}}" | xargs -I {} docker pull {}
+```
+
 ## Docker Registry
 
 Docker image name also contains location of it source. Those names can be used:
