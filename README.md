@@ -1191,6 +1191,44 @@ docker network create -d macvlan \
   -o parent=eth0 macvlan
 ```
 
+## ctop
+
+ctop is a top-like interface for container metrics.
+
+- [ctop.sh](https://ctop.sh/)
+- [github.com/bcicen/ctop](https://github.com/bcicen/ctop)
+
+### Install
+
+Mac
+
+```
+brew install ctop
+```
+
+Using [slu](https://github.com/sikalabs/slu)
+
+```
+slu install-bin ctop
+```
+
+Official installation instructions: <https://github.com/bcicen/ctop#install>
+
+### Run
+
+```
+ctop
+```
+
+or with Docker
+
+```
+docker run --rm -ti \
+  --name=ctop \
+  --volume /var/run/docker.sock:/var/run/docker.sock:ro \
+  quay.io/vektorlab/ctop:latest
+```
+
 ## Portainer
 
 Portainer is a web UI for Docker.
