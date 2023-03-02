@@ -1259,6 +1259,10 @@ docker run \
 
 See: <https://portainer.lab0.sikademo.com>
 
+### Run Portainer behind Traefik v2
+
+https://github.com/ondrejsika/docker-compose-examples/tree/master/portainer
+
 ## Nixery.dev
 
 Nixery.dev provides ad-hoc container images that contain packages from the Nix package manager. Images with arbitrary packages can be requested via the image name.
@@ -1327,6 +1331,10 @@ docker run \
 ```
 
 See: <https://cadvisor.lab0.sikademo.com>
+
+### Run cAdvisor behind Traefik v2
+
+https://github.com/ondrejsika/docker-compose-examples/tree/master/cadvisor
 
 ## Distroless Images
 
