@@ -333,7 +333,6 @@ docker run -ti debian
 ## Common Docker Run Params
 
 - `--name <name>` - set container name ([Wozniak easter egg](https://github.com/moby/moby/blob/master/pkg/namesgenerator/names-generator.go#L852))
-- `--rm` - remove container after stop
 - `-d` - run in detached mode
 - `-ti` - map TTY a STDIN (for bash eg.)
 - `-e <variable>=<value>` - set ENV variable
