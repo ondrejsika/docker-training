@@ -524,47 +524,6 @@ docker image inspect redis --format "{{.Config.Volumes|json}}"
 docker image inspect postgres:11 --format "{{.Config.Volumes|json}}"
 ```
 
-### Volume Drivers
-
-[Docs](https://docs.docker.com/storage/volumes/#use-a-volume-driver)
-
-### SSH FS Volumes
-
-Install plugin
-
-```
-docker plugin install vieux/sshfs
-```
-
-Create SSH FS volume
-
-```
-docker volume create --driver vieux/sshfs \
-  -o sshcmd=root@sshfs.sikademo.com:/sshfs \
-  -o password=asdfasdf \
-  sshvolume
-```
-
-Use SSH FS volume
-
-```
-docker run -ti -v sshvolume:/data debian
-```
-
-### NFS Volumes
-
-Create NFS volume
-
-```
-docker volume create --driver local --opt type=nfs --opt o=addr=nfs.sikademo.com,rw --opt device=:/nfs nfsvolume
-```
-
-Use NFS volume
-
-```
-docker run -ti -v nfsvolume:/data debian
-```
-
 ### Read only volumes
 
 If you want to mount your volumes **read only**, you have to add `:ro` to volume argument.
