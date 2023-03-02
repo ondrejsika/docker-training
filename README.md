@@ -162,7 +162,6 @@ An **image** is an inert, immutable, file that's essentially a snapshot of a con
 - `docker image ls -q` - quiet output, just IDs
 - `docker image ls <image>` - list image versions
 - `docker image rm <image>` - remove image
-- `docker image history <image>` - show image history
 - `docker image inspect <image>` - show image properties
 
 ## Docker Registry
