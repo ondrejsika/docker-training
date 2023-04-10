@@ -1012,7 +1012,6 @@ make run
 
 [examples/build_mount_cache](./examples/build_mount_cache)
 
-
 ## Entrypoint vs Command
 
 ### Dockerized tool (echo)
