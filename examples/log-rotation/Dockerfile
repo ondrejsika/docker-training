@@ -1,3 +1,2 @@
-FROM debian:10
-COPY counter.sh /
-CMD [ "/counter.sh" ]
+FROM sikalabs/slu:v0.64.0
+CMD [ "slu", "loggen" ]
