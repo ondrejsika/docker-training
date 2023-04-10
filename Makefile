@@ -2,6 +2,7 @@ fmt:
 	yarn run prettier-write
 
 fmt-check:
+	# Install using: `brew install editorconfig-checker`
 	editorconfig-checker
 	yarn run prettier-check
 
