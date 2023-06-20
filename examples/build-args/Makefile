@@ -1,3 +1,5 @@
+build-all: build build-2.7-slim build-3.10-slim
+
 build:
 	docker build -t build-args .
 
@@ -6,6 +8,8 @@ build-2.7-slim:
 
 build-3.10-slim:
 	docker build -t build-args:3.10-slim --build-arg PYTHON_IMAGE_VERSION=3.10-slim .
+
+run-all: run run-2.7-slim run-3.10-slim
 
 run:
 	docker run build-args
