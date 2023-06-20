@@ -1,9 +1,9 @@
-FROM golang:1.19 as build
+FROM golang:1.20 as build
 WORKDIR /build
 COPY go.mod go.sum ./
 RUN go mod download
 COPY . .
 RUN go build
 
-FROM debian:11-slim
+FROM debian:12-slim
 COPY --from=build /build/large /usr/local/bin/large
