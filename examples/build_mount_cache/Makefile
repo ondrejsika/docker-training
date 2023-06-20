@@ -17,4 +17,5 @@ build-2-kaniko:
 		--cache-repo=reg.istry.cz/cache/build-mount-cache-example
 
 run-2-kaniko:
+	docker pull reg.istry.cz/build-mount-cache-example
 	docker run reg.istry.cz/build-mount-cache-example large
