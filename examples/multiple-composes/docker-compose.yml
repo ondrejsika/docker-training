@@ -4,6 +4,7 @@ services:
   counter:
     build: .
     image: reg.istry.cz/dte/multiple-composes/counter
+    platform: linux/amd64
     depends_on:
       - redis
     labels:
