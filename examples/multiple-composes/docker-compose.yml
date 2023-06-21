@@ -9,7 +9,7 @@ services:
       - redis
     labels:
       traefik.enable: "true"
-      traefik.http.routers.counter.rule: Host(`127.0.0.1`)
+      traefik.http.routers.counter.rule: Host(`${HOST:-127.0.0.1}`)
   redis:
     image: redis
     volumes:
