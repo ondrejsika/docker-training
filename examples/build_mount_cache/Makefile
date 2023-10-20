@@ -11,11 +11,11 @@ build-2-kaniko:
 		gcr.io/kaniko-project/executor:debug \
 		--dockerfile=/build/Dockerfile.2 \
 		--context=/build \
-		--destination=reg.istry.cz/build-mount-cache-example \
+		--destination=ttl.sh/build-mount-cache-example \
 		--cache=true \
 		--cache-dir=/build/.kaniko-cache \
-		--cache-repo=reg.istry.cz/cache/build-mount-cache-example
+		--cache-repo=ttl.sh/cache/build-mount-cache-example
 
 run-2-kaniko:
-	docker pull reg.istry.cz/build-mount-cache-example
-	docker run reg.istry.cz/build-mount-cache-example large
+	docker pull ttl.sh/build-mount-cache-example
+	docker run ttl.sh/build-mount-cache-example large
