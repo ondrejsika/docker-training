@@ -4,10 +4,10 @@ all:
 	@make run-2
 
 build:
-	docker build -t entrypoint .
+	docker build -t cowsay .
 
 run-1:
-	docker run entrypoint
+	docker run cowsay
 
 run-2:
-	docker run entrypoint Ahoj svete
+	docker run cowsay Ahoj svete
