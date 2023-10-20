@@ -12,11 +12,11 @@ build-kaniko:
 		-v $(shell pwd):/build \
 		gcr.io/kaniko-project/executor:debug \
 		--context=/build \
-		--destination=reg.istry.cz/multistage-image-kaniko \
+		--destination=ttl.sh/multistage-image-kaniko \
 		--cache=true \
 		--cache-dir=/build/.kaniko-cache \
-		--cache-repo=reg.istry.cz/cache/multistage-image-kaniko
+		--cache-repo=ttl.sh/cache/multistage-image-kaniko
 
 run-kaniko:
-	docker pull reg.istry.cz/multistage-image-kaniko
-	docker run -p 80:80 reg.istry.cz/multistage-image-kaniko
+	docker pull ttl.sh/multistage-image-kaniko
+	docker run -p 80:80 ttl.sh/multistage-image-kaniko
