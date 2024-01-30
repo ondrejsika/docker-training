@@ -15,7 +15,7 @@ func index(w http.ResponseWriter, r *http.Request) {
 
 func main() {
 	http.HandleFunc("/", index)
-	fmt.Println("Server started.")
+	fmt.Println("Server started on 0.0.0.0:80, see http://127.0.0.1:80")
 	err := http.ListenAndServe(":80", nil)
 	if err != nil {
 		log.Fatalln(err)
