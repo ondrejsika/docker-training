@@ -1,0 +1,30 @@
+version: '3.8'
+services:
+  frontend:
+    image: ghcr.io/ondrejsika/counter-frontend
+    environment:
+      API_ORIGIN: http://backend:8000
+    ports:
+      - 3000:3000
+    networks:
+      - frontnet
+  backend:
+    image: ondrejsika/counter
+    environment:
+      PORT: 8000
+      REDIS: redis
+    ports:
+      - 8000:8000
+    depends_on:
+      - redis
+    networks:
+      - frontnet
+      - backnet
+  redis:
+    image: redis
+    networks:
+      - backnet
+
+networks:
+  frontnet:
+  backnet:
