@@ -10,5 +10,6 @@ COPY . .
 FROM gcr.io/distroless/python3-debian12
 WORKDIR /app
 COPY --from=build /app /app
-ENTRYPOINT ["/app/venv/bin/python", "app.py"]
+ENTRYPOINT ["/app/venv/bin/python"]
+CMD ["app.py"]
 EXPOSE 80
