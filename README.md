@@ -323,6 +323,8 @@ If you want to set maximum restart count for `on-failure` restart policy, you ca
 - `docker container ls -a` - list all containers
 - `docker container ls -a -q` - list IDs of all containers
 
+or
+
 - `docker ps` - list running containers
 - `docker ps -a` - list all containers
 - `docker ps -a -q` - list IDs of all containers
