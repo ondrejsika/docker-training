@@ -176,7 +176,7 @@ Docker image name also contains location of it source. Those names can be used:
 
 - `debian` - Official images on Docker Hub
 - `ondrejsika/debian` - User (custom) images on Docker Hub
-- `reg.istry.cz/debian` - Image in my own registry
+- `ttl.sh/debian` - Image in my own registry
 
 ### Own Docker Registry
 
@@ -255,7 +255,7 @@ crane copy <source> <destination>
 example
 
 ```
-crane copy sikalabs/dev reg.istry.cz/dev
+crane copy sikalabs/dev ttl.sh/dev
 ```
 
 ## Docker Run
@@ -1223,7 +1223,7 @@ services:
       dockerfile: ./app/docker/Dockerfile
       args:
         BUILD_NO: 1
-    image: reg.istry.cz/app
+    image: ttl.sh/app
 ```
 
 ### Port Forwarding
@@ -1378,7 +1378,7 @@ version: "3.8"
 services:
     counter:
         build: .
-        image: reg.istry.cz/examples/simple-compose/counter
+        image: ttl.sh/examples/simple-compose/counter
         ports:
             - ${PORT:-80}:80
         depends_on:

@@ -1,4 +1,4 @@
-IMAGE = reg.istry.cz/ondrejsika/go-hello-world:3
+IMAGE = ttl.sh/ondrejsika/go-hello-world:3
 
 build-run: build run
 build-push: build push
