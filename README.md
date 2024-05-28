@@ -386,7 +386,7 @@ docker run --name pg16 -e POSTGRES_PASSWORD=pg -d postgres:16
 ```
 
 ```
-docker exec -ti pg15 bash
+docker exec -ti pg16 bash
 ```
 
 ```
