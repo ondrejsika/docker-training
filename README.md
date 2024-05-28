@@ -470,11 +470,11 @@ Using Go Template Language.
 Examples:
 
 ```
-docker inspect log-rotation --format "{{.NetworkSettings.IPAddress}}"
+docker inspect loggen --format "{{.NetworkSettings.IPAddress}}"
 ```
 
 ```
-docker inspect log-rotation --format "{{.LogPath}}"
+docker inspect loggen --format "{{.LogPath}}"
 ```
 
 ## Docker Volumes
