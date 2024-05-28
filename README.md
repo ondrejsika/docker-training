@@ -290,6 +290,7 @@ docker run -ti debian
 
 ## Containers
 
+- `docker container ls` - list containers
 - `docker ps` - list containers
 - `docker start <container>`
 - `docker stop <container>`
@@ -317,6 +318,10 @@ You can choose another behavion using argument `--restart <restart policy>`.
 If you want to set maximum restart count for `on-failure` restart policy, you can use: `--restart on-failure:<count>`
 
 ## List Containers
+
+- `docker container ls` - list running containers
+- `docker container ls -a` - list all containers
+- `docker container ls -a -q` - list IDs of all containers
 
 - `docker ps` - list running containers
 - `docker ps -a` - list all containers
