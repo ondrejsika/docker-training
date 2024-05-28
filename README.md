@@ -176,6 +176,7 @@ Docker image name also contains location of it source. Those names can be used:
 
 - `debian` - Official images on Docker Hub
 - `ondrejsika/debian` - User (custom) images on Docker Hub
+- `ghcr.io/ondrejsika/debian` - Github Container Registry
 - `ttl.sh/debian` - Image in my own registry
 
 ### Own Docker Registry
