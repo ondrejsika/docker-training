@@ -199,9 +199,9 @@ echo "registry_external_url 'registry.example.com'" >> /etc/gitlab/gitlab.rb
 gitlab-ctl reconfigure
 ```
 
-### My Example Registry: reg.istry.cz
+### My Example Registry: simple-registry.sikademo.com
 
-See: <https://reg.istry.cz/v2/_catalog>
+See: <https://simple-registry.sikademo.com/v2/_catalog>
 
 Deployed into Kubernetes by [sikalabs/simple-registry](https://github.com/sikalabs/charts/tree/master/charts/simple-registry) chart
 
@@ -217,7 +217,7 @@ helm repo update
 Install **sikalabs/simple-registry** chart
 
 ```
-helm install registry sikalabs/simple-registry --set host reg.istry.cz
+helm install registry sikalabs/simple-registry --set host simple-registry.sikademo.com
 ```
 
 ### ttl.sh - Anonymous & ephemeral Docker image registry
