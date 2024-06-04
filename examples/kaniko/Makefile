@@ -1,7 +1,7 @@
 build:
 	docker run \
 		-w /build \
-		-v $(shell pwd):/build \
+		-v ./:/build \
 		gcr.io/kaniko-project/executor:debug \
 		--context=/build \
 		--destination=ttl.sh/kaniko-example \
