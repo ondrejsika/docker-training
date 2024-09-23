@@ -18,16 +18,6 @@
 
 Write me mail to <ondrej@sika.io>
 
-### Lecturer notes
-
-#### Download Images before course, prevent slow connections
-
-```
-./pull-images.sh
-```
-
-If you want update list of used images in file `images.txt`, run `./save-image-list.sh` and remove locally built images.
-
 ## Course
 
 ## About Me - Ondrej Sika
@@ -1513,3 +1503,13 @@ You can fix it by setting Google or Cloudflare DNS to `/etc/docker/daemon.json`:
 ```json
 { "dns": ["1.1.1.", "8.8.8.8"] }
 ```
+
+## Lecturer Notes
+
+### Download Images before course, prevent slow connections
+
+```
+./pull-images.sh
+```
+
+If you want update list of used images in file `images.txt`, run `./save-image-list.sh` and remove locally built images.
