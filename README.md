@@ -81,6 +81,7 @@ Containers run in same kernel as host - it is not possible use different OS or k
 ## Docker containers in cluster
 
 - Kubernetes
+- ~~Docker Swarm~~
 
 ## Docker Editions (CE / EE)
 
