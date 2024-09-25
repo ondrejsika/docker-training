@@ -1361,6 +1361,23 @@ cd example--simple-compose/examples/simple-compose
 rm Dockerfile docker-compose.yml
 ```
 
+Try it wihout Docker Compose. Run the example:
+
+```
+docker build -t counter .
+docker network create counter
+docker run --name redis -d --net counter -v redis-data:/data redis
+docker run --name counter -d --net counter -p 80:80 counter
+```
+
+Stop & Remove
+
+```
+docker stop counter redis
+docker rm counter redis
+docker network rm counter
+```
+
 Now, we can create Docker compose and Compose File manually.
 
 Create `Dockerfile`:
