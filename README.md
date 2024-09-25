@@ -1248,6 +1248,17 @@ services:
     image: ttl.sh/app
 ```
 
+Inline Dockerfile
+
+```yaml
+services:
+  example:
+    build:
+      dockerfile_inline: |
+        FROM debian:12-slim
+        CMD ["echo", "Hello from inline Dockerfile"]
+```
+
 ### Port Forwarding
 
 ```yaml
