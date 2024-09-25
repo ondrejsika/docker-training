@@ -1259,6 +1259,15 @@ services:
         CMD ["echo", "Hello from inline Dockerfile"]
 ```
 
+Platoform specific build
+
+```yaml
+services:
+  example:
+    build: .
+    platform: linux/amd64
+```
+
 ### Port Forwarding
 
 ```yaml
