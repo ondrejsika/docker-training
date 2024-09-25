@@ -1123,11 +1123,19 @@ Docker Compose is part of Docker Desktop (Mac, Windows). Only on Linux, you have
 - <https://docs.docker.com/compose/install/>
 - <https://docs.docker.com/compose/completion/>
 
-Install `docker compose` CLI plugin
+Install `docker compose` CLI plugin on Linux
 
 ```
 mkdir -p ~/.docker/cli-plugins/
 curl -SL https://github.com/docker/compose/releases/download/v2.7.0/docker-compose-linux-x86_64 -o ~/.docker/cli-plugins/docker-compose
+chmod +x ~/.docker/cli-plugins/docker-compose
+```
+
+on Mac (Apple Silicon)
+
+```
+mkdir -p ~/.docker/cli-plugins/
+curl -SL https://github.com/docker/compose/releases/download/v2.29.7/docker-compose-darwin-aarch64 -o ~/.docker/cli-plugins/docker-compose
 chmod +x ~/.docker/cli-plugins/docker-compose
 ```
 
