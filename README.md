@@ -1163,7 +1163,6 @@ docker compose version
 ### Example Compose File
 
 ```yaml
-version: "3.8"
 services:
   app:
     build: .
@@ -1373,7 +1372,6 @@ services:
 ### Compose Project Name
 
 ```yaml
-version: "3.8"
 name: "compose-name-example"
 ```
 
@@ -1433,7 +1431,6 @@ docker network rm counter
 Create `docker-compose.yml`:
 
 ```
-version: "3.8"
 services:
     counter:
         build: .
