@@ -251,6 +251,12 @@ example
 crane copy sikalabs/dev ttl.sh/dev
 ```
 
+### List Image Tags (versions)
+
+```
+crane ls ghcr.io/sikalabs/slu
+```
+
 ## Docker Run
 
 ```
