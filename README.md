@@ -1463,6 +1463,20 @@ If you want override your `docker-compose.yml`, you can use `-f` param for multi
 
 See [compose-override](examples/compose-override) example.
 
+## Podman
+
+## Podman shortnames.conf
+
+Shortnames project is collecting registry alias names for shortnames to fully specified container image names.
+
+https://github.com/containers/shortnames/blob/main/shortnames.conf
+
+See your shortnames
+
+```
+cat /etc/containers/registries.conf.d/shortnames.conf
+```
+
 ## Thank you! & Questions?
 
 That's it. Do you have any questions? **Let's go for a beer!**
