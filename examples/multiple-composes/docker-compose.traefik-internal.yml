@@ -4,6 +4,7 @@ services:
     command:
       - --metrics.prometheus=true
       - --api.insecure=true
+      - --accesslog=true
       - --providers.docker=true
       - --providers.docker.exposedbydefault=false
       - --entrypoints.http.address=:80
