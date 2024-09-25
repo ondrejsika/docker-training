@@ -1,4 +1,3 @@
-version: "3.8"
 x-service-template: &service-template
   image: debian
   command: sh -c "env | grep DEMO"
