@@ -145,6 +145,7 @@ An **image** is an inert, immutable, file that's essentially a snapshot of a con
 - `docker info` - system wide information
 - `docker system df` - docker disk usage
 - `docker system prune` - cleanup unused data
+- `docker volume prune --all` - cleanup unused volumes (including named volumes)
 
 ## Docker Images
 
