@@ -1,13 +1,15 @@
 services:
   counter:
-    build: .
-    image: ttl.sh/dte/external-traefik/counter
+    image: ghcr.io/ondrejsika/counter
     depends_on:
       - redis
     labels:
       traefik.enable: true
+      traefik.port: 80
       traefik.frontend.rule: Host:127.0.0.1
       traefik.docker.network: traefik
+    environment:
+      REDIS: redis
     networks:
       - traefik
       - backend
