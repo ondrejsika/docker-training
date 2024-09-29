@@ -1,0 +1,13 @@
+services:
+  counter:
+    build: .
+    image: ttl.sh/dte/simple-compose/counter
+    ports:
+      - ${PORT:-80}:80
+    depends_on:
+      - mongodb
+    environment:
+      BACKEND: mongodb
+      MONGODB_URI: mongodb://mongodb:27017
+  mongodb:
+    image: mongo
