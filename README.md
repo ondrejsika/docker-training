@@ -1123,6 +1123,10 @@ With **Docker Compose**, you use a **Compose file** to configure your applicatio
 
 `docker-compose` is the old command. `docker compose` is the new command. Both commands are the same.
 
+### `docker-compose.yml` vs `compose.yml`
+
+`docker-compose.yml` is the old name. `compose.yml` is the new name. Both names are the same.
+
 ### Install Docker Compose
 
 Docker Compose is part of Docker Desktop (Mac, Windows). Only on Linux, you have to install it:
