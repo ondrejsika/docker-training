@@ -1,7 +1,7 @@
 package main
 
 import (
-	"gitlab.sikalabs.com/ondrejsika-go-test/counter-test/pkg/server"
+	"github.com/ondrejsika/counter/server"
 )
 
 func main() {
