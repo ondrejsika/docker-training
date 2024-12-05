@@ -1,0 +1,8 @@
+services:
+  backend:
+    ports:
+      - ${PORT_BACKEND:-8001}:80
+
+  frontend:
+    ports:
+      - ${PORT_FRONTEND:-8000}:3000

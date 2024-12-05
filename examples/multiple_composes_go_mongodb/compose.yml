@@ -1,0 +1,51 @@
+name: counter
+services:
+  mongodb:
+    image: mongo
+    healthcheck:
+      test: echo 'db.stats().ok' | mongosh localhost:27017/test --quiet
+      interval: 1s
+      retries: 5
+    volumes:
+      - mongodb:/data/db
+    networks:
+      - backend
+
+  backend:
+    build: ./backend
+    image: ttl.sh/counter/backend
+    depends_on:
+      mongodb:
+        condition: service_healthy
+    environment:
+      BACKEND: mongodb
+      MONGODB_URI: mongodb://mongodb:27017
+    healthcheck:
+      test: curl -f http://localhost/readyz
+      interval: 1s
+      retries: 5
+    networks:
+      - backend
+      - frontend
+
+  frontend:
+    build: ./frontend
+    image: ttl.sh/counter/frontend
+    depends_on:
+      backend:
+        condition: service_healthy
+    environment:
+      API_ORIGIN: http://backend
+    healthcheck:
+      test: curl -f http://localhost:3000/api/livez
+      interval: 1s
+      retries: 5
+    networks:
+      - frontend
+
+networks:
+  backend:
+  frontend:
+
+volumes:
+  mongodb:
