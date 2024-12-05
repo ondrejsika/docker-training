@@ -1,6 +1,7 @@
 FROM debian:12-slim
-RUN apt-get update && apt-get install -y --no-install-recommends \
-    cowsay \
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
+        cowsay \
     && rm -rf /var/lib/apt/lists/*
 ENTRYPOINT ["/usr/games/cowsay"]
 CMD ["Hello World"]
