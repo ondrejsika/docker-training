@@ -1395,7 +1395,7 @@ Try it wihout Docker Compose. Run the example:
 docker build -t counter .
 docker network create counter
 docker run --name redis -d --net counter -v redis-data:/data redis
-docker run --name counter -d --net counter -p 80:80 counter
+docker run --name counter -d --net counter -p 80:80 -e REDIS=redis counter
 ```
 
 Stop & Remove
