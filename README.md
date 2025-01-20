@@ -1052,7 +1052,7 @@ Install:
 
 ```
 # use the latest release version from https://github.com/google/cadvisor/releases
-VERSION=v0.49.1
+VERSION=v0.49.2
 docker run \
   --volume=/:/rootfs:ro \
   --volume=/var/run:/var/run:ro \
