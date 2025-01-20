@@ -795,7 +795,7 @@ See [Build Args](examples/build-args) example.
 ### Dockerfile for multistage builds
 
 ```dockerfile
-FROM java-jdk as build
+FROM java-jdk AS build
 RUN gradle assembly
 
 FROM java-jre
