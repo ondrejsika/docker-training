@@ -65,7 +65,7 @@ require (
 	github.com/cespare/xxhash/v2 v2.2.0 // indirect
 	github.com/chai2010/gettext-go v0.0.0-20170215093142-bf70f2a70fb1 // indirect
 	github.com/cheggaaa/pb/v3 v3.1.2 // indirect
-	github.com/cloudflare/circl v1.3.3 // indirect
+	github.com/cloudflare/circl v1.3.7 // indirect
 	github.com/cloudflare/cloudflare-go v0.78.0 // indirect
 	github.com/coreos/go-oidc v2.2.1+incompatible // indirect
 	github.com/cpuguy83/go-md2man/v2 v2.0.2 // indirect
@@ -219,15 +219,15 @@ require (
 	go.opentelemetry.io/otel v1.11.1 // indirect
 	go.opentelemetry.io/otel/trace v1.11.1 // indirect
 	go.starlark.net v0.0.0-20200306205701-8dd3e2ee1dd5 // indirect
-	golang.org/x/crypto v0.13.0 // indirect
+	golang.org/x/crypto v0.17.0 // indirect
 	golang.org/x/exp v0.0.0-20221230185412-738e83a70c30 // indirect
 	golang.org/x/mod v0.8.0 // indirect
 	golang.org/x/net v0.15.0 // indirect
 	golang.org/x/oauth2 v0.6.0 // indirect
 	golang.org/x/sync v0.2.0 // indirect
-	golang.org/x/sys v0.12.0 // indirect
-	golang.org/x/term v0.12.0 // indirect
-	golang.org/x/text v0.13.0 // indirect
+	golang.org/x/sys v0.15.0 // indirect
+	golang.org/x/term v0.15.0 // indirect
+	golang.org/x/text v0.14.0 // indirect
 	golang.org/x/time v0.3.0 // indirect
 	golang.org/x/tools v0.6.0 // indirect
 	golang.org/x/xerrors v0.0.0-20220907171357-04be3eba64a2 // indirect
