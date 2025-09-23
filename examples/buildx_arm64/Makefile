@@ -1,6 +1,7 @@
 default: build-and-load
 
 all:
+	make install-deps-debian
 	make create-builder
 	make build-and-load
 	make build-and-push
