@@ -1,6 +1,6 @@
 #!/bin/sh
 
-VERSION=v0.73.0 && \
+VERSION=v0.88.0 && \
 OS=linux && \
 ARCH=arm64 && \
 ORG=sikalabs && \
