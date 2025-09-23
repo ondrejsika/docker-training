@@ -1,3 +1,5 @@
+all: build run see
+
 build:
 	docker build -t health-check .
 
