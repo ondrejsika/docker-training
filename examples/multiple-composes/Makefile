@@ -6,6 +6,7 @@ down:
 
 run-test:
 	docker compose run test
+	docker compose run ab
 
 use-ports:
 	cp .env.ports .env
