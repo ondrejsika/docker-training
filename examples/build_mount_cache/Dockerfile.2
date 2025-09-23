@@ -1,4 +1,4 @@
-FROM golang:1.23 AS build
+FROM golang:1.24 AS build
 WORKDIR /build
 COPY go.mod go.sum ./
 RUN \
@@ -10,5 +10,5 @@ RUN \
   --mount=type=cache,target=/go \
   CGO_ENABLED=0 go build
 
-FROM debian:12-slim
+FROM debian:13-slim
 COPY --from=build /build/large /usr/local/bin/large
