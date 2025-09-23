@@ -1,0 +1,5 @@
+services:
+  slu:
+    build: .
+    image: ttl.sh/slu-arm64-compose
+    platform: linux/arm64
