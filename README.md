@@ -1540,6 +1540,10 @@ Wanna to go for a beer or do some work together? Just [book me](https://book-me.
 
 ## Training Sessions
 
+#### 2025-09-23
+
+- https://github.com/sika-training-examples/2025-09-23-docker-compose-example
+
 #### 2022-09-22 TTC
 
 - https://github.com/sika-training-examples/2022-09-22--ttc--docker-compose
