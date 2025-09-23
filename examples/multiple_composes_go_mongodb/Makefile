@@ -10,6 +10,12 @@ down:
 down-with-volumes:
 	docker compose down --remove-orphans --volumes
 
+run-tests:
+	docker compose run tests
+	docker compose run ab-be-api
+	docker compose run ab-be
+	docker compose run ab-fe
+
 .PHONY: tests
 tests:
 	COMPOSE_FILE=compose.yml:compose.tests.yml docker compose run tests

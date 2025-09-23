@@ -1,11 +1,29 @@
+x-base: &base
+  depends_on:
+    backend:
+      condition: service_healthy
+    frontend:
+      condition: service_healthy
+  networks:
+    - backend
+    - frontend
+
 services:
   tests:
+    <<: *base
     build: ./tests
-    depends_on:
-      backend:
-        condition: service_healthy
-      frontend:
-        condition: service_healthy
-    networks:
-      - backend
-      - frontend
+
+  ab-be-api:
+    <<: *base
+    image: ondrejsika/ab
+    command: ab -n 100 http://backend/api/counter/
+
+  ab-be:
+    <<: *base
+    image: ondrejsika/ab
+    command: ab -n 100 http://backend/
+
+  ab-fe:
+    <<: *base
+    image: ondrejsika/ab
+    command: ab -n 100 http://frontend:3000/
