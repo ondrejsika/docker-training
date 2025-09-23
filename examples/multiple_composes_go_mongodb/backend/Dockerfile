@@ -1,9 +1,14 @@
 FROM golang:1.24 AS builder
 WORKDIR /build
 COPY go.mod go.sum ./
-RUN go mod download
+RUN \
+  --mount=type=cache,target=/go \
+  go mod download
 COPY . .
-RUN CGO_ENABLED=0 go build
+RUN \
+  --mount=type=cache,target=/root/.cache/go-build \
+  --mount=type=cache,target=/go \
+  CGO_ENABLED=0 go build
 
 FROM debian:13-slim
 RUN \
