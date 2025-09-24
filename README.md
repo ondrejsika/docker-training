@@ -1,4 +1,4 @@
-[Ondrej Sika (sika.io)](https://sika.io) | <ondrej@sika.io> | [go to course ->](#course) | [install docker ->](#install-docker)
+[Ondrej Sika (sika.io)](https://sika.io) | <ondrej@sika.io> | [go to course ->](#course) | [install docker ->](#install-docker) | [**Skoleni Docker**](https://ondrej-sika.cz/skoleni/docker/) 🚀💻
 
 ![](images/docker_github.svg)
 
