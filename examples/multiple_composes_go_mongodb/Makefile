@@ -20,6 +20,9 @@ run-tests:
 tests:
 	COMPOSE_FILE=compose.yml:compose.tests.yml docker compose run tests
 
+tests-build:
+	COMPOSE_FILE=compose.yml:compose.tests.yml docker compose run --build tests
+
 use-ports:
 	echo "COMPOSE_FILE=compose.yml:compose.ports.yml" >> .env
 
