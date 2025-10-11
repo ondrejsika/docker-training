@@ -3,7 +3,7 @@ services:
     build: .
     image: ttl.sh/dte/simple-compose/counter
     ports:
-      - ${PORT:-80}:80
+      - ${PORT:-80}:8000
     depends_on:
       - redis
     environment:
