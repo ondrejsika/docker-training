@@ -15,6 +15,6 @@ RUN \
   apt-get update && \
   apt-get install -y --no-install-recommends curl && \
   rm -rf /var/lib/apt/lists/*
-COPY --from=builder /build/counter /usr/local/bin/counter
-CMD [ "/usr/local/bin/counter" ]
+COPY --from=builder /build/backend /usr/local/bin/backend
+CMD [ "/usr/local/bin/backend" ]
 EXPOSE 8000
