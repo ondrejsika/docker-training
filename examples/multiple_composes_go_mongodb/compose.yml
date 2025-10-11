@@ -21,7 +21,7 @@ services:
       BACKEND: mongodb
       MONGODB_URI: mongodb://mongodb:27017
     healthcheck:
-      test: curl -f http://localhost/readyz
+      test: curl -f http://localhost:8000/readyz
       interval: 1s
       retries: 5
     networks:
@@ -35,7 +35,7 @@ services:
       backend:
         condition: service_healthy
     environment:
-      API_ORIGIN: http://backend
+      API_ORIGIN: http://backend:8000
     healthcheck:
       test: curl -f http://localhost:3000/api/livez
       interval: 1s

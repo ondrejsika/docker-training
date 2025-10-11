@@ -2,10 +2,10 @@
   auto_https off
 }
 
-:8000 {
+:3000 {
   reverse_proxy frontend:3000
 }
 
-:8001 {
-  reverse_proxy backend:80
+:8000 {
+  reverse_proxy backend:8000
 }

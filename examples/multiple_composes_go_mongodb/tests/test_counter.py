@@ -4,11 +4,11 @@ import requests
 
 class TestBackend(unittest.TestCase):
     def test_response_code(self):
-        response = requests.get('http://backend')
+        response = requests.get('http://backend:8000')
         self.assertEqual(200, response.status_code)
 
     def test_api_response_code(self):
-        response = requests.get('http://backend/api/counter')
+        response = requests.get('http://backend:8000/api/counter')
         self.assertEqual(200, response.status_code)
 
 class TestFrontend(unittest.TestCase):

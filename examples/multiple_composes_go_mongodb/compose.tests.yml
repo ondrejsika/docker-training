@@ -16,12 +16,12 @@ services:
   ab-be-api:
     <<: *base
     image: ondrejsika/ab
-    command: ab -n 100 http://backend/api/counter/
+    command: ab -n 100 http://backend:8000/api/counter/
 
   ab-be:
     <<: *base
     image: ondrejsika/ab
-    command: ab -n 100 http://backend/
+    command: ab -n 100 http://backend:8000/
 
   ab-fe:
     <<: *base

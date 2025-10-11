@@ -17,4 +17,4 @@ RUN \
   rm -rf /var/lib/apt/lists/*
 COPY --from=builder /build/counter /usr/local/bin/counter
 CMD [ "/usr/local/bin/counter" ]
-EXPOSE 80
+EXPOSE 8000
