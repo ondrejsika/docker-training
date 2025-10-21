@@ -4,7 +4,6 @@ services:
       - traefik.enable=true
       - traefik.http.services.${TRAEFIK_NAME:-counter}.loadbalancer.server.port=3000
       - traefik.http.routers.${TRAEFIK_NAME:-counter}.rule=Host(`${HOST?Traefik host}`)
-      - traefik.http.routers.${TRAEFIK_NAME:-counter}.tls.certresolver=le
     networks:
       - traefik
       - frontend
