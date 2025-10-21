@@ -1540,6 +1540,12 @@ Wanna to go for a beer or do some work together? Just [book me](https://book-me.
 
 ## Training Sessions
 
+#### 2025-10-20
+
+- https://github.com/ondrejsika/docker-training-example-platform (created on the course)
+- https://github.com/sika-training-examples/2025-10-21_docker_compose_with_gitlab_ci
+- https://github.com/sika-training-examples/2025-10-21_docker_compose_example
+
 #### 2025-09-23
 
 - https://github.com/sika-training-examples/2025-09-23-docker-compose-example
