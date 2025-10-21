@@ -1,0 +1,4 @@
+services:
+  example:
+    image: ghcr.io/sikalabs/hello-world-server
+    network_mode: host
