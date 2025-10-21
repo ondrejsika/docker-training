@@ -1,3 +1,5 @@
+all: build run
+
 build:
 	docker run \
 		-w /build \
