@@ -1,0 +1,9 @@
+filebeat.inputs:
+  - type: filestream
+    paths:
+      - "/var/lib/docker/containers/*/*.log"
+    processors:
+      - add_docker_metadata:
+
+output.console:
+  pretty: true
