@@ -5,3 +5,5 @@ node_modules
 /examples/multistage-image/app
 *.log
 /.gitstats_output
+compose.override.yml
+compose.override.yaml
