@@ -5,5 +5,5 @@ import (
 )
 
 func main() {
-	server.Server(true)
+	server.Server(server.ServerConfig{})
 }
