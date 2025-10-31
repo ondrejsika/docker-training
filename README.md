@@ -1,6 +1,6 @@
 [Ondrej Sika (sika.io)](https://sika.io) | <ondrej@sika.io> | [go to course ->](#course) | [install docker ->](#install-docker) | [**Skoleni Docker**](https://ondrej-sika.cz/skoleni/docker/) 🚀💻
 
-![](images/docker_github.svg)
+![](_images/docker_github.svg)
 
 # Docker Training
 
@@ -47,7 +47,7 @@ For sharing links & "secrets".
 
 ## DevOps Kniha (Czech only)
 
-[![](./images/devops_kniha.jpg)](https://kniha.sika.io)
+[![](_images/devops_kniha.jpg)](https://kniha.sika.io)
 
 <https://kniha.sika.io>
 
@@ -117,7 +117,7 @@ Set of 12 rules how to write modern applications.
 docker run hello-world
 ```
 
-![](images/test-the-installation.png)
+![](_images/test-the-installation.png)
 
 ### Remote Docker (over SSH)
 
@@ -591,7 +591,7 @@ docker run -v /:/rootfs -ti debian cat /rootfs/etc/shadow
 docker run -v /:/rootfs -ti --userns=host debian cat /rootfs/etc/shadow
 ```
 
-![docker-userns-remap-example](images/docker-userns-remap-example.png)
+![docker-userns-remap-example](_images/docker-userns-remap-example.png)
 
 ## Docker In Docker
 
@@ -716,7 +716,7 @@ List images and see the difference in image sizes
 docker image ls simple-image
 ```
 
-![](images/image-sizes.png)
+![](_images/image-sizes.png)
 
 ## Hadolint
 
@@ -838,7 +838,7 @@ rm Dockerfile
 docker image ls multistage-image
 ```
 
-![](images/image-size-multistage.png)
+![](_images/image-size-multistage.png)
 
 ## ASP.NET Core Example
 
@@ -1560,7 +1560,7 @@ Wanna to go for a beer or do some work together? Just [book me](https://book-me.
 
 If you see something like that, it may be caused by DNS server trouble.
 
-![FAQ DNS Trouble](images/faq-dns-trouble.png)
+![FAQ DNS Trouble](_images/faq-dns-trouble.png)
 
 You can check see your DNS server using:
 
@@ -1574,7 +1574,7 @@ Or check if it works:
 docker run ondrejsika/host google.com
 ```
 
-![FAQ DNS Trouble 2](images/faq-dns-trouble-2.png)
+![FAQ DNS Trouble 2](_images/faq-dns-trouble-2.png)
 
 You can fix it by setting Google or Cloudflare DNS to `/etc/docker/daemon.json`:
 
