@@ -1,6 +1,0 @@
-services:
-  example:
-    image: nixery.dev/shell
-    command: bash -c "echo $$MESSAGE"
-    environment:
-      MESSAGE: Hello World

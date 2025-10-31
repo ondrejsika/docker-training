@@ -1,2 +1,0 @@
-up:
-	docker compose up
