@@ -1506,7 +1506,7 @@ docker compose up --scale <service>=<n>
 
 ![](_images/traefik_architecture.png)
 
-### Docker Compose Override
+## Docker Compose Override
 
 If you want override your `compose.yaml` (former `docker-compose.yaml`), you can use `-f` param for multiple compose files. You can also create `compose.override.yaml` (former `docker-compose.override.yaml`) which will be used automatically.
 
