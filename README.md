@@ -1506,7 +1506,7 @@ docker compose up --scale <service>=<n>
 
 If you want override your `compose.yaml` (former `docker-compose.yaml`), you can use `-f` param for multiple compose files. You can also create `compose.override.yaml` (former `docker-compose.override.yaml`) which will be used automatically.
 
-See [compose-override](examples/compose-override) example.
+See [compose_override](examples/compose_override) example.
 
 ## Podman
 
