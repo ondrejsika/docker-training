@@ -1,0 +1,3 @@
+services:
+  hello:
+    command: dogsay Hello from compose.override.yaml - it is overridden!
