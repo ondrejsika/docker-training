@@ -1502,6 +1502,10 @@ docker compose up --scale <service>=<n>
 - https://github.com/ondrejsika/ondrejsika-docker-traefik
 - https://doc.traefik.io/traefik/reference/dynamic-configuration/docker/
 
+### Traefik Architecture
+
+![](_images/traefik_architecture.png)
+
 ### Docker Compose Override
 
 If you want override your `compose.yaml` (former `docker-compose.yaml`), you can use `-f` param for multiple compose files. You can also create `compose.override.yaml` (former `docker-compose.override.yaml`) which will be used automatically.
