@@ -55,6 +55,8 @@ github.com/ondrejsika/counter v0.14.0 h1:6N0bhG08RCcRgNp+BaWcNTqjgsLTAPEeaYZY8NK
 github.com/ondrejsika/counter v0.14.0/go.mod h1:hud3Zo/a5QfnhB2SeV4OaEkvsODC7KxgRSCZNLaPk/c=
 github.com/ondrejsika/counter v0.15.0 h1:KO1Ryo74L4zcuUzbLc+q50p8o9ki/dFa7aaOhnSRJJQ=
 github.com/ondrejsika/counter v0.15.0/go.mod h1:hud3Zo/a5QfnhB2SeV4OaEkvsODC7KxgRSCZNLaPk/c=
+github.com/ondrejsika/counter v0.16.0 h1:3hHOyGIE7rksyuFomFmNnl9ZcXipifxr4kWIOmBozCU=
+github.com/ondrejsika/counter v0.16.0/go.mod h1:hud3Zo/a5QfnhB2SeV4OaEkvsODC7KxgRSCZNLaPk/c=
 github.com/onsi/ginkgo v1.16.5 h1:8xi0RTUf59SOSfEtZMvwTvXYMzG4gV23XVHOZiXNtnE=
 github.com/onsi/ginkgo v1.16.5/go.mod h1:+E8gABHa3K6zRBolWtd+ROzc/U5bkGt0FwiG042wbpU=
 github.com/onsi/gomega v1.30.0 h1:hvMK7xYz4D3HapigLTeGdId/NcfQx1VHMJc60ew99+8=
