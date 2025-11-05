@@ -2,7 +2,7 @@ module counter
 
 go 1.24.0
 
-require github.com/ondrejsika/counter v0.13.0
+require github.com/ondrejsika/counter v0.16.0
 
 require (
 	github.com/beorn7/perks v1.0.1 // indirect

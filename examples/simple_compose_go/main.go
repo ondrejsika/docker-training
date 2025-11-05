@@ -1,9 +1,9 @@
 package main
 
 import (
-	"github.com/ondrejsika/counter/server"
+	"github.com/ondrejsika/counter/pkg/server"
 )
 
 func main() {
-	server.Server(false)
+	server.Server(server.ServerOptions{})
 }
