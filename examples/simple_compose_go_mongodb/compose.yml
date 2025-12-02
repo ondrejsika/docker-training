@@ -2,7 +2,7 @@ services:
   counter:
     build: .
     ports:
-      - ${PORT:-80}:80
+      - ${PORT:-80}:8000
     depends_on:
       - mongodb
     environment:
