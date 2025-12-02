@@ -891,16 +891,34 @@ Docker support those network drivers:
 docker run debian:10 ip a
 ```
 
+or using `slu ipl`
+
+```
+docker run ghcr.io/sikalabs/dev slu ipl
+```
+
 ### Host
 
 ```
 docker run --net host debian:10 ip a
 ```
 
+or using `slu ipl`
+
+```
+docker run --net host ghcr.io/sikalabs/dev slu ipl
+```
+
 ### None
 
 ```
 docker run --net none debian:10 ip a
+```
+
+or using `slu ipl`
+
+```
+docker run --net none ghcr.io/sikalabs/dev slu ipl
 ```
 
 ### Network Commands
