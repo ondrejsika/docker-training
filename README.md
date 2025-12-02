@@ -1544,6 +1544,11 @@ Wanna to go for a beer or do some work together? Just [book me](https://book-me.
 
 ## Training Sessions
 
+### 2025-12-01
+
+- https://github.com/sika-training-examples/2025-12-02_counter_project_docker_example - Docker Compose project with Gitlab CI
+- https://github.com/sika-training-examples/2025-12-02_docker_caddy_cloudflare_example - Caddy with Cloudflare DNS challenge example (for infra behind VPN)
+
 #### 2025-10-20
 
 - https://github.com/ondrejsika/docker-training-example-platform (created on the course)
