@@ -347,20 +347,6 @@ Arguments
 - `-ti` - map TTY a STDIN (for bash eg.)
 - `-u <user>` - run command by specific user
 
-Postgres 15 example
-
-```
-docker run --name pg15 -e POSTGRES_PASSWORD=pg -d postgres:15
-```
-
-```
-docker exec -ti pg15 bash
-```
-
-```
-docker exec -ti -u postgres pg15 psql
-```
-
 Postgres 16 example
 
 ```
@@ -373,6 +359,20 @@ docker exec -ti pg16 bash
 
 ```
 docker exec -ti -u postgres pg16 psql
+```
+
+Postgres 17 example
+
+```
+docker run --name pg17 -e POSTGRES_PASSWORD=pg -d postgres:17
+```
+
+```
+docker exec -ti pg17 bash
+```
+
+```
+docker exec -ti -u postgres pg17 psql
 ```
 
 ## Docker Logs
