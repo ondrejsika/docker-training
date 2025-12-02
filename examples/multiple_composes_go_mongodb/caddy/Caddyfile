@@ -3,7 +3,7 @@
 }
 
 :3000 {
-    reverse_proxy {
+  reverse_proxy {
     dynamic a frontend 3000
     lb_policy round_robin
   }
