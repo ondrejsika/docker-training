@@ -381,6 +381,10 @@ All containers have to log into STDOUT or STDERR.
 
 Example of logging to STDOUT from legacy application - [examples/log_to_file](./examples/log_to_file)
 
+See also nginx logging to STDOUT here:
+
+<https://github.com/nginx/docker-nginx/blob/5a4ad48c733b365d69a4d1c9946a9d8480469c7f/mainline/debian/Dockerfile#L129>
+
 ```
 docker logs [-f] [-t] <container>
 ```
