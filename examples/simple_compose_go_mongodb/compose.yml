@@ -1,7 +1,6 @@
 services:
   counter:
     build: .
-    image: ttl.sh/dte/simple-compose/counter
     ports:
       - ${PORT:-80}:80
     depends_on:
