@@ -449,7 +449,7 @@ Log Driver options:
 Examle:
 
 ```
-docker run --name log-rotation -d --log-opt max-size=1k --log-opt max-file=5 ondrejsika/log-rotation
+docker run --name log-rotation -d --log-opt max-size=5m --log-opt max-file=2 ghcr.io/sikalabs/slu:v0.95.2 slu loggen -s 5
 ```
 
 ### Global Log Configuration
