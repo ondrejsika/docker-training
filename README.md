@@ -476,6 +476,26 @@ make
 
 See logs in terminal, no elastic output is configured.
 
+## Log Collection Using Promtail
+
+See example: [examples/promtail](examples/promtail)
+
+Run Loki and Grafana first
+
+```
+cd examples/grafana_with_loki
+make
+```
+
+Then run Promtail
+
+```
+cd examples/promtail
+make
+```
+
+Go to Grafana: http://lab0.sikademo.com:3000, configure Loki data source and explore logs.
+
 ## Docker Inspect
 
 Get lots of information about container in JSON.
