@@ -465,6 +465,17 @@ You can set default log driver and options in `/etc/docker/daemon.json`
 }
 ```
 
+## Log Collection Using Filebeat
+
+See example: [examples/filebeat](examples/filebeat)
+
+```
+cd examples/filebeat
+make
+```
+
+See logs in terminal, no elastic output is configured.
+
 ## Docker Inspect
 
 Get lots of information about container in JSON.
