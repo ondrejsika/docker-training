@@ -297,7 +297,6 @@ docker run -ti debian
 - `-d` - run in detached mode
 - `-ti` - map TTY a STDIN (for bash eg.)
 - `-e <variable>=<value>` - set ENV variable
-- `--env-file=<env_file>` - load all variables defined in ENV file
 
 ## Restart Policy
 
