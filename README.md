@@ -892,6 +892,31 @@ make run
 
 ## Entrypoint vs Command
 
+Idea of entrtypoint is to run something before the main command.
+
+It's done by "entrypoint" script which do some initialization and then run the main command.
+
+The `ENTRYPOINT` and `CMD` instructions in a Dockerfile work together to define what command gets executed when running a container.
+
+**Dockerfile**
+
+```Dockerfile
+ENTRYPOINT ["/entrypoint.sh"]
+CMD ["myapp"]
+```
+
+**entrypoint.sh**
+
+```sh
+#!/bin/sh
+
+echo "Running entrypoint script..."
+
+exec "$@"
+```
+
+When Docker continer starts, it will execute `/entrypoint.sh myapp`. The script will run the inicialization and then use `exec "$@"` to replace itself with the `myapp` command.
+
 ### Entrypoint Examples
 
 - [Postgress with Default Data](examples/postgres-default-data)
