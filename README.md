@@ -452,6 +452,19 @@ Examle:
 docker run --name log-rotation -d --log-opt max-size=1k --log-opt max-file=5 ondrejsika/log-rotation
 ```
 
+### Global Log Configuration
+
+You can set default log driver and options in `/etc/docker/daemon.json`
+
+```json
+{
+  "log-opts": {
+    "max-size": "10m",
+    "max-file": "3"
+  }
+}
+```
+
 ## Docker Inspect
 
 Get lots of information about container in JSON.
