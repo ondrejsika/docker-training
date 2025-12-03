@@ -407,7 +407,7 @@ Args
 Examples
 
 ```
-docker run --name loggen -d sikalabs/slu:v0.60.0 slu loggen --json
+docker run --name loggen -d ghcr.io/sikalabs/slu:v0.95.2 slu loggen --json
 ```
 
 ```
