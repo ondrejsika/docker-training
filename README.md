@@ -772,6 +772,12 @@ Install on Mac
 brew install hadolint
 ```
 
+Install on Linux using [slu](https://github.com/sikalabs/slu)
+
+```
+slu install-bin hadolint
+```
+
 Use hadolint
 
 ```bash
