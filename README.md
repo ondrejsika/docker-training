@@ -893,23 +893,6 @@ docker run -ti -p 8000:80 dotnet-example
 
 See: http://127.0.0.1:8000
 
-## Kaniko
-
-- Build Docker images in Conteiner / Kubernetes without Docker daemon
-- <https://github.com/GoogleContainerTools/kaniko>
-
-See [examples/kaniko](./examples/kaniko)
-
-```
-cd example/kaniko
-make build
-make run
-```
-
-## `RUN --mount=type=cache`
-
-[examples/build_mount_cache](./examples/build_mount_cache)
-
 ## Entrypoint vs Command
 
 Idea of entrtypoint is to run something before the main command.
