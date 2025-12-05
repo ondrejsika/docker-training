@@ -10,3 +10,8 @@ test:
 	docker run entrypoint_vs_cmd:1 Ahoj Svete
 	docker run entrypoint_vs_cmd:2 Ahoj Svete || true
 	docker run entrypoint_vs_cmd:3 Ahoj Svete
+
+	docker run entrypoint_vs_cmd:1 Ahoj Svete
+	docker run entrypoint_vs_cmd:2 echo Ahoj Svete
+	docker run --entrypoint echo entrypoint_vs_cmd:2 Ahoj Svete
+	docker run --entrypoint echo entrypoint_vs_cmd:3 Ahoj Svete
