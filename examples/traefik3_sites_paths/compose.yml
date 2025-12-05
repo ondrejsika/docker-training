@@ -1,0 +1,57 @@
+services:
+  example:
+    image: sikalabs/hello-world-server:v0.6.0
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.example2.rule=Host(`lab0.sikademo.com`) && PathPrefix(`/example`)
+      - traefik.http.services.example2.loadbalancer.server.port=8000
+    networks:
+      - traefik
+    deploy:
+      replicas: 4
+  example-strip:
+    image: sikalabs/hello-world-server:v0.6.0
+    environment:
+      - TEXT=strip
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.example-strip.rule=Host(`lab0.sikademo.com`) && PathPrefix(`/strip`)
+      - traefik.http.services.example-strip.loadbalancer.server.port=8000
+      - traefik.http.middlewares.example-strip-stripprefix.stripprefix.prefixes=/strip
+      - traefik.http.routers.example-strip.middlewares=example-strip-stripprefix
+    networks:
+      - traefik
+    deploy:
+      replicas: 4
+  nginx:
+    image: nginx
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.nginx2.rule=Host(`lab0.sikademo.com`) && PathPrefix(`/nginx`)
+      - traefik.http.middlewares.nginx2-stripprefix.stripprefix.prefixes=/nginx
+      - traefik.http.routers.nginx2.middlewares=nginx2-stripprefix
+    networks:
+      - traefik
+  apache:
+    image: httpd
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.apache2.rule=Host(`lab0.sikademo.com`) && PathPrefix(`/apache`)
+      - traefik.http.middlewares.apache2-stripprefix.stripprefix.prefixes=/apache
+      - traefik.http.routers.apache2.middlewares=apache2-stripprefix
+    networks:
+      - traefik
+  caddy:
+    image: caddy:2
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.caddy2.rule=Host(`lab0.sikademo.com`) && PathPrefix(`/caddy`)
+      - traefik.http.middlewares.caddy2-stripprefix.stripprefix.prefixes=/caddy
+      - traefik.http.routers.caddy2.middlewares=caddy2-stripprefix
+    networks:
+      - traefik
+
+networks:
+  traefik:
+    name: traefik
+    external: true
