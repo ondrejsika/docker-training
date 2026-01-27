@@ -3,7 +3,6 @@ WORKDIR /build
 COPY . .
 RUN \
   --mount=type=cache,target=/root/.cache/go-build \
-  --mount=type=cache,target=/go \
   CGO_ENABLED=0 go build app.go
 
 FROM debian:13-slim
