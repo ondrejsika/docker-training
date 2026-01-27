@@ -10,3 +10,8 @@ services:
       MONGODB_URI: mongodb://mongodb:27017
   mongodb:
     image: mongo
+    volumes:
+      - mongo_db_data:/data/db
+
+volumes:
+  mongo_db_data:
