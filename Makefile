@@ -16,12 +16,3 @@ gitstats:
 		-v $(shell pwd)/.gitstats:/workspace/.gitstats_output:rw \
 		nixery.dev/git/gitstats \
 		gitstats . .gitstats_output
-
-print-pull-images:
-	cat images.txt | xargs -n 1 echo docker pull
-
-pull-images:
-	cat images.txt | xargs -n 1 docker pull
-
-save-image-list:
-	docker image ls --format '{{.Repository}}:{{.Tag}}' | sort > images.txt
