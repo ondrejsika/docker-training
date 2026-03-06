@@ -115,7 +115,9 @@ docker info
 
 ## Docker plugin for VS Code
 
-<https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker>
+<https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker> Official Docker plugin for VS Code
+
+<https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers> Official Dev Containers plugin for VS Code
 
 ## Basic Usage
 
