@@ -259,7 +259,7 @@ crane copy <source> <destination>
 example
 
 ```
-crane copy sikalabs/dev ttl.sh/dev
+crane copy ghcr.io/sikalabs/dev ttl.sh/dev
 ```
 
 ### List Image Tags (versions)
