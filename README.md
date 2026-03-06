@@ -195,6 +195,14 @@ echo "registry_external_url 'registry.example.com'" >> /etc/gitlab/gitlab.rb
 gitlab-ctl reconfigure
 ```
 
+### Harbor
+
+- https://goharbor.io/
+- https://github.com/goharbor/harbor
+- https://www.cncf.io/projects/harbor/
+
+Harbor is an open-source container image registry under CNCF.
+
 ### My Example Registry: simple-registry.sikademo.com
 
 See: <https://simple-registry.sikademo.com/v2/_catalog>
