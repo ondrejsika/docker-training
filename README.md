@@ -453,6 +453,10 @@ docker logs -f loggen | jq .i
 ```
 
 ```
+docker logs -f loggen | jq -r '"\(.i) \(.message)"'
+```
+
+```
 docker logs -t loggen
 ```
 
