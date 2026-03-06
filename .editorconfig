@@ -17,3 +17,5 @@ indent_style = tab
 indent_style = tab
 [go.mod]
 indent_style = tab
+[pom.xml]
+indent_size = 0
