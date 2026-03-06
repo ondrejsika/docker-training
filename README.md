@@ -166,6 +166,14 @@ Verified Publisher Images
 
 - https://hub.docker.com/search?badges=verified_publisher
 
+### Github Container Registry
+
+```
+ghcr.io
+```
+
+Docs: https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry#about-the-container-registry
+
 ### Own Docker Registry
 
 **Docker Registry** is build in **Gitlab** and **Github** for no additional cost. You can find it in packages section.
