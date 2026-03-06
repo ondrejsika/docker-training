@@ -1,0 +1,22 @@
+services:
+  caddy:
+    build:
+      dockerfile_inline: |
+        FROM caddy
+        RUN cat > /etc/caddy/Caddyfile <<EOF
+        :80 {
+            reverse_proxy {
+            dynamic a hello-world-server 8000
+            lb_policy round_robin
+          }
+        }
+        EOF
+    ports:
+      - 8000:80
+  hello-world-server:
+    build:
+      dockerfile_inline: |
+        FROM ghcr.io/sikalabs/hello-world-server
+        ENV TEXT="Hello from Dockerfile inline!"
+    deploy:
+      replicas: 4
