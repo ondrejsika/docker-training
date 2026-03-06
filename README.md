@@ -268,6 +268,20 @@ crane copy ghcr.io/sikalabs/dev ttl.sh/dev
 crane ls ghcr.io/sikalabs/slu
 ```
 
+### Tag Image
+
+Add a new tag to an existing image in a registry without pulling it locally.
+
+```
+crane tag <image> <new tag>
+```
+
+example
+
+```
+crane tag ttl.sh/dev:latest ttl.sh/dev:2026-01-01
+```
+
 ## Docker Run
 
 ```
