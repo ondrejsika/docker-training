@@ -1591,6 +1591,32 @@ See [compose_override](examples/compose_override) example.
 
 ## Podman
 
+## Install Podman
+
+```
+apt-get install podman
+```
+
+## Create User for Podman
+
+```
+useradd -m -s /bin/bash podman
+```
+
+## Try Podman
+
+```
+su - podman
+```
+
+```
+podman run hello-world
+```
+
+```
+podman run -p 8000:8000 ghcr.io/sikalabs/hello-world-server
+```
+
 ## Podman shortnames.conf
 
 Shortnames project is collecting registry alias names for shortnames to fully specified container image names.
