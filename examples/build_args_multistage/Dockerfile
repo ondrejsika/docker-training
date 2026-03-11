@@ -1,6 +1,6 @@
 ARG BASE_IMAGE=debian:13-slim
 
-FROM golang:1.25 AS build-dogsay
+FROM golang:1.26 AS build-dogsay
 RUN go install github.com/sikalabs/dogsay@latest
 
 FROM ${BASE_IMAGE}
