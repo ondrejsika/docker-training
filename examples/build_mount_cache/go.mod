@@ -80,7 +80,6 @@ require (
 	github.com/chainguard-dev/git-urls v1.0.2 // indirect
 	github.com/cheggaaa/pb/v3 v3.1.7 // indirect
 	github.com/clipperhouse/displaywidth v0.11.0 // indirect
-	github.com/clipperhouse/stringish v0.1.1 // indirect
 	github.com/clipperhouse/uax29/v2 v2.7.0 // indirect
 	github.com/cloudflare/circl v1.6.3 // indirect
 	github.com/cloudflare/cloudflare-go v0.116.0 // indirect
@@ -237,7 +236,7 @@ require (
 	github.com/mitchellh/mapstructure v1.5.1-0.20220423185008-bf980b35cac4 // indirect
 	github.com/mlosinsky/clisso/ssoclient v1.0.0 // indirect
 	github.com/moby/docker-image-spec v1.3.1 // indirect
-	github.com/moby/spdystream v0.5.0 // indirect
+	github.com/moby/spdystream v0.5.1 // indirect
 	github.com/moby/term v0.5.2 // indirect
 	github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd // indirect
 	github.com/modern-go/reflect2 v1.0.3-0.20250322232337-35a7c28c31ee // indirect
