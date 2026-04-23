@@ -19,7 +19,7 @@ require (
 	github.com/Azure/azure-sdk-for-go/sdk/resourcemanager/resources/armsubscriptions v1.3.0 // indirect
 	github.com/Azure/azure-sdk-for-go/sdk/storage/azblob v1.6.4 // indirect
 	github.com/Azure/go-ansiterm v0.0.0-20250102033503-faa5f7b0171c // indirect
-	github.com/Azure/go-ntlmssp v0.1.0 // indirect
+	github.com/Azure/go-ntlmssp v0.1.1 // indirect
 	github.com/AzureAD/microsoft-authentication-library-for-go v1.7.0 // indirect
 	github.com/ChrisTrenkamp/goxpath v0.0.0-20210404020558-97928f7e12b6 // indirect
 	github.com/MakeNowJust/heredoc v1.0.0 // indirect
@@ -80,7 +80,6 @@ require (
 	github.com/chainguard-dev/git-urls v1.0.2 // indirect
 	github.com/cheggaaa/pb/v3 v3.1.7 // indirect
 	github.com/clipperhouse/displaywidth v0.11.0 // indirect
-	github.com/clipperhouse/stringish v0.1.1 // indirect
 	github.com/clipperhouse/uax29/v2 v2.7.0 // indirect
 	github.com/cloudflare/circl v1.6.3 // indirect
 	github.com/cloudflare/cloudflare-go v0.116.0 // indirect
