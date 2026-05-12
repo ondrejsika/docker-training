@@ -90,15 +90,19 @@ Think of an image as a class definition and a container as an object instantiate
 
 ## Usage of Docker
 
-- Almost everywhere
-- Development, Testing, Production
-- Better (easier, faster) deployment process
-- Separates running applications
+Docker is used throughout the entire software lifecycle:
 
-## Docker containers in cluster
+- **Development** — every developer runs the same environment regardless of their OS; onboarding is `docker compose up` instead of a 20-step setup guide.
+- **Testing & CI** — isolated containers make tests repeatable and parallel; each test run starts from a clean state.
+- **Production** — the exact same image tested in CI is deployed to production, removing environment drift.
+- **Microservices** — separate concerns into independently deployable services, each in its own container.
 
-- Kubernetes
-- ~~Docker Swarm~~
+## Docker Containers in a Cluster
+
+A single Docker host is not enough for production workloads that need high availability and horizontal scaling. Container orchestrators manage fleets of containers across multiple hosts:
+
+- **Kubernetes** — the industry-standard orchestrator; handles scheduling, scaling, rolling updates, and self-healing.
+- ~~**Docker Swarm**~~ — Docker's built-in orchestrator; largely superseded by Kubernetes.
 
 ## 12 Factor Apps
 
