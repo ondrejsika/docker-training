@@ -1,0 +1,41 @@
+networks:
+  macvlan54:
+    driver: macvlan
+    driver_opts:
+      parent: eno1
+    ipam:
+      config:
+        - subnet: 192.168.54.0/24
+          ip_range: 192.168.54.128/25
+          gateway: 192.168.54.1
+
+services:
+  my-200:
+    image: ghcr.io/sikalabs/hello-world-server
+    container_name: my-200
+    environment:
+      TEXT: "192.168.54.200"
+      BACKGROUND_COLOR: "red"
+    networks:
+      macvlan54:
+        ipv4_address: 192.168.54.200
+
+  my-201:
+    image: ghcr.io/sikalabs/hello-world-server
+    container_name: my-201
+    environment:
+      TEXT: "192.168.54.201"
+      BACKGROUND_COLOR: "green"
+    networks:
+      macvlan54:
+        ipv4_address: 192.168.54.201
+
+  my-202:
+    image: ghcr.io/sikalabs/hello-world-server
+    container_name: my-202
+    environment:
+      TEXT: "192.168.54.202"
+      BACKGROUND_COLOR: "blue"
+    networks:
+      macvlan54:
+        ipv4_address: 192.168.54.202
