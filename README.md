@@ -108,7 +108,7 @@ A single Docker host is not enough for production workloads that need high avail
 
 [12factor.net](https://12factor.net)
 
-Set of 12 rules how to write modern applications.
+The 12-Factor methodology defines 12 rules for building modern, cloud-native applications. Containers and Docker naturally enforce many of these factors — for example, storing config in environment variables (factor III), treating logs as event streams (factor XI), and keeping the dev/prod environment identical (factor X).
 
 ## Install Docker
 
