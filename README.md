@@ -53,9 +53,7 @@ For sharing links & "secrets".
 
 ## What is Docker?
 
-Docker is an open-source platform for building, shipping, and running applications in lightweight, isolated environments called containers.
-
-It helps developers and operators ensure that software runs the same way everywhere—on a laptop, on a server, or in the cloud.
+Docker is a platform for **containerization** - packaging applications and their dependencies into isolated, portable units called containers.
 
 ## Containers vs virtualization
 
