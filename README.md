@@ -55,22 +55,20 @@ For sharing links & "secrets".
 
 Docker is a platform for **containerization** - packaging applications and their dependencies into isolated, portable units called containers.
 
-- https://docs.docker.com/get-started/docker-overview/
+- https://docs.docker.com/get-started/docker-overview//
 - https://aws.amazon.com/docker/
 
-## Containers vs virtualization
+## Containers vs. Virtualization
 
 ### Virtualization
 
-A VM is an abstraction of physical hardware. Each VM has a full server hardware stack from virtualized BIOS to virtualized network adapters, storage, and CPU.
-
-That stack allows run any OS on your host but it takes some power.
+A virtual machine (VM) is an abstraction of physical hardware. Each VM emulates a full hardware stack — from BIOS to network adapters, storage, and CPU — which allows you to run any operating system on your host. This flexibility comes at a cost: VMs are resource-heavy and slow to start.
 
 ### Containers
 
-Containers are abstraction in linux kernel, just proces, memory, network, … namespaces.
+Containers are an abstraction at the Linux kernel level. Instead of emulating hardware, they isolate processes using kernel namespaces (PID, network, mount, IPC, etc.) and control groups (cgroups).
 
-Containers run in same kernel as host - it is not possible use different OS or kernel version, but containers are much more faster than VMs.
+Because containers share the host kernel, you cannot run a different OS or kernel version inside them — but they are significantly faster to start and far more lightweight than VMs.
 
 ## Usage of Docker
 
