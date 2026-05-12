@@ -79,6 +79,15 @@ Because containers share the host kernel, they start in milliseconds and consume
 | Size         | GBs              | MBs               |
 | Density      | Tens per host    | Hundreds per host |
 
+## Images and Containers
+
+Docker builds on two core concepts:
+
+- **Image** — a read-only, layered snapshot of a filesystem and its metadata. An image is built once and can be shared via a registry. It is immutable: running it never changes it.
+- **Container** — a running instance of an image. Multiple containers can run from the same image simultaneously, each isolated from the others with its own writable layer.
+
+Think of an image as a class definition and a container as an object instantiated from it.
+
 ## Usage of Docker
 
 - Almost everywhere
@@ -128,10 +137,6 @@ docker info
 <https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers> Official Dev Containers plugin for VS Code
 
 ## Basic Usage
-
-## Image and Container
-
-An **image** is an inert, immutable, file that's essentially a snapshot of a container. Images are created with the build command, and they'll produce a **container** when started with run. Images are stored in a Docker registry.
 
 ## System Wide Info
 
