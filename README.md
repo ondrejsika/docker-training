@@ -349,15 +349,16 @@ docker run -ti debian
 
 ## Restart Policy
 
-By default, if container process stop (or fail), container will be stopped.
+By default, if a container process stops or fails, the container is stopped.
 
-You can choose another behavion using argument `--restart <restart policy>`.
+You can choose another behavior using the `--restart <policy>` argument.
 
-- `--restart on-failure` - restart only when container return non zero return code
-- `--restart always` - always, even on Docker daemon restart (server restart also)
-- `--restart unless-stopped` - similar to always, but keep stopped container stopped on Docker daemon restart (server restart also)
+- `--restart no` - never restart (default)
+- `--restart on-failure` - restart only when the container exits with a non-zero exit code
+- `--restart always` - always restart, even after a Docker daemon or host restart
+- `--restart unless-stopped` - like `always`, but a manually stopped container stays stopped across daemon restarts
 
-If you want to set maximum restart count for `on-failure` restart policy, you can use: `--restart on-failure:<count>`
+To limit the number of retries for the `on-failure` policy, use: `--restart on-failure:<count>`
 
 ## List Containers
 
