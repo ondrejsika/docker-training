@@ -126,7 +126,7 @@ docker run hello-world
 
 ### Remote Docker (over SSH)
 
-You can use remote Docker using SSH. Just export varibale `DOCKER_HOST` with `ssh://root@docker.sikademo.com` and your local Docker clint will be executed on docker.sikademo.com server.
+You can use a remote Docker daemon over SSH. Export `DOCKER_HOST` pointing at the remote host and your local Docker client will transparently execute commands there.
 
 ```
 export DOCKER_HOST=ssh://root@docker.sikademo.com
