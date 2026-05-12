@@ -53,7 +53,9 @@ For sharing links & "secrets".
 
 ## What is Docker?
 
-Docker is a platform for **containerization** - packaging applications and their dependencies into isolated, portable units called containers.
+Docker is a platform for **containerization** — packaging applications and their dependencies into isolated, portable units called **containers**.
+
+It provides a consistent environment from a developer's laptop all the way to production, eliminating the classic "works on my machine" problem.
 
 - https://docs.docker.com/get-started/docker-overview//
 - https://aws.amazon.com/docker/
