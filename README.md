@@ -1079,6 +1079,57 @@ docker network create -d macvlan \
   -o parent=eth0 macvlan
 ```
 
+### Macvlan Example on 192.168.54.0/24 network
+
+1. Create the macvlan network
+
+```bash
+docker network create -d macvlan \
+  --subnet=192.168.54.0/24 \
+  --ip-range=192.168.54.128/25 \
+  --gateway=192.168.54.1 \
+  -o parent=eno1 \
+  macvlan54
+```
+
+2. (optional) Fix host <-> container communication
+
+```bash
+ip link add macvlan-host link eno1 type macvlan mode bridge
+ip addr add 192.168.54.129/32 dev macvlan-host
+ip link set macvlan-host up
+ip route add 192.168.54.128/25 dev macvlan-host
+```
+
+3. Run containers
+
+```bash
+docker run -d \
+  --network macvlan54 \
+  --ip 192.168.54.200 \
+  --name my-200 \
+  -e TEXT="192.168.54.200" \
+  ghcr.io/sikalabs/hello-world-server
+```
+
+```bash
+docker run -d \
+  --network macvlan54 \
+  --ip 192.168.54.201 \
+  --name my-201 \
+  -e TEXT="192.168.54.201" \
+  ghcr.io/sikalabs/hello-world-server
+```
+
+4. Test
+
+```bash
+curl http://192.168.54.200:8000
+curl http://192.168.54.201:8000
+```
+
+Note: The ip link / ip route commands (step 2) are lost on reboot. To make them persistent add them to /etc/network/interfaces or a systemd service.
+
 ## ctop
 
 ctop is a top-like interface for container metrics.
