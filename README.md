@@ -68,7 +68,7 @@ A virtual machine (VM) is an abstraction of physical hardware. Each VM emulates 
 
 ### Containers
 
-Containers are an abstraction at the Linux kernel level. Instead of emulating hardware, they isolate processes using kernel namespaces (PID, network, mount, IPC, etc.) and control groups (cgroups).
+Containers are an abstraction at the Linux kernel level. Instead of emulating hardware, they isolate processes using kernel **namespaces** (PID, network, mount, IPC, etc.) and limit resource usage with **cgroups** (control groups).
 
 Because containers share the host kernel, you cannot run a different OS or kernel version inside them — but they are significantly faster to start and far more lightweight than VMs.
 
