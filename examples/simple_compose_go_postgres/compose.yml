@@ -1,0 +1,22 @@
+services:
+  counter:
+    build: .
+    ports:
+      - ${PORT:-80}:8000
+    depends_on:
+      - postgres
+    environment:
+      BACKEND: postgres
+      POSTGRES_HOST: postgres
+      POSTGRES_PASSWORD: pg
+      POSTGRES_DATABASE: counter
+  postgres:
+    image: postgres:17
+    environment:
+      POSTGRES_PASSWORD: pg
+      POSTGRES_DB: counter
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
