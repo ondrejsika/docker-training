@@ -1,0 +1,26 @@
+networks:
+  backend:
+  frontend:
+
+services:
+  db:
+    image: redis
+    networks:
+      - backend
+  
+  backend:
+    image: ghcr.io/ondrejsika/counter
+    environment:
+      REDIS: db
+    networks:
+      - backend
+      - frontend
+
+  frontend:
+    image: ghcr.io/ondrejsika/counter-frontend-go
+    environment:
+      API_ORIGIN: http://backend:8000
+    ports:
+      - 3000:3000
+    networks:
+      - frontend
