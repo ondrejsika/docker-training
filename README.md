@@ -197,14 +197,6 @@ Docs: https://docs.github.com/en/packages/working-with-a-github-packages-registr
 
 **Docker Registry** is build in **Gitlab** and **Github** for no additional cost. You can find it in packages section.
 
-You can run registry manually using this command:
-
-```
-docker run -d -p 5000:5000 --restart=always --name registry registry:2
-```
-
-See full deployment configuration here: <https://docs.docker.com/registry/deploying/>
-
 ### Docker Registry in Self-Hosted Gitlab
 
 You have to add `registry_external_url` to Your Gitlab config and reconfigure.
@@ -221,27 +213,6 @@ gitlab-ctl reconfigure
 - https://www.cncf.io/projects/harbor/
 
 Harbor is an open-source container image registry under CNCF.
-
-### My Example Registry: simple-registry.sikademo.com
-
-See: <https://simple-registry.sikademo.com/v2/_catalog>
-
-Deployed into Kubernetes by [sikalabs/simple-registry](https://github.com/sikalabs/charts/tree/master/charts/simple-registry) chart
-
-### sikalabs/simple-registry chart
-
-Setup SikaLabs Charts
-
-```
-helm repo add sikalabs https://helm.sikalabs.io
-helm repo update
-```
-
-Install **sikalabs/simple-registry** chart
-
-```
-helm install registry sikalabs/simple-registry --set host simple-registry.sikademo.com
-```
 
 ### ttl.sh - Anonymous & ephemeral Docker image registry
 
