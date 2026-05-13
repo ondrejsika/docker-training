@@ -536,7 +536,7 @@ Using Go Template Language.
 Examples:
 
 ```
-docker inspect loggen --format "{{.NetworkSettings.IPAddress}}"
+docker inspect loggen --format "{{.NetworkSettings.Networks.bridge.IPAddress}}"
 ```
 
 ```
