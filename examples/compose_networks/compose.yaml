@@ -7,7 +7,7 @@ services:
     image: redis
     networks:
       - backend
-  
+
   backend:
     image: ghcr.io/ondrejsika/counter
     environment:
