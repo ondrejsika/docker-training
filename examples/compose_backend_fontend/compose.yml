@@ -1,0 +1,27 @@
+name: counter
+services:
+  redis:
+    image: redis:8
+    volumes:
+      - redis-data:/data
+
+  backend:
+    build: ./backend
+    image: ttl.sh/counter/backend
+    depends_on:
+      - redis
+    environment:
+      REDIS: redis
+
+  frontend:
+    build: ./frontend
+    image: ttl.sh/counter/frontend
+    depends_on:
+      - backend
+    environment:
+      API_ORIGIN: http://backend:8000
+    ports:
+      - ${PORT:-3000}:3000
+
+volumes:
+  redis-data:
