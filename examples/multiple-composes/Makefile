@@ -9,13 +9,13 @@ run-test:
 	docker compose run ab
 
 use-ports:
-	cp .env.ports .env
+	echo 'COMPOSE_FILE=compose.yml:compose.ports.yml' >> .env
 
 use-test:
-	cp .env.test .env
+	echo 'COMPOSE_FILE=compose.yml:compose.test.yml' >> .env
 
 use-traefik-internal:
-	cp .env.traefik-internal .env
+	echo 'COMPOSE_FILE=compose.yml:compose.replicas.yml:compose.traefik-internal.yml' >> .env
 
 use-traefik-external:
-	cp .env.traefik-external .env
+	echo 'COMPOSE_FILE=compose.yml:compose.replicas.yml:compose.traefik-external.yml' >> .env
