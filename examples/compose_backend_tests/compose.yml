@@ -1,0 +1,23 @@
+name: counter-backend-tests
+services:
+  redis:
+    image: redis:8
+    volumes:
+      - redis-data:/data
+      
+  backend:
+    build: ./backend
+    image: ttl.sh/counter/backend
+    depends_on:
+      - redis
+    environment:
+      REDIS: redis
+
+  tests:
+    build: ./tests
+    image: ttl.sh/counter/tests
+    depends_on:
+      - backend
+
+volumes:
+  redis-data:
