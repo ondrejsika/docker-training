@@ -8,6 +8,7 @@ services:
       - redis
     environment:
       REDIS: redis
+      SUFFIX:
     labels:
       traefik.enable: "true"
       traefik.http.routers.counter.rule: Host(`${HOST:-127.0.0.1}`)
