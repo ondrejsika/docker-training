@@ -1,0 +1,11 @@
+services:
+  example:
+    image: busybox
+    command: >
+      cat /run/secrets/some_secret
+    secrets:
+      - some_secret
+
+secrets:
+  some_secret:
+    file: ./some_secret.txt
