@@ -1629,6 +1629,26 @@ If you want override your `compose.yaml` (former `docker-compose.yaml`), you can
 
 See [compose_override](examples/compose_override) example.
 
+## Docker Compose Secrets (without Swarm)
+
+Plain `docker compose` (without Swarm) doesn't have that store, but it still supports secrets backed by a local file - Compose bind-mounts the file into the container at `/run/secrets/<secret_name>`:
+
+```yaml
+services:
+  example:
+    image: busybox
+    command: >
+      cat /run/secrets/some_secret
+    secrets:
+      - some_secret
+
+secrets:
+  some_secret:
+    file: ./some_secret.txt
+```
+
+See [compose_secrets](examples/compose_secrets) example.
+
 ## Podman
 
 ## Install Podman
