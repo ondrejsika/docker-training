@@ -4,7 +4,7 @@ services:
     image: redis:8
     volumes:
       - redis-data:/data
-      
+
   backend:
     build: ./backend
     image: ttl.sh/counter/backend
